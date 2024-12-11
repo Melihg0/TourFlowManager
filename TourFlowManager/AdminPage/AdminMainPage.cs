@@ -16,5 +16,30 @@ namespace TourAgent.AdminPage
         {
             InitializeComponent();
         }
+
+        private void btnMainPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTourManagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSystemManagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

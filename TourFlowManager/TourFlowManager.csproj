@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,18 @@
     </Compile>
     <Compile Include="AdminPage\AdminMainPage.Designer.cs">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\AdminSystemManagement\AdminSystemManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\AdminSystemManagement\AdminSystemManagement.Designer.cs">
+      <DependentUpon>AdminSystemManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\AdminTourManagment\AdminTourManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\AdminTourManagment\AdminTourManagment.Designer.cs">
+      <DependentUpon>AdminTourManagment.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPage\AdminUserManagement\AdminUserManagement.cs">
       <SubType>Form</SubType>
@@ -92,6 +105,12 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="AdminPage\AdminMainPage.resx">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\AdminSystemManagement\AdminSystemManagement.resx">
+      <DependentUpon>AdminSystemManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\AdminTourManagment\AdminTourManagment.resx">
+      <DependentUpon>AdminTourManagment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage\AdminUserManagement\AdminUserManagement.resx">
       <DependentUpon>AdminUserManagement.cs</DependentUpon>

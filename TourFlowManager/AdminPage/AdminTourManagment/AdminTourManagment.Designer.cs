@@ -1,6 +1,6 @@
-﻿namespace TourAgent.AdminPage
+﻿namespace TourAgent.AdminPage.AdminTourManagment
 {
-    partial class AdminMainPage
+    partial class AdminTourManagment
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,7 +48,6 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -70,35 +68,12 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Yönetim Sayfası";
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Linen;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnExit.Image = global::TourAgent.Properties.Resources.logout;
-            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(33, 543);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(154, 85);
-            this.btnExit.TabIndex = 5;
-            this.btnExit.Text = "CIKIS";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
-            this.pictureBox1.Location = new System.Drawing.Point(46, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(131, 130);
             this.pictureBox1.TabIndex = 16;
@@ -159,11 +134,10 @@
             this.btnMainPage.Location = new System.Drawing.Point(35, 6);
             this.btnMainPage.Name = "btnMainPage";
             this.btnMainPage.Size = new System.Drawing.Size(126, 101);
-            this.btnMainPage.TabIndex = 27;
+            this.btnMainPage.TabIndex = 31;
             this.btnMainPage.Text = "Ana Sayfa";
             this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMainPage.UseVisualStyleBackColor = false;
-            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
             // 
             // btnSystemManagement
             // 
@@ -179,11 +153,10 @@
             this.btnSystemManagement.Location = new System.Drawing.Point(683, 3);
             this.btnSystemManagement.Name = "btnSystemManagement";
             this.btnSystemManagement.Size = new System.Drawing.Size(200, 104);
-            this.btnSystemManagement.TabIndex = 25;
+            this.btnSystemManagement.TabIndex = 30;
             this.btnSystemManagement.Text = "Veritabanı Yonetimi";
             this.btnSystemManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSystemManagement.UseVisualStyleBackColor = false;
-            this.btnSystemManagement.Click += new System.EventHandler(this.btnSystemManagement_Click);
             // 
             // btnTourManagement
             // 
@@ -199,11 +172,10 @@
             this.btnTourManagement.Location = new System.Drawing.Point(454, 3);
             this.btnTourManagement.Name = "btnTourManagement";
             this.btnTourManagement.Size = new System.Drawing.Size(200, 104);
-            this.btnTourManagement.TabIndex = 23;
+            this.btnTourManagement.TabIndex = 29;
             this.btnTourManagement.Text = "Tur Islemleri";
             this.btnTourManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTourManagement.UseVisualStyleBackColor = false;
-            this.btnTourManagement.Click += new System.EventHandler(this.btnTourManagement_Click);
             // 
             // btnUserManagement
             // 
@@ -219,13 +191,12 @@
             this.btnUserManagement.Location = new System.Drawing.Point(210, 3);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(200, 104);
-            this.btnUserManagement.TabIndex = 4;
+            this.btnUserManagement.TabIndex = 28;
             this.btnUserManagement.Text = "Kullanıcı Islemleri";
             this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUserManagement.UseVisualStyleBackColor = false;
-            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
-            // AdminMainPage
+            // AdminUserManagementPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -237,7 +208,7 @@
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AdminMainPage";
+            this.Name = "AdminUserManagementPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
             this.panel1.ResumeLayout(false);
@@ -256,10 +227,9 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnUserManagement;
+        private System.Windows.Forms.Button btnMainPage;
         private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
-        private System.Windows.Forms.Button btnMainPage;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnUserManagement;
     }
 }
