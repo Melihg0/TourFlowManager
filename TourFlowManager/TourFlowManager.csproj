@@ -52,6 +52,12 @@
     <Compile Include="AdminPage\AdminMainPage.Designer.cs">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPage\AdminUserManagement\AdminUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\AdminUserManagement\AdminUserManagement.Designer.cs">
+      <DependentUpon>AdminUserManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPage\CustomerMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="AdminPage\AdminMainPage.resx">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\AdminUserManagement\AdminUserManagement.resx">
+      <DependentUpon>AdminUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginAndRegisterPage\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,5 +142,27 @@
   <ItemGroup>
     <None Include="Resources\BaslangicFoto.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\software-engineer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tour.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-storage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit User.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
