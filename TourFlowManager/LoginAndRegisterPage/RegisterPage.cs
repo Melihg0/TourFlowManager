@@ -19,11 +19,10 @@ namespace TourAgent
 {
     public partial class RegisterPage : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowAgentDB; Integrated Security = True;");
+        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
         string TelNo;
         public RegisterPage()
         {
-        
             InitializeComponent();
             txtPassword.PasswordChar = '•';
             txtPasswordAgain.PasswordChar = '•';  //Password baslangıc degerleri

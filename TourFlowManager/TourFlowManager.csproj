@@ -53,23 +53,23 @@
     <Compile Include="AdminPage\AdminMainPage.Designer.cs">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPage\AdminSystemManagement\AdminSystemManagement.cs">
+    <Compile Include="AdminPage\AdminSystemManagement\AdminSystemMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPage\AdminSystemManagement\AdminSystemManagement.Designer.cs">
-      <DependentUpon>AdminSystemManagement.cs</DependentUpon>
+    <Compile Include="AdminPage\AdminSystemManagement\AdminSystemMainPage.Designer.cs">
+      <DependentUpon>AdminSystemMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPage\AdminTourManagment\AdminTourManagment.cs">
+    <Compile Include="AdminPage\AdminTourManagment\AdminTourMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPage\AdminTourManagment\AdminTourManagment.Designer.cs">
-      <DependentUpon>AdminTourManagment.cs</DependentUpon>
+    <Compile Include="AdminPage\AdminTourManagment\AdminTourMainPage.Designer.cs">
+      <DependentUpon>AdminTourMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPage\AdminUserManagement\AdminUserManagement.cs">
+    <Compile Include="AdminPage\AdminUserManagement\AdminEditUserPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPage\AdminUserManagement\AdminUserManagement.Designer.cs">
-      <DependentUpon>AdminUserManagement.cs</DependentUpon>
+    <Compile Include="AdminPage\AdminUserManagement\AdminEditUserPage.Designer.cs">
+      <DependentUpon>AdminEditUserPage.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerPage\CustomerMainPage.cs">
       <SubType>Form</SubType>
@@ -91,10 +91,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TourAgentDataSet.Designer.cs">
+    <Compile Include="TourFlowManagerDBDataSet.cs">
+      <DependentUpon>TourFlowManagerDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TourFlowManagerDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TourAgentDataSet.xsd</DependentUpon>
+      <DependentUpon>TourFlowManagerDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="TourGuidePage\TourGuideMainPage.cs">
       <SubType>Form</SubType>
@@ -106,14 +109,14 @@
     <EmbeddedResource Include="AdminPage\AdminMainPage.resx">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPage\AdminSystemManagement\AdminSystemManagement.resx">
-      <DependentUpon>AdminSystemManagement.cs</DependentUpon>
+    <EmbeddedResource Include="AdminPage\AdminSystemManagement\AdminSystemMainPage.resx">
+      <DependentUpon>AdminSystemMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPage\AdminTourManagment\AdminTourManagment.resx">
-      <DependentUpon>AdminTourManagment.cs</DependentUpon>
+    <EmbeddedResource Include="AdminPage\AdminTourManagment\AdminTourMainPage.resx">
+      <DependentUpon>AdminTourMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPage\AdminUserManagement\AdminUserManagement.resx">
-      <DependentUpon>AdminUserManagement.cs</DependentUpon>
+    <EmbeddedResource Include="AdminPage\AdminUserManagement\AdminEditUserPage.resx">
+      <DependentUpon>AdminEditUserPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginAndRegisterPage\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -143,16 +146,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TourAgentDataSet.xsc">
-      <DependentUpon>TourAgentDataSet.xsd</DependentUpon>
+    <None Include="TourFlowManagerDBDataSet.xsc">
+      <DependentUpon>TourFlowManagerDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="TourAgentDataSet.xsd">
+    <None Include="TourFlowManagerDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TourAgentDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>TourFlowManagerDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="TourAgentDataSet.xss">
-      <DependentUpon>TourAgentDataSet.xsd</DependentUpon>
+    <None Include="TourFlowManagerDBDataSet.xss">
+      <DependentUpon>TourFlowManagerDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +185,8 @@
   <ItemGroup>
     <None Include="Resources\edit User.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\block-user.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

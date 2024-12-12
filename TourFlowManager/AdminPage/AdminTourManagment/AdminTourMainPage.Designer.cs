@@ -1,6 +1,6 @@
-﻿namespace TourAgent.AdminPage.AdminUserManagement
+﻿namespace TourAgent.AdminPage.AdminTourManagment
 {
-    partial class AdminUserManagement
+    partial class AdminTourMainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -62,10 +62,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(27, 154);
+            this.label1.Location = new System.Drawing.Point(27, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 31);
-            this.label1.TabIndex = 17;
+            this.label1.TabIndex = 19;
             this.label1.Text = "Yönetim Sayfası";
             // 
             // pictureBox1
@@ -73,10 +73,10 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(44, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 130);
-            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
+            this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
             // panel4
@@ -138,6 +138,7 @@
             this.btnMainPage.Text = "Ana Sayfa";
             this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMainPage.UseVisualStyleBackColor = false;
+            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
             // 
             // btnSystemManagement
             // 
@@ -157,6 +158,7 @@
             this.btnSystemManagement.Text = "Veritabanı Yonetimi";
             this.btnSystemManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSystemManagement.UseVisualStyleBackColor = false;
+            this.btnSystemManagement.Click += new System.EventHandler(this.btnSystemManagement_Click);
             // 
             // btnTourManagement
             // 
@@ -176,6 +178,7 @@
             this.btnTourManagement.Text = "Tur Islemleri";
             this.btnTourManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTourManagement.UseVisualStyleBackColor = false;
+            this.btnTourManagement.Click += new System.EventHandler(this.btnTourManagement_Click);
             // 
             // btnUserManagement
             // 
@@ -195,8 +198,9 @@
             this.btnUserManagement.Text = "Kullanıcı Islemleri";
             this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUserManagement.UseVisualStyleBackColor = false;
+            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
-            // AdminUserManagementPage
+            // AdminTourMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -208,7 +212,7 @@
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AdminUserManagementPage";
+            this.Name = "AdminTourMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
             this.panel1.ResumeLayout(false);
@@ -225,11 +229,11 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMainPage;
         private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
         private System.Windows.Forms.Button btnUserManagement;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

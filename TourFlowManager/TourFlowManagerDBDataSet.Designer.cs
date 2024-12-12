@@ -20,9 +20,9 @@ namespace TourAgent {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TourAgentDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("TourFlowManagerDBDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TourAgentDataSet : global::System.Data.DataSet {
+    public partial class TourFlowManagerDBDataSet : global::System.Data.DataSet {
         
         private tbl_CitiesDataTable tabletbl_Cities;
         
@@ -39,6 +39,8 @@ namespace TourAgent {
         private tbl_TourTypesDataTable tabletbl_TourTypes;
         
         private tbl_UsersDataTable tabletbl_Users;
+        
+        private sp_ValidateUserDataTable tablesp_ValidateUser;
         
         private global::System.Data.DataRelation relationfk_TourID;
         
@@ -58,7 +60,7 @@ namespace TourAgent {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TourAgentDataSet() {
+        public TourFlowManagerDBDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -69,7 +71,7 @@ namespace TourAgent {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected TourAgentDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected TourFlowManagerDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -105,6 +107,9 @@ namespace TourAgent {
                 }
                 if ((ds.Tables["tbl_Users"] != null)) {
                     base.Tables.Add(new tbl_UsersDataTable(ds.Tables["tbl_Users"]));
+                }
+                if ((ds.Tables["sp_ValidateUser"] != null)) {
+                    base.Tables.Add(new sp_ValidateUserDataTable(ds.Tables["sp_ValidateUser"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -206,6 +211,16 @@ namespace TourAgent {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_ValidateUserDataTable sp_ValidateUser {
+            get {
+                return this.tablesp_ValidateUser;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -246,7 +261,7 @@ namespace TourAgent {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TourAgentDataSet cln = ((TourAgentDataSet)(base.Clone()));
+            TourFlowManagerDBDataSet cln = ((TourFlowManagerDBDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -294,6 +309,9 @@ namespace TourAgent {
                 }
                 if ((ds.Tables["tbl_Users"] != null)) {
                     base.Tables.Add(new tbl_UsersDataTable(ds.Tables["tbl_Users"]));
+                }
+                if ((ds.Tables["sp_ValidateUser"] != null)) {
+                    base.Tables.Add(new sp_ValidateUserDataTable(ds.Tables["sp_ValidateUser"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -376,6 +394,12 @@ namespace TourAgent {
                     this.tabletbl_Users.InitVars();
                 }
             }
+            this.tablesp_ValidateUser = ((sp_ValidateUserDataTable)(base.Tables["sp_ValidateUser"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_ValidateUser != null)) {
+                    this.tablesp_ValidateUser.InitVars();
+                }
+            }
             this.relationfk_TourID = this.Relations["fk_TourID"];
             this.relationfk_UserID = this.Relations["fk_UserID"];
             this.relationFK__tbl_Tours__Desti__47DBAE45 = this.Relations["FK__tbl_Tours__Desti__47DBAE45"];
@@ -388,9 +412,9 @@ namespace TourAgent {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TourAgentDataSet";
+            this.DataSetName = "TourFlowManagerDBDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TourAgentDataSet.xsd";
+            this.Namespace = "http://tempuri.org/TourFlowManagerDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletbl_Cities = new tbl_CitiesDataTable();
@@ -409,6 +433,8 @@ namespace TourAgent {
             base.Tables.Add(this.tabletbl_TourTypes);
             this.tabletbl_Users = new tbl_UsersDataTable();
             base.Tables.Add(this.tabletbl_Users);
+            this.tablesp_ValidateUser = new sp_ValidateUserDataTable();
+            base.Tables.Add(this.tablesp_ValidateUser);
             this.relationfk_TourID = new global::System.Data.DataRelation("fk_TourID", new global::System.Data.DataColumn[] {
                         this.tabletbl_Tours.TourIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_Reservations.TourIDColumn}, false);
@@ -489,6 +515,12 @@ namespace TourAgent {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializesp_ValidateUser() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -498,7 +530,7 @@ namespace TourAgent {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TourAgentDataSet ds = new TourAgentDataSet();
+            TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -565,6 +597,9 @@ namespace TourAgent {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void tbl_UsersRowChangeEventHandler(object sender, tbl_UsersRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void sp_ValidateUserRowChangeEventHandler(object sender, sp_ValidateUserRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -797,7 +832,7 @@ namespace TourAgent {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TourAgentDataSet ds = new TourAgentDataSet();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1205,7 +1240,7 @@ namespace TourAgent {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TourAgentDataSet ds = new TourAgentDataSet();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1283,7 +1318,7 @@ namespace TourAgent {
             
             private global::System.Data.DataColumn columnPhoneNumber;
             
-            private global::System.Data.DataColumn columnPassword;
+            private global::System.Data.DataColumn columnDeletedUserPassword;
             
             private global::System.Data.DataColumn columnRoleID;
             
@@ -1372,9 +1407,9 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PasswordColumn {
+            public global::System.Data.DataColumn DeletedUserPasswordColumn {
                 get {
-                    return this.columnPassword;
+                    return this.columnDeletedUserPassword;
                 }
             }
             
@@ -1431,7 +1466,7 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_DeletedUsersRow Addtbl_DeletedUsersRow(int DeletedUserID, System.DateTime DeletedAt, string Email, string FirstName, string LastName, string PhoneNumber, string Password, int RoleID, System.DateTime BirthDate) {
+            public tbl_DeletedUsersRow Addtbl_DeletedUsersRow(int DeletedUserID, System.DateTime DeletedAt, string Email, string FirstName, string LastName, string PhoneNumber, string DeletedUserPassword, int RoleID, System.DateTime BirthDate) {
                 tbl_DeletedUsersRow rowtbl_DeletedUsersRow = ((tbl_DeletedUsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DeletedUserID,
@@ -1440,7 +1475,7 @@ namespace TourAgent {
                         FirstName,
                         LastName,
                         PhoneNumber,
-                        Password,
+                        DeletedUserPassword,
                         RoleID,
                         BirthDate};
                 rowtbl_DeletedUsersRow.ItemArray = columnValuesArray;
@@ -1478,7 +1513,7 @@ namespace TourAgent {
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnPassword = base.Columns["Password"];
+                this.columnDeletedUserPassword = base.Columns["DeletedUserPassword"];
                 this.columnRoleID = base.Columns["RoleID"];
                 this.columnBirthDate = base.Columns["BirthDate"];
             }
@@ -1498,8 +1533,8 @@ namespace TourAgent {
                 base.Columns.Add(this.columnLastName);
                 this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber);
-                this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPassword);
+                this.columnDeletedUserPassword = new global::System.Data.DataColumn("DeletedUserPassword", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDeletedUserPassword);
                 this.columnRoleID = new global::System.Data.DataColumn("RoleID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRoleID);
                 this.columnBirthDate = new global::System.Data.DataColumn("BirthDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -1517,8 +1552,8 @@ namespace TourAgent {
                 this.columnLastName.MaxLength = 50;
                 this.columnPhoneNumber.AllowDBNull = false;
                 this.columnPhoneNumber.MaxLength = 15;
-                this.columnPassword.AllowDBNull = false;
-                this.columnPassword.MaxLength = 20;
+                this.columnDeletedUserPassword.AllowDBNull = false;
+                this.columnDeletedUserPassword.MaxLength = 20;
                 this.columnRoleID.AllowDBNull = false;
                 this.columnBirthDate.AllowDBNull = false;
             }
@@ -1588,7 +1623,7 @@ namespace TourAgent {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TourAgentDataSet ds = new TourAgentDataSet();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1901,7 +1936,7 @@ namespace TourAgent {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TourAgentDataSet ds = new TourAgentDataSet();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2179,7 +2214,7 @@ namespace TourAgent {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TourAgentDataSet ds = new TourAgentDataSet();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2590,7 +2625,7 @@ namespace TourAgent {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TourAgentDataSet ds = new TourAgentDataSet();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2883,7 +2918,7 @@ namespace TourAgent {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TourAgentDataSet ds = new TourAgentDataSet();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2959,7 +2994,7 @@ namespace TourAgent {
             
             private global::System.Data.DataColumn columnPhoneNumber;
             
-            private global::System.Data.DataColumn columnPassword;
+            private global::System.Data.DataColumn columnUserPassword;
             
             private global::System.Data.DataColumn columnRoleID;
             
@@ -3042,9 +3077,9 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PasswordColumn {
+            public global::System.Data.DataColumn UserPasswordColumn {
                 get {
-                    return this.columnPassword;
+                    return this.columnUserPassword;
                 }
             }
             
@@ -3109,7 +3144,7 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_UsersRow Addtbl_UsersRow(string Email, string FirstName, string LastName, string PhoneNumber, string Password, tbl_RoleRow parenttbl_RoleRowByfk_RoleID, System.DateTime BirthDate, System.DateTime CreatedAt) {
+            public tbl_UsersRow Addtbl_UsersRow(string Email, string FirstName, string LastName, string PhoneNumber, string UserPassword, tbl_RoleRow parenttbl_RoleRowByfk_RoleID, System.DateTime BirthDate, System.DateTime CreatedAt) {
                 tbl_UsersRow rowtbl_UsersRow = ((tbl_UsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3117,7 +3152,7 @@ namespace TourAgent {
                         FirstName,
                         LastName,
                         PhoneNumber,
-                        Password,
+                        UserPassword,
                         null,
                         BirthDate,
                         CreatedAt};
@@ -3158,7 +3193,7 @@ namespace TourAgent {
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnPassword = base.Columns["Password"];
+                this.columnUserPassword = base.Columns["UserPassword"];
                 this.columnRoleID = base.Columns["RoleID"];
                 this.columnBirthDate = base.Columns["BirthDate"];
                 this.columnCreatedAt = base.Columns["CreatedAt"];
@@ -3177,8 +3212,8 @@ namespace TourAgent {
                 base.Columns.Add(this.columnLastName);
                 this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoneNumber);
-                this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPassword);
+                this.columnUserPassword = new global::System.Data.DataColumn("UserPassword", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserPassword);
                 this.columnRoleID = new global::System.Data.DataColumn("RoleID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRoleID);
                 this.columnBirthDate = new global::System.Data.DataColumn("BirthDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -3201,8 +3236,8 @@ namespace TourAgent {
                 this.columnLastName.MaxLength = 50;
                 this.columnPhoneNumber.AllowDBNull = false;
                 this.columnPhoneNumber.MaxLength = 15;
-                this.columnPassword.AllowDBNull = false;
-                this.columnPassword.MaxLength = 20;
+                this.columnUserPassword.AllowDBNull = false;
+                this.columnUserPassword.MaxLength = 20;
                 this.columnRoleID.AllowDBNull = false;
                 this.columnBirthDate.AllowDBNull = false;
                 this.columnCreatedAt.AllowDBNull = false;
@@ -3273,7 +3308,7 @@ namespace TourAgent {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TourAgentDataSet ds = new TourAgentDataSet();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3292,6 +3327,391 @@ namespace TourAgent {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "tbl_UsersDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_ValidateUserDataTable : global::System.Data.TypedTableBase<sp_ValidateUserRow> {
+            
+            private global::System.Data.DataColumn columnUserID;
+            
+            private global::System.Data.DataColumn columnFirstName;
+            
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnEmail;
+            
+            private global::System.Data.DataColumn columnRoleID;
+            
+            private global::System.Data.DataColumn columnPhoneNumber;
+            
+            private global::System.Data.DataColumn columnUserPassword;
+            
+            private global::System.Data.DataColumn columnBirthDate;
+            
+            private global::System.Data.DataColumn columnCreatedAt;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ValidateUserDataTable() {
+                this.TableName = "sp_ValidateUser";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ValidateUserDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected sp_ValidateUserDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FirstNameColumn {
+                get {
+                    return this.columnFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn EmailColumn {
+                get {
+                    return this.columnEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn RoleIDColumn {
+                get {
+                    return this.columnRoleID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PhoneNumberColumn {
+                get {
+                    return this.columnPhoneNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn UserPasswordColumn {
+                get {
+                    return this.columnUserPassword;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn BirthDateColumn {
+                get {
+                    return this.columnBirthDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CreatedAtColumn {
+                get {
+                    return this.columnCreatedAt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ValidateUserRow this[int index] {
+                get {
+                    return ((sp_ValidateUserRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ValidateUserRowChangeEventHandler sp_ValidateUserRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ValidateUserRowChangeEventHandler sp_ValidateUserRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ValidateUserRowChangeEventHandler sp_ValidateUserRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event sp_ValidateUserRowChangeEventHandler sp_ValidateUserRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addsp_ValidateUserRow(sp_ValidateUserRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ValidateUserRow Addsp_ValidateUserRow(string FirstName, string LastName, string Email, int RoleID, string PhoneNumber, string UserPassword, System.DateTime BirthDate, System.DateTime CreatedAt) {
+                sp_ValidateUserRow rowsp_ValidateUserRow = ((sp_ValidateUserRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        FirstName,
+                        LastName,
+                        Email,
+                        RoleID,
+                        PhoneNumber,
+                        UserPassword,
+                        BirthDate,
+                        CreatedAt};
+                rowsp_ValidateUserRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_ValidateUserRow);
+                return rowsp_ValidateUserRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ValidateUserRow FindByUserID(int UserID) {
+                return ((sp_ValidateUserRow)(this.Rows.Find(new object[] {
+                            UserID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_ValidateUserDataTable cln = ((sp_ValidateUserDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_ValidateUserDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnUserID = base.Columns["UserID"];
+                this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnRoleID = base.Columns["RoleID"];
+                this.columnPhoneNumber = base.Columns["PhoneNumber"];
+                this.columnUserPassword = base.Columns["UserPassword"];
+                this.columnBirthDate = base.Columns["BirthDate"];
+                this.columnCreatedAt = base.Columns["CreatedAt"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
+                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnRoleID = new global::System.Data.DataColumn("RoleID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRoleID);
+                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPhoneNumber);
+                this.columnUserPassword = new global::System.Data.DataColumn("UserPassword", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserPassword);
+                this.columnBirthDate = new global::System.Data.DataColumn("BirthDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBirthDate);
+                this.columnCreatedAt = new global::System.Data.DataColumn("CreatedAt", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCreatedAt);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnUserID}, true));
+                this.columnUserID.AutoIncrement = true;
+                this.columnUserID.AllowDBNull = false;
+                this.columnUserID.ReadOnly = true;
+                this.columnUserID.Unique = true;
+                this.columnFirstName.AllowDBNull = false;
+                this.columnFirstName.MaxLength = 50;
+                this.columnLastName.AllowDBNull = false;
+                this.columnLastName.MaxLength = 50;
+                this.columnEmail.AllowDBNull = false;
+                this.columnEmail.MaxLength = 50;
+                this.columnRoleID.AllowDBNull = false;
+                this.columnPhoneNumber.AllowDBNull = false;
+                this.columnPhoneNumber.MaxLength = 15;
+                this.columnUserPassword.AllowDBNull = false;
+                this.columnUserPassword.MaxLength = 20;
+                this.columnBirthDate.AllowDBNull = false;
+                this.columnCreatedAt.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ValidateUserRow Newsp_ValidateUserRow() {
+                return ((sp_ValidateUserRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_ValidateUserRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_ValidateUserRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_ValidateUserRowChanged != null)) {
+                    this.sp_ValidateUserRowChanged(this, new sp_ValidateUserRowChangeEvent(((sp_ValidateUserRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_ValidateUserRowChanging != null)) {
+                    this.sp_ValidateUserRowChanging(this, new sp_ValidateUserRowChangeEvent(((sp_ValidateUserRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_ValidateUserRowDeleted != null)) {
+                    this.sp_ValidateUserRowDeleted(this, new sp_ValidateUserRowChangeEvent(((sp_ValidateUserRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_ValidateUserRowDeleting != null)) {
+                    this.sp_ValidateUserRowDeleting(this, new sp_ValidateUserRowChangeEvent(((sp_ValidateUserRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removesp_ValidateUserRow(sp_ValidateUserRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                TourFlowManagerDBDataSet ds = new TourFlowManagerDBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_ValidateUserDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3654,12 +4074,12 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Password {
+            public string DeletedUserPassword {
                 get {
-                    return ((string)(this[this.tabletbl_DeletedUsers.PasswordColumn]));
+                    return ((string)(this[this.tabletbl_DeletedUsers.DeletedUserPasswordColumn]));
                 }
                 set {
-                    this[this.tabletbl_DeletedUsers.PasswordColumn] = value;
+                    this[this.tabletbl_DeletedUsers.DeletedUserPasswordColumn] = value;
                 }
             }
             
@@ -4159,12 +4579,12 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Password {
+            public string UserPassword {
                 get {
-                    return ((string)(this[this.tabletbl_Users.PasswordColumn]));
+                    return ((string)(this[this.tabletbl_Users.UserPasswordColumn]));
                 }
                 set {
-                    this[this.tabletbl_Users.PasswordColumn] = value;
+                    this[this.tabletbl_Users.UserPasswordColumn] = value;
                 }
             }
             
@@ -4231,6 +4651,120 @@ namespace TourAgent {
                 }
                 else {
                     return ((tbl_ToursRow[])(base.GetChildRows(this.Table.ChildRelations["fk_GuideID"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_ValidateUserRow : global::System.Data.DataRow {
+            
+            private sp_ValidateUserDataTable tablesp_ValidateUser;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal sp_ValidateUserRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_ValidateUser = ((sp_ValidateUserDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int UserID {
+                get {
+                    return ((int)(this[this.tablesp_ValidateUser.UserIDColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.UserIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string FirstName {
+                get {
+                    return ((string)(this[this.tablesp_ValidateUser.FirstNameColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string LastName {
+                get {
+                    return ((string)(this[this.tablesp_ValidateUser.LastNameColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Email {
+                get {
+                    return ((string)(this[this.tablesp_ValidateUser.EmailColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.EmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int RoleID {
+                get {
+                    return ((int)(this[this.tablesp_ValidateUser.RoleIDColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.RoleIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PhoneNumber {
+                get {
+                    return ((string)(this[this.tablesp_ValidateUser.PhoneNumberColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.PhoneNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string UserPassword {
+                get {
+                    return ((string)(this[this.tablesp_ValidateUser.UserPasswordColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.UserPasswordColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime BirthDate {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_ValidateUser.BirthDateColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.BirthDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime CreatedAt {
+                get {
+                    return ((global::System.DateTime)(this[this.tablesp_ValidateUser.CreatedAtColumn]));
+                }
+                set {
+                    this[this.tablesp_ValidateUser.CreatedAtColumn] = value;
                 }
             }
         }
@@ -4506,9 +5040,43 @@ namespace TourAgent {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class sp_ValidateUserRowChangeEvent : global::System.EventArgs {
+            
+            private sp_ValidateUserRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ValidateUserRowChangeEvent(sp_ValidateUserRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sp_ValidateUserRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
-namespace TourAgent.TourAgentDataSetTableAdapters {
+namespace TourAgent.TourFlowManagerDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -4673,7 +5241,7 @@ SELECT PlateNumber, CityName, Country FROM tbl_Cities WHERE (PlateNumber = @Plat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourAgentConnectionString;
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4690,7 +5258,7 @@ SELECT PlateNumber, CityName, Country FROM tbl_Cities WHERE (PlateNumber = @Plat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TourAgentDataSet.tbl_CitiesDataTable dataTable) {
+        public virtual int Fill(TourFlowManagerDBDataSet.tbl_CitiesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4703,9 +5271,9 @@ SELECT PlateNumber, CityName, Country FROM tbl_Cities WHERE (PlateNumber = @Plat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TourAgentDataSet.tbl_CitiesDataTable GetData() {
+        public virtual TourFlowManagerDBDataSet.tbl_CitiesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TourAgentDataSet.tbl_CitiesDataTable dataTable = new TourAgentDataSet.tbl_CitiesDataTable();
+            TourFlowManagerDBDataSet.tbl_CitiesDataTable dataTable = new TourFlowManagerDBDataSet.tbl_CitiesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4713,14 +5281,14 @@ SELECT PlateNumber, CityName, Country FROM tbl_Cities WHERE (PlateNumber = @Plat
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet.tbl_CitiesDataTable dataTable) {
+        public virtual int Update(TourFlowManagerDBDataSet.tbl_CitiesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet dataSet) {
+        public virtual int Update(TourFlowManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_Cities");
         }
         
@@ -5086,7 +5654,7 @@ SELECT DeletedTourID, DeletedAt, TourName, StartPointCityID, DestinationCityID, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourAgentConnectionString;
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5105,7 +5673,7 @@ SELECT DeletedTourID, DeletedAt, TourName, StartPointCityID, DestinationCityID, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TourAgentDataSet.tbl_DeletedToursDataTable dataTable) {
+        public virtual int Fill(TourFlowManagerDBDataSet.tbl_DeletedToursDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5118,9 +5686,9 @@ SELECT DeletedTourID, DeletedAt, TourName, StartPointCityID, DestinationCityID, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TourAgentDataSet.tbl_DeletedToursDataTable GetData() {
+        public virtual TourFlowManagerDBDataSet.tbl_DeletedToursDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TourAgentDataSet.tbl_DeletedToursDataTable dataTable = new TourAgentDataSet.tbl_DeletedToursDataTable();
+            TourFlowManagerDBDataSet.tbl_DeletedToursDataTable dataTable = new TourFlowManagerDBDataSet.tbl_DeletedToursDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5128,14 +5696,14 @@ SELECT DeletedTourID, DeletedAt, TourName, StartPointCityID, DestinationCityID, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet.tbl_DeletedToursDataTable dataTable) {
+        public virtual int Update(TourFlowManagerDBDataSet.tbl_DeletedToursDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet dataSet) {
+        public virtual int Update(TourFlowManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_DeletedTours");
         }
         
@@ -5464,13 +6032,13 @@ SELECT DeletedTourID, DeletedAt, TourName, StartPointCityID, DestinationCityID, 
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("Password", "Password");
+            tableMapping.ColumnMappings.Add("DeletedUserPassword", "DeletedUserPassword");
             tableMapping.ColumnMappings.Add("RoleID", "RoleID");
             tableMapping.ColumnMappings.Add("BirthDate", "BirthDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbl_DeletedUsers] WHERE (([DeletedUserID] = @Original_DeletedUserID) AND ([DeletedAt] = @Original_DeletedAt) AND ([Email] = @Original_Email) AND ([FirstName] = @Original_FirstName) AND ([LastName] = @Original_LastName) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([Password] = @Original_Password) AND ([RoleID] = @Original_RoleID) AND ([BirthDate] = @Original_BirthDate))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbl_DeletedUsers] WHERE (([DeletedUserID] = @Original_DeletedUserID) AND ([DeletedAt] = @Original_DeletedAt) AND ([Email] = @Original_Email) AND ([FirstName] = @Original_FirstName) AND ([LastName] = @Original_LastName) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([DeletedUserPassword] = @Original_DeletedUserPassword) AND ([RoleID] = @Original_RoleID) AND ([BirthDate] = @Original_BirthDate))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedUserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedAt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedAt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5478,13 +6046,13 @@ SELECT DeletedTourID, DeletedAt, TourName, StartPointCityID, DestinationCityID, 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedUserPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUserPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BirthDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_DeletedUsers] ([DeletedUserID], [DeletedAt], [Email], [FirstName], [LastName], [PhoneNumber], [Password], [RoleID], [BirthDate]) VALUES (@DeletedUserID, @DeletedAt, @Email, @FirstName, @LastName, @PhoneNumber, @Password, @RoleID, @BirthDate);
-SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthDate FROM tbl_DeletedUsers WHERE (DeletedUserID = @DeletedUserID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_DeletedUsers] ([DeletedUserID], [DeletedAt], [Email], [FirstName], [LastName], [PhoneNumber], [DeletedUserPassword], [RoleID], [BirthDate]) VALUES (@DeletedUserID, @DeletedAt, @Email, @FirstName, @LastName, @PhoneNumber, @DeletedUserPassword, @RoleID, @BirthDate);
+SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, DeletedUserPassword, RoleID, BirthDate FROM tbl_DeletedUsers WHERE (DeletedUserID = @DeletedUserID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedUserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedAt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5492,13 +6060,13 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedUserPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUserPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BirthDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_DeletedUsers] SET [DeletedUserID] = @DeletedUserID, [DeletedAt] = @DeletedAt, [Email] = @Email, [FirstName] = @FirstName, [LastName] = @LastName, [PhoneNumber] = @PhoneNumber, [Password] = @Password, [RoleID] = @RoleID, [BirthDate] = @BirthDate WHERE (([DeletedUserID] = @Original_DeletedUserID) AND ([DeletedAt] = @Original_DeletedAt) AND ([Email] = @Original_Email) AND ([FirstName] = @Original_FirstName) AND ([LastName] = @Original_LastName) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([Password] = @Original_Password) AND ([RoleID] = @Original_RoleID) AND ([BirthDate] = @Original_BirthDate));
-SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthDate FROM tbl_DeletedUsers WHERE (DeletedUserID = @DeletedUserID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_DeletedUsers] SET [DeletedUserID] = @DeletedUserID, [DeletedAt] = @DeletedAt, [Email] = @Email, [FirstName] = @FirstName, [LastName] = @LastName, [PhoneNumber] = @PhoneNumber, [DeletedUserPassword] = @DeletedUserPassword, [RoleID] = @RoleID, [BirthDate] = @BirthDate WHERE (([DeletedUserID] = @Original_DeletedUserID) AND ([DeletedAt] = @Original_DeletedAt) AND ([Email] = @Original_Email) AND ([FirstName] = @Original_FirstName) AND ([LastName] = @Original_LastName) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([DeletedUserPassword] = @Original_DeletedUserPassword) AND ([RoleID] = @Original_RoleID) AND ([BirthDate] = @Original_BirthDate));
+SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, DeletedUserPassword, RoleID, BirthDate FROM tbl_DeletedUsers WHERE (DeletedUserID = @DeletedUserID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedUserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedAt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5506,7 +6074,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DeletedUserPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUserPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BirthDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedUserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -5515,7 +6083,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DeletedUserPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DeletedUserPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BirthDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -5524,7 +6092,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourAgentConnectionString;
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5533,8 +6101,8 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwor" +
-                "d, RoleID, BirthDate FROM dbo.tbl_DeletedUsers";
+            this._commandCollection[0].CommandText = "SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Deleted" +
+                "UserPassword, RoleID, BirthDate FROM dbo.tbl_DeletedUsers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5542,7 +6110,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TourAgentDataSet.tbl_DeletedUsersDataTable dataTable) {
+        public virtual int Fill(TourFlowManagerDBDataSet.tbl_DeletedUsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5555,9 +6123,9 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TourAgentDataSet.tbl_DeletedUsersDataTable GetData() {
+        public virtual TourFlowManagerDBDataSet.tbl_DeletedUsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TourAgentDataSet.tbl_DeletedUsersDataTable dataTable = new TourAgentDataSet.tbl_DeletedUsersDataTable();
+            TourFlowManagerDBDataSet.tbl_DeletedUsersDataTable dataTable = new TourFlowManagerDBDataSet.tbl_DeletedUsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5565,14 +6133,14 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet.tbl_DeletedUsersDataTable dataTable) {
+        public virtual int Update(TourFlowManagerDBDataSet.tbl_DeletedUsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet dataSet) {
+        public virtual int Update(TourFlowManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_DeletedUsers");
         }
         
@@ -5595,7 +6163,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_DeletedUserID, System.DateTime Original_DeletedAt, string Original_Email, string Original_FirstName, string Original_LastName, string Original_PhoneNumber, string Original_Password, int Original_RoleID, System.DateTime Original_BirthDate) {
+        public virtual int Delete(int Original_DeletedUserID, System.DateTime Original_DeletedAt, string Original_Email, string Original_FirstName, string Original_LastName, string Original_PhoneNumber, string Original_DeletedUserPassword, int Original_RoleID, System.DateTime Original_BirthDate) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_DeletedUserID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DeletedAt));
             if ((Original_Email == null)) {
@@ -5622,11 +6190,11 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_PhoneNumber));
             }
-            if ((Original_Password == null)) {
-                throw new global::System.ArgumentNullException("Original_Password");
+            if ((Original_DeletedUserPassword == null)) {
+                throw new global::System.ArgumentNullException("Original_DeletedUserPassword");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Password));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_DeletedUserPassword));
             }
             this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_RoleID));
             this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_BirthDate));
@@ -5650,7 +6218,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int DeletedUserID, System.DateTime DeletedAt, string Email, string FirstName, string LastName, string PhoneNumber, string Password, int RoleID, System.DateTime BirthDate) {
+        public virtual int Insert(int DeletedUserID, System.DateTime DeletedAt, string Email, string FirstName, string LastName, string PhoneNumber, string DeletedUserPassword, int RoleID, System.DateTime BirthDate) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(DeletedUserID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(DeletedAt));
             if ((Email == null)) {
@@ -5677,11 +6245,11 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(PhoneNumber));
             }
-            if ((Password == null)) {
-                throw new global::System.ArgumentNullException("Password");
+            if ((DeletedUserPassword == null)) {
+                throw new global::System.ArgumentNullException("DeletedUserPassword");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Password));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(DeletedUserPassword));
             }
             this.Adapter.InsertCommand.Parameters[7].Value = ((int)(RoleID));
             this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(BirthDate));
@@ -5712,7 +6280,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
                     string FirstName, 
                     string LastName, 
                     string PhoneNumber, 
-                    string Password, 
+                    string DeletedUserPassword, 
                     int RoleID, 
                     System.DateTime BirthDate, 
                     int Original_DeletedUserID, 
@@ -5721,7 +6289,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
                     string Original_FirstName, 
                     string Original_LastName, 
                     string Original_PhoneNumber, 
-                    string Original_Password, 
+                    string Original_DeletedUserPassword, 
                     int Original_RoleID, 
                     System.DateTime Original_BirthDate) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(DeletedUserID));
@@ -5750,11 +6318,11 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(PhoneNumber));
             }
-            if ((Password == null)) {
-                throw new global::System.ArgumentNullException("Password");
+            if ((DeletedUserPassword == null)) {
+                throw new global::System.ArgumentNullException("DeletedUserPassword");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Password));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(DeletedUserPassword));
             }
             this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(RoleID));
             this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(BirthDate));
@@ -5784,11 +6352,11 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_PhoneNumber));
             }
-            if ((Original_Password == null)) {
-                throw new global::System.ArgumentNullException("Original_Password");
+            if ((Original_DeletedUserPassword == null)) {
+                throw new global::System.ArgumentNullException("Original_DeletedUserPassword");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Password));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_DeletedUserPassword));
             }
             this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_RoleID));
             this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_BirthDate));
@@ -5818,7 +6386,7 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
                     string FirstName, 
                     string LastName, 
                     string PhoneNumber, 
-                    string Password, 
+                    string DeletedUserPassword, 
                     int RoleID, 
                     System.DateTime BirthDate, 
                     int Original_DeletedUserID, 
@@ -5827,10 +6395,10 @@ SELECT DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Passwo
                     string Original_FirstName, 
                     string Original_LastName, 
                     string Original_PhoneNumber, 
-                    string Original_Password, 
+                    string Original_DeletedUserPassword, 
                     int Original_RoleID, 
                     System.DateTime Original_BirthDate) {
-            return this.Update(Original_DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthDate, Original_DeletedUserID, Original_DeletedAt, Original_Email, Original_FirstName, Original_LastName, Original_PhoneNumber, Original_Password, Original_RoleID, Original_BirthDate);
+            return this.Update(Original_DeletedUserID, DeletedAt, Email, FirstName, LastName, PhoneNumber, DeletedUserPassword, RoleID, BirthDate, Original_DeletedUserID, Original_DeletedAt, Original_Email, Original_FirstName, Original_LastName, Original_PhoneNumber, Original_DeletedUserPassword, Original_RoleID, Original_BirthDate);
         }
     }
     
@@ -5998,7 +6566,7 @@ SELECT ReservationID, TourID, UserID, ReservationDate FROM tbl_Reservations WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourAgentConnectionString;
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6015,7 +6583,7 @@ SELECT ReservationID, TourID, UserID, ReservationDate FROM tbl_Reservations WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TourAgentDataSet.tbl_ReservationsDataTable dataTable) {
+        public virtual int Fill(TourFlowManagerDBDataSet.tbl_ReservationsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6028,9 +6596,9 @@ SELECT ReservationID, TourID, UserID, ReservationDate FROM tbl_Reservations WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TourAgentDataSet.tbl_ReservationsDataTable GetData() {
+        public virtual TourFlowManagerDBDataSet.tbl_ReservationsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TourAgentDataSet.tbl_ReservationsDataTable dataTable = new TourAgentDataSet.tbl_ReservationsDataTable();
+            TourFlowManagerDBDataSet.tbl_ReservationsDataTable dataTable = new TourFlowManagerDBDataSet.tbl_ReservationsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6038,14 +6606,14 @@ SELECT ReservationID, TourID, UserID, ReservationDate FROM tbl_Reservations WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet.tbl_ReservationsDataTable dataTable) {
+        public virtual int Update(TourFlowManagerDBDataSet.tbl_ReservationsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet dataSet) {
+        public virtual int Update(TourFlowManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_Reservations");
         }
         
@@ -6304,7 +6872,7 @@ SELECT ReservationID, TourID, UserID, ReservationDate FROM tbl_Reservations WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourAgentConnectionString;
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6321,7 +6889,7 @@ SELECT ReservationID, TourID, UserID, ReservationDate FROM tbl_Reservations WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TourAgentDataSet.tbl_RoleDataTable dataTable) {
+        public virtual int Fill(TourFlowManagerDBDataSet.tbl_RoleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6334,9 +6902,9 @@ SELECT ReservationID, TourID, UserID, ReservationDate FROM tbl_Reservations WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TourAgentDataSet.tbl_RoleDataTable GetData() {
+        public virtual TourFlowManagerDBDataSet.tbl_RoleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TourAgentDataSet.tbl_RoleDataTable dataTable = new TourAgentDataSet.tbl_RoleDataTable();
+            TourFlowManagerDBDataSet.tbl_RoleDataTable dataTable = new TourFlowManagerDBDataSet.tbl_RoleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6344,14 +6912,14 @@ SELECT ReservationID, TourID, UserID, ReservationDate FROM tbl_Reservations WHER
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet.tbl_RoleDataTable dataTable) {
+        public virtual int Update(TourFlowManagerDBDataSet.tbl_RoleDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet dataSet) {
+        public virtual int Update(TourFlowManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_Role");
         }
         
@@ -6662,7 +7230,7 @@ SELECT TourID, TourName, StartPointCityID, DestinationCityID, TourTypeID, GuideI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourAgentConnectionString;
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6680,7 +7248,7 @@ SELECT TourID, TourName, StartPointCityID, DestinationCityID, TourTypeID, GuideI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TourAgentDataSet.tbl_ToursDataTable dataTable) {
+        public virtual int Fill(TourFlowManagerDBDataSet.tbl_ToursDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6693,9 +7261,9 @@ SELECT TourID, TourName, StartPointCityID, DestinationCityID, TourTypeID, GuideI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TourAgentDataSet.tbl_ToursDataTable GetData() {
+        public virtual TourFlowManagerDBDataSet.tbl_ToursDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TourAgentDataSet.tbl_ToursDataTable dataTable = new TourAgentDataSet.tbl_ToursDataTable();
+            TourFlowManagerDBDataSet.tbl_ToursDataTable dataTable = new TourFlowManagerDBDataSet.tbl_ToursDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6703,14 +7271,14 @@ SELECT TourID, TourName, StartPointCityID, DestinationCityID, TourTypeID, GuideI
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet.tbl_ToursDataTable dataTable) {
+        public virtual int Update(TourFlowManagerDBDataSet.tbl_ToursDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet dataSet) {
+        public virtual int Update(TourFlowManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_Tours");
         }
         
@@ -7104,7 +7672,7 @@ SELECT TourTypeID, TypeName, Description FROM tbl_TourTypes WHERE (TourTypeID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourAgentConnectionString;
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7121,7 +7689,7 @@ SELECT TourTypeID, TypeName, Description FROM tbl_TourTypes WHERE (TourTypeID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TourAgentDataSet.tbl_TourTypesDataTable dataTable) {
+        public virtual int Fill(TourFlowManagerDBDataSet.tbl_TourTypesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7134,9 +7702,9 @@ SELECT TourTypeID, TypeName, Description FROM tbl_TourTypes WHERE (TourTypeID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TourAgentDataSet.tbl_TourTypesDataTable GetData() {
+        public virtual TourFlowManagerDBDataSet.tbl_TourTypesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TourAgentDataSet.tbl_TourTypesDataTable dataTable = new TourAgentDataSet.tbl_TourTypesDataTable();
+            TourFlowManagerDBDataSet.tbl_TourTypesDataTable dataTable = new TourFlowManagerDBDataSet.tbl_TourTypesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7144,14 +7712,14 @@ SELECT TourTypeID, TypeName, Description FROM tbl_TourTypes WHERE (TourTypeID = 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet.tbl_TourTypesDataTable dataTable) {
+        public virtual int Update(TourFlowManagerDBDataSet.tbl_TourTypesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet dataSet) {
+        public virtual int Update(TourFlowManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_TourTypes");
         }
         
@@ -7423,47 +7991,47 @@ SELECT TourTypeID, TypeName, Description FROM tbl_TourTypes WHERE (TourTypeID = 
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("Password", "Password");
+            tableMapping.ColumnMappings.Add("UserPassword", "UserPassword");
             tableMapping.ColumnMappings.Add("RoleID", "RoleID");
             tableMapping.ColumnMappings.Add("BirthDate", "BirthDate");
             tableMapping.ColumnMappings.Add("CreatedAt", "CreatedAt");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbl_Users] WHERE (([UserID] = @Original_UserID) AND ([Email] = @Original_Email) AND ([FirstName] = @Original_FirstName) AND ([LastName] = @Original_LastName) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([Password] = @Original_Password) AND ([RoleID] = @Original_RoleID) AND ([BirthDate] = @Original_BirthDate) AND ([CreatedAt] = @Original_CreatedAt))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tbl_Users] WHERE (([UserID] = @Original_UserID) AND ([Email] = @Original_Email) AND ([FirstName] = @Original_FirstName) AND ([LastName] = @Original_LastName) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([UserPassword] = @Original_UserPassword) AND ([RoleID] = @Original_RoleID) AND ([BirthDate] = @Original_BirthDate) AND ([CreatedAt] = @Original_CreatedAt))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BirthDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CreatedAt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedAt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_Users] ([Email], [FirstName], [LastName], [PhoneNumber], [Password], [RoleID], [BirthDate], [CreatedAt]) VALUES (@Email, @FirstName, @LastName, @PhoneNumber, @Password, @RoleID, @BirthDate, @CreatedAt);
-SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthDate, CreatedAt FROM tbl_Users WHERE (UserID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tbl_Users] ([Email], [FirstName], [LastName], [PhoneNumber], [UserPassword], [RoleID], [BirthDate], [CreatedAt]) VALUES (@Email, @FirstName, @LastName, @PhoneNumber, @UserPassword, @RoleID, @BirthDate, @CreatedAt);
+SELECT UserID, Email, FirstName, LastName, PhoneNumber, UserPassword, RoleID, BirthDate, CreatedAt FROM tbl_Users WHERE (UserID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BirthDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreatedAt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_Users] SET [Email] = @Email, [FirstName] = @FirstName, [LastName] = @LastName, [PhoneNumber] = @PhoneNumber, [Password] = @Password, [RoleID] = @RoleID, [BirthDate] = @BirthDate, [CreatedAt] = @CreatedAt WHERE (([UserID] = @Original_UserID) AND ([Email] = @Original_Email) AND ([FirstName] = @Original_FirstName) AND ([LastName] = @Original_LastName) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([Password] = @Original_Password) AND ([RoleID] = @Original_RoleID) AND ([BirthDate] = @Original_BirthDate) AND ([CreatedAt] = @Original_CreatedAt));
-SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthDate, CreatedAt FROM tbl_Users WHERE (UserID = @UserID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tbl_Users] SET [Email] = @Email, [FirstName] = @FirstName, [LastName] = @LastName, [PhoneNumber] = @PhoneNumber, [UserPassword] = @UserPassword, [RoleID] = @RoleID, [BirthDate] = @BirthDate, [CreatedAt] = @CreatedAt WHERE (([UserID] = @Original_UserID) AND ([Email] = @Original_Email) AND ([FirstName] = @Original_FirstName) AND ([LastName] = @Original_LastName) AND ([PhoneNumber] = @Original_PhoneNumber) AND ([UserPassword] = @Original_UserPassword) AND ([RoleID] = @Original_RoleID) AND ([BirthDate] = @Original_BirthDate) AND ([CreatedAt] = @Original_CreatedAt));
+SELECT UserID, Email, FirstName, LastName, PhoneNumber, UserPassword, RoleID, BirthDate, CreatedAt FROM tbl_Users WHERE (UserID = @UserID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BirthDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CreatedAt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedAt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7472,7 +8040,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserPassword", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoleID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BirthDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BirthDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CreatedAt", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CreatedAt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7483,7 +8051,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourAgentConnectionString;
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7492,8 +8060,8 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthDa" +
-                "te, CreatedAt FROM dbo.tbl_Users";
+            this._commandCollection[0].CommandText = "SELECT UserID, Email, FirstName, LastName, PhoneNumber, UserPassword, RoleID, Bir" +
+                "thDate, CreatedAt FROM dbo.tbl_Users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7501,7 +8069,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TourAgentDataSet.tbl_UsersDataTable dataTable) {
+        public virtual int Fill(TourFlowManagerDBDataSet.tbl_UsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7514,9 +8082,9 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TourAgentDataSet.tbl_UsersDataTable GetData() {
+        public virtual TourFlowManagerDBDataSet.tbl_UsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TourAgentDataSet.tbl_UsersDataTable dataTable = new TourAgentDataSet.tbl_UsersDataTable();
+            TourFlowManagerDBDataSet.tbl_UsersDataTable dataTable = new TourFlowManagerDBDataSet.tbl_UsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7524,14 +8092,14 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet.tbl_UsersDataTable dataTable) {
+        public virtual int Update(TourFlowManagerDBDataSet.tbl_UsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(TourAgentDataSet dataSet) {
+        public virtual int Update(TourFlowManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "tbl_Users");
         }
         
@@ -7554,7 +8122,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_UserID, string Original_Email, string Original_FirstName, string Original_LastName, string Original_PhoneNumber, string Original_Password, int Original_RoleID, System.DateTime Original_BirthDate, System.DateTime Original_CreatedAt) {
+        public virtual int Delete(int Original_UserID, string Original_Email, string Original_FirstName, string Original_LastName, string Original_PhoneNumber, string Original_UserPassword, int Original_RoleID, System.DateTime Original_BirthDate, System.DateTime Original_CreatedAt) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UserID));
             if ((Original_Email == null)) {
                 throw new global::System.ArgumentNullException("Original_Email");
@@ -7580,11 +8148,11 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_PhoneNumber));
             }
-            if ((Original_Password == null)) {
-                throw new global::System.ArgumentNullException("Original_Password");
+            if ((Original_UserPassword == null)) {
+                throw new global::System.ArgumentNullException("Original_UserPassword");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Password));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_UserPassword));
             }
             this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_RoleID));
             this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_BirthDate));
@@ -7609,7 +8177,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Email, string FirstName, string LastName, string PhoneNumber, string Password, int RoleID, System.DateTime BirthDate, System.DateTime CreatedAt) {
+        public virtual int Insert(string Email, string FirstName, string LastName, string PhoneNumber, string UserPassword, int RoleID, System.DateTime BirthDate, System.DateTime CreatedAt) {
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
@@ -7634,11 +8202,11 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(PhoneNumber));
             }
-            if ((Password == null)) {
-                throw new global::System.ArgumentNullException("Password");
+            if ((UserPassword == null)) {
+                throw new global::System.ArgumentNullException("UserPassword");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Password));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(UserPassword));
             }
             this.Adapter.InsertCommand.Parameters[5].Value = ((int)(RoleID));
             this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(BirthDate));
@@ -7668,7 +8236,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
                     string FirstName, 
                     string LastName, 
                     string PhoneNumber, 
-                    string Password, 
+                    string UserPassword, 
                     int RoleID, 
                     System.DateTime BirthDate, 
                     System.DateTime CreatedAt, 
@@ -7677,7 +8245,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
                     string Original_FirstName, 
                     string Original_LastName, 
                     string Original_PhoneNumber, 
-                    string Original_Password, 
+                    string Original_UserPassword, 
                     int Original_RoleID, 
                     System.DateTime Original_BirthDate, 
                     System.DateTime Original_CreatedAt, 
@@ -7706,11 +8274,11 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(PhoneNumber));
             }
-            if ((Password == null)) {
-                throw new global::System.ArgumentNullException("Password");
+            if ((UserPassword == null)) {
+                throw new global::System.ArgumentNullException("UserPassword");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Password));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(UserPassword));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(RoleID));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(BirthDate));
@@ -7740,11 +8308,11 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_PhoneNumber));
             }
-            if ((Original_Password == null)) {
-                throw new global::System.ArgumentNullException("Original_Password");
+            if ((Original_UserPassword == null)) {
+                throw new global::System.ArgumentNullException("Original_UserPassword");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Password));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_UserPassword));
             }
             this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_RoleID));
             this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_BirthDate));
@@ -7775,7 +8343,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
                     string FirstName, 
                     string LastName, 
                     string PhoneNumber, 
-                    string Password, 
+                    string UserPassword, 
                     int RoleID, 
                     System.DateTime BirthDate, 
                     System.DateTime CreatedAt, 
@@ -7784,11 +8352,353 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
                     string Original_FirstName, 
                     string Original_LastName, 
                     string Original_PhoneNumber, 
-                    string Original_Password, 
+                    string Original_UserPassword, 
                     int Original_RoleID, 
                     System.DateTime Original_BirthDate, 
                     System.DateTime Original_CreatedAt) {
-            return this.Update(Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthDate, CreatedAt, Original_UserID, Original_Email, Original_FirstName, Original_LastName, Original_PhoneNumber, Original_Password, Original_RoleID, Original_BirthDate, Original_CreatedAt, Original_UserID);
+            return this.Update(Email, FirstName, LastName, PhoneNumber, UserPassword, RoleID, BirthDate, CreatedAt, Original_UserID, Original_Email, Original_FirstName, Original_LastName, Original_PhoneNumber, Original_UserPassword, Original_RoleID, Original_BirthDate, Original_CreatedAt, Original_UserID);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_ValidateUserTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public sp_ValidateUserTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_ValidateUser";
+            tableMapping.ColumnMappings.Add("UserID", "UserID");
+            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("Email", "Email");
+            tableMapping.ColumnMappings.Add("RoleID", "RoleID");
+            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
+            tableMapping.ColumnMappings.Add("UserPassword", "UserPassword");
+            tableMapping.ColumnMappings.Add("BirthDate", "BirthDate");
+            tableMapping.ColumnMappings.Add("CreatedAt", "CreatedAt");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_ValidateUser";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(TourFlowManagerDBDataSet.sp_ValidateUserDataTable dataTable, string Email, string Password) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Email == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Email));
+            }
+            if ((Password == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Password));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual TourFlowManagerDBDataSet.sp_ValidateUserDataTable GetData(string Email, string Password) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Email == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Email));
+            }
+            if ((Password == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Password));
+            }
+            TourFlowManagerDBDataSet.sp_ValidateUserDataTable dataTable = new TourFlowManagerDBDataSet.sp_ValidateUserDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class QueriesTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.IDbCommand[] _commandCollection;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.IDbCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.IDbCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.sp_RegisterUser";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhoneNumber", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserPassword", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BirthDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Connection = new global::System.Data.SqlClient.SqlConnection(global::TourAgent.Properties.Settings.Default.TourFlowManagerDBConnectionString);
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandText = "dbo.sp_GetUserAndRole";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[1])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int sp_RegisterUser(string Name, string Surname, string Email, string PhoneNumber, string UserPassword, global::System.Nullable<int> RoleID, global::System.Nullable<global::System.DateTime> BirthDate) {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[0]));
+            if ((Name == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(Name));
+            }
+            if ((Surname == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(Surname));
+            }
+            if ((Email == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(Email));
+            }
+            if ((PhoneNumber == null)) {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[4].Value = ((string)(PhoneNumber));
+            }
+            if ((UserPassword == null)) {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[5].Value = ((string)(UserPassword));
+            }
+            if ((RoleID.HasValue == true)) {
+                command.Parameters[6].Value = ((int)(RoleID.Value));
+            }
+            else {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((BirthDate.HasValue == true)) {
+                command.Parameters[7].Value = ((System.DateTime)(BirthDate.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object sp_GetUsersWithRoles() {
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[1]));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
         }
     }
     
@@ -8044,7 +8954,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(TourAgentDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(TourFlowManagerDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tbl_RoleTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tbl_Role.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -8126,7 +9036,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(TourAgentDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(TourFlowManagerDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tbl_RoleTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tbl_Role.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -8200,7 +9110,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(TourAgentDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(TourFlowManagerDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tbl_ReservationsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tbl_Reservations.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -8298,7 +9208,7 @@ SELECT UserID, Email, FirstName, LastName, PhoneNumber, Password, RoleID, BirthD
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(TourAgentDataSet dataSet) {
+        public virtual int UpdateAll(TourFlowManagerDBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

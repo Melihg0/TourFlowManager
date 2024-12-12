@@ -73,6 +73,16 @@ namespace TourAgent.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap block_user {
+            get {
+                object obj = ResourceManager.GetObject("block-user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap data_storage {
             get {
                 object obj = ResourceManager.GetObject("data-storage", resourceCulture);

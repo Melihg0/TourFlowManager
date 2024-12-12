@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -40,17 +38,19 @@
             this.btnSystemManagement = new System.Windows.Forms.Button();
             this.btnTourManagement = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -58,17 +58,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 700);
             this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(27, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 31);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Yönetim Sayfası";
             // 
             // btnExit
             // 
@@ -84,7 +73,7 @@
             this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnExit.Image = global::TourAgent.Properties.Resources.logout;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(33, 543);
+            this.btnExit.Location = new System.Drawing.Point(38, 538);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(154, 85);
             this.btnExit.TabIndex = 5;
@@ -92,17 +81,6 @@
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
-            this.pictureBox1.Location = new System.Drawing.Point(46, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 130);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -225,6 +203,28 @@
             this.btnUserManagement.UseVisualStyleBackColor = false;
             this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(28, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 31);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Yönetim Sayfası";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
@@ -242,8 +242,8 @@
             this.Text = "AdminMainPage";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,12 +254,12 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnUserManagement;
         private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
         private System.Windows.Forms.Button btnMainPage;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

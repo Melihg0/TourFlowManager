@@ -7,16 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TourAgent.AdminPage;
 using TourAgent.AdminPage.AdminSystemManagement;
-using TourAgent.AdminPage.AdminTourManagment;
 using TourAgent.AdminPage.AdminUserManagement;
+using TourAgent.AdminPage;
 
-namespace TourAgent.AdminPage
+namespace TourAgent.AdminPage.AdminTourManagment
 {
-    public partial class AdminMainPage : Form
+    public partial class AdminTourMainPage : Form
     {
-        public AdminMainPage()
+        public AdminTourMainPage()
         {
             InitializeComponent();
         }
@@ -30,8 +29,8 @@ namespace TourAgent.AdminPage
 
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
-            AdminEditUserPage adminUserMain = new AdminEditUserPage();
-            adminUserMain.Show();
+            AdminTourMainPage adminTourMain = new AdminTourMainPage();
+            adminTourMain.Show();
             this.Hide();
         }
 
@@ -47,11 +46,6 @@ namespace TourAgent.AdminPage
             AdminSystemMainPage adminSystemMain = new AdminSystemMainPage();
             adminSystemMain.Show();
             this.Hide();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

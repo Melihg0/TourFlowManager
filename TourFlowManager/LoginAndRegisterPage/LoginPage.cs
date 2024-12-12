@@ -23,7 +23,7 @@ namespace TourAgent
 {
     public partial class LoginPage : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowAgentDB; Integrated Security = True;");
+        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
         User user = null;
         bool isPasswordVisible = false;
         public LoginPage()
