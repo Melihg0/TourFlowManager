@@ -105,6 +105,12 @@
     <Compile Include="TourGuidePage\TourGuideMainPage.Designer.cs">
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="TourGuidePage\TourGuideTourPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourGuidePage\TourGuideTourPage.Designer.cs">
+      <DependentUpon>TourGuideTourPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="AdminPage\AdminMainPage.resx">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
@@ -136,6 +142,9 @@
     </Compile>
     <EmbeddedResource Include="TourGuidePage\TourGuideMainPage.resx">
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourGuidePage\TourGuideTourPage.resx">
+      <DependentUpon>TourGuideTourPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
