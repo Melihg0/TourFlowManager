@@ -1,0 +1,345 @@
+USE [master]
+GO
+/****** Object:  Database [TourFlowAgentDB]    Script Date: 11.12.2024 13:19:26 ******/
+CREATE DATABASE [TourFlowAgentDB]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'TourAgent', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\TourAgent.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'TourAgent_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\TourAgent_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+GO
+ALTER DATABASE [TourFlowAgentDB] SET COMPATIBILITY_LEVEL = 160
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [TourFlowAgentDB].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [TourFlowAgentDB] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET RECOVERY FULL 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET  MULTI_USER 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [TourFlowAgentDB] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [TourFlowAgentDB] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'TourFlowAgentDB', N'ON'
+GO
+ALTER DATABASE [TourFlowAgentDB] SET QUERY_STORE = ON
+GO
+ALTER DATABASE [TourFlowAgentDB] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+GO
+USE [TourFlowAgentDB]
+GO
+/****** Object:  Table [dbo].[tbl_Cities]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tbl_Cities](
+	[PlateNumber] [varchar](5) NOT NULL,
+	[CityName] [nvarchar](100) NOT NULL,
+	[Country] [nvarchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[PlateNumber] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[CityName] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tbl_DeletedTours]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tbl_DeletedTours](
+	[DeletedTourID] [int] NOT NULL,
+	[DeletedAt] [datetime] NOT NULL,
+	[TourName] [nvarchar](30) NULL,
+	[StartPointCityID] [int] NOT NULL,
+	[DestinationCityID] [int] NOT NULL,
+	[TourTypeID] [int] NOT NULL,
+	[GuideID] [int] NOT NULL,
+	[StartDate] [date] NOT NULL,
+	[EndDate] [date] NOT NULL,
+	[Price] [decimal](10, 2) NOT NULL,
+	[MaxParticipants] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[DeletedTourID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tbl_DeletedUsers]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tbl_DeletedUsers](
+	[DeletedUserID] [int] NOT NULL,
+	[DeletedAt] [datetime] NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[FirstName] [nvarchar](50) NOT NULL,
+	[LastName] [nvarchar](50) NOT NULL,
+	[PhoneNumber] [varchar](15) NOT NULL,
+	[DeletedUserPassword] [nvarchar](20) NOT NULL,
+	[RoleID] [int] NOT NULL,
+	[BirthDate] [date] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[DeletedUserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[Email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tbl_Reservations]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tbl_Reservations](
+	[ReservationID] [int] IDENTITY(1,1) NOT NULL,
+	[TourID] [int] NOT NULL,
+	[UserID] [int] NOT NULL,
+	[ReservationDate] [datetime] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ReservationID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tbl_Role]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tbl_Role](
+	[RoleID] [int] IDENTITY(1,1) NOT NULL,
+	[RoleName] [nvarchar](20) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[RoleID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tbl_Tours]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tbl_Tours](
+	[TourID] [int] IDENTITY(1,1) NOT NULL,
+	[TourName] [nvarchar](30) NULL,
+	[StartPointCityID] [varchar](5) NOT NULL,
+	[DestinationCityID] [varchar](5) NOT NULL,
+	[TourTypeID] [int] NOT NULL,
+	[GuideID] [int] NOT NULL,
+	[StartDate] [date] NOT NULL,
+	[EndDate] [date] NOT NULL,
+	[Price] [decimal](10, 2) NOT NULL,
+	[MaxParticipants] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[TourID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tbl_TourTypes]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tbl_TourTypes](
+	[TourTypeID] [int] IDENTITY(1,1) NOT NULL,
+	[TypeName] [nvarchar](100) NOT NULL,
+	[Description] [nvarchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[TourTypeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[TypeName] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tbl_Users]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tbl_Users](
+	[UserID] [int] IDENTITY(1,1) NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[FirstName] [nvarchar](50) NOT NULL,
+	[LastName] [nvarchar](50) NOT NULL,
+	[PhoneNumber] [varchar](15) NOT NULL,
+	[UserPassword] [nvarchar](20) NOT NULL,
+	[RoleID] [int] NOT NULL,
+	[BirthDate] [date] NOT NULL,
+	[CreatedAt] [datetime] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[Email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[tbl_Cities] ADD  CONSTRAINT [df_Country]  DEFAULT ('Turkey') FOR [Country]
+GO
+ALTER TABLE [dbo].[tbl_DeletedTours] ADD  DEFAULT (getdate()) FOR [DeletedAt]
+GO
+ALTER TABLE [dbo].[tbl_DeletedUsers] ADD  DEFAULT (getdate()) FOR [DeletedAt]
+GO
+ALTER TABLE [dbo].[tbl_Reservations] ADD  DEFAULT (getdate()) FOR [ReservationDate]
+GO
+ALTER TABLE [dbo].[tbl_Users] ADD  CONSTRAINT [df_getdate]  DEFAULT (getdate()) FOR [CreatedAt]
+GO
+ALTER TABLE [dbo].[tbl_Reservations]  WITH CHECK ADD  CONSTRAINT [fk_TourID] FOREIGN KEY([TourID])
+REFERENCES [dbo].[tbl_Tours] ([TourID])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[tbl_Reservations] CHECK CONSTRAINT [fk_TourID]
+GO
+ALTER TABLE [dbo].[tbl_Reservations]  WITH CHECK ADD  CONSTRAINT [fk_UserID] FOREIGN KEY([UserID])
+REFERENCES [dbo].[tbl_Users] ([UserID])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[tbl_Reservations] CHECK CONSTRAINT [fk_UserID]
+GO
+ALTER TABLE [dbo].[tbl_Tours]  WITH CHECK ADD FOREIGN KEY([DestinationCityID])
+REFERENCES [dbo].[tbl_Cities] ([PlateNumber])
+GO
+ALTER TABLE [dbo].[tbl_Tours]  WITH CHECK ADD FOREIGN KEY([StartPointCityID])
+REFERENCES [dbo].[tbl_Cities] ([PlateNumber])
+GO
+ALTER TABLE [dbo].[tbl_Tours]  WITH CHECK ADD  CONSTRAINT [fk_GuideID] FOREIGN KEY([GuideID])
+REFERENCES [dbo].[tbl_Users] ([UserID])
+GO
+ALTER TABLE [dbo].[tbl_Tours] CHECK CONSTRAINT [fk_GuideID]
+GO
+ALTER TABLE [dbo].[tbl_Tours]  WITH CHECK ADD  CONSTRAINT [fk_TourType] FOREIGN KEY([TourTypeID])
+REFERENCES [dbo].[tbl_TourTypes] ([TourTypeID])
+GO
+ALTER TABLE [dbo].[tbl_Tours] CHECK CONSTRAINT [fk_TourType]
+GO
+ALTER TABLE [dbo].[tbl_Users]  WITH CHECK ADD  CONSTRAINT [fk_RoleID] FOREIGN KEY([RoleID])
+REFERENCES [dbo].[tbl_Role] ([RoleID])
+GO
+ALTER TABLE [dbo].[tbl_Users] CHECK CONSTRAINT [fk_RoleID]
+GO
+ALTER TABLE [dbo].[tbl_Tours]  WITH CHECK ADD  CONSTRAINT [ck_DateRange] CHECK  (([StartDate]<=[EndDate]))
+GO
+ALTER TABLE [dbo].[tbl_Tours] CHECK CONSTRAINT [ck_DateRange]
+GO
+ALTER TABLE [dbo].[tbl_Tours]  WITH CHECK ADD  CONSTRAINT [ck_MaxParticipants] CHECK  (([MaxParticipants]>=(0)))
+GO
+ALTER TABLE [dbo].[tbl_Tours] CHECK CONSTRAINT [ck_MaxParticipants]
+GO
+ALTER TABLE [dbo].[tbl_Users]  WITH CHECK ADD  CONSTRAINT [ck_Email] CHECK  (([Email] like '%_@_%._%'))
+GO
+ALTER TABLE [dbo].[tbl_Users] CHECK CONSTRAINT [ck_Email]
+GO
+ALTER TABLE [dbo].[tbl_Users]  WITH CHECK ADD  CONSTRAINT [ck_RoleID] CHECK  (([RoleID]>=(1) AND [RoleID]<=(3)))
+GO
+ALTER TABLE [dbo].[tbl_Users] CHECK CONSTRAINT [ck_RoleID]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_RegisterUser]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_RegisterUser]
+  @Name nvarchar(50),
+  @Surname nvarchar(50),
+  @Email nvarchar(50),
+  @PhoneNumber varchar(15),
+  @UserPassword nvarchar(20), 
+  @RoleID INT , 
+  @BirthDate date 
+AS
+BEGIN
+   INSERT INTO tbl_Users(FirstName,LastName,Email,PhoneNumber,UserPassword,RoleID,BirthDate)
+	  VALUES(@NAME,@SURNAME,@Email,@PhoneNumber,@UserPassword,@RoleID,@BirthDate) 	
+END;
+GO
+/****** Object:  StoredProcedure [dbo].[sp_ValidateUser]    Script Date: 11.12.2024 13:19:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_ValidateUser]
+@Email nvarchar(50),
+@Password nvarchar(20)
+AS
+BEGIN
+Select UserID, FirstName, LastName, Email, RoleID, PhoneNumber, UserPassword, BirthDate, CreatedAt
+from tbl_Users Where Email=@Email and UserPassword=@Password
+END;
+GO
+USE [master]
+GO
+ALTER DATABASE [TourFlowAgentDB] SET  READ_WRITE 
+GO

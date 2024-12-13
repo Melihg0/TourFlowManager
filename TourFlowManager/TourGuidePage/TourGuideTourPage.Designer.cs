@@ -1,6 +1,6 @@
-﻿namespace TourAgent.AdminPage.AdminSystemManagement
+﻿namespace TourAgent.TourGuidePage.TourGuideTourPage
 {
-    partial class AdminSystemMainPage
+    partial class TourGuideTourPage
     {
         /// <summary>
         /// Required designer variable.
@@ -36,9 +36,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnMainPage = new System.Windows.Forms.Button();
-            this.btnSystemManagement = new System.Windows.Forms.Button();
             this.btnTourManagement = new System.Windows.Forms.Button();
-            this.btnUserManagement = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -47,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel4);
@@ -62,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(28, 160);
+            this.label1.Location = new System.Drawing.Point(27, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(190, 31);
             this.label1.TabIndex = 19;
@@ -72,8 +72,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(44, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(147, 145);
             this.pictureBox1.TabIndex = 18;
@@ -110,9 +109,7 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Window;
             this.panel6.Controls.Add(this.btnMainPage);
-            this.panel6.Controls.Add(this.btnSystemManagement);
             this.panel6.Controls.Add(this.btnTourManagement);
-            this.panel6.Controls.Add(this.btnUserManagement);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(241, 0);
@@ -129,7 +126,6 @@
             this.btnMainPage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMainPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMainPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMainPage.Image = global::TourAgent.Properties.Resources.home;
             this.btnMainPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMainPage.Location = new System.Drawing.Point(35, 6);
             this.btnMainPage.Name = "btnMainPage";
@@ -138,27 +134,7 @@
             this.btnMainPage.Text = "Ana Sayfa";
             this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMainPage.UseVisualStyleBackColor = false;
-            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
-            // 
-            // btnSystemManagement
-            // 
-            this.btnSystemManagement.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnSystemManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSystemManagement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSystemManagement.FlatAppearance.BorderSize = 0;
-            this.btnSystemManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSystemManagement.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSystemManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSystemManagement.Image = global::TourAgent.Properties.Resources.data_storage;
-            this.btnSystemManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSystemManagement.Location = new System.Drawing.Point(683, 3);
-            this.btnSystemManagement.Name = "btnSystemManagement";
-            this.btnSystemManagement.Size = new System.Drawing.Size(200, 104);
-            this.btnSystemManagement.TabIndex = 30;
-            this.btnSystemManagement.Text = "Veritabanı Yonetimi";
-            this.btnSystemManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSystemManagement.UseVisualStyleBackColor = false;
-            this.btnSystemManagement.Click += new System.EventHandler(this.btnSystemManagement_Click);
+            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click_1);
             // 
             // btnTourManagement
             // 
@@ -169,38 +145,38 @@
             this.btnTourManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTourManagement.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTourManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnTourManagement.Image = global::TourAgent.Properties.Resources.tour;
             this.btnTourManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTourManagement.Location = new System.Drawing.Point(454, 3);
+            this.btnTourManagement.Location = new System.Drawing.Point(210, 3);
             this.btnTourManagement.Name = "btnTourManagement";
             this.btnTourManagement.Size = new System.Drawing.Size(200, 104);
-            this.btnTourManagement.TabIndex = 29;
+            this.btnTourManagement.TabIndex = 23;
             this.btnTourManagement.Text = "Tur Islemleri";
             this.btnTourManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTourManagement.UseVisualStyleBackColor = false;
-            this.btnTourManagement.Click += new System.EventHandler(this.btnTourManagement_Click);
+            this.btnTourManagement.Click += new System.EventHandler(this.btnTourManagement_Click_1);
             // 
-            // btnUserManagement
+            // btnExit
             // 
-            this.btnUserManagement.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnUserManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnUserManagement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUserManagement.FlatAppearance.BorderSize = 0;
-            this.btnUserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUserManagement.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUserManagement.Image = global::TourAgent.Properties.Resources.group;
-            this.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUserManagement.Location = new System.Drawing.Point(210, 3);
-            this.btnUserManagement.Name = "btnUserManagement";
-            this.btnUserManagement.Size = new System.Drawing.Size(200, 104);
-            this.btnUserManagement.TabIndex = 28;
-            this.btnUserManagement.Text = "Kullanıcı Islemleri";
-            this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnUserManagement.UseVisualStyleBackColor = false;
-            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
+            this.btnExit.BackColor = System.Drawing.Color.Linen;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(38, 538);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(154, 85);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "CIKIS";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
-            // AdminSystemMainPage
+            // PersonalTourPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -212,15 +188,17 @@
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AdminSystemMainPage";
+            this.Name = "PersonalTourPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminMainPage";
-            this.Load += new System.EventHandler(this.AdminSystemMainPage_Load);
+            this.Text = "PersonelTourPage";
+            this.Load += new System.EventHandler(this.TourGuideTourPage_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
+
+
 
         }
 
@@ -231,10 +209,9 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnMainPage;
-        private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
-        private System.Windows.Forms.Button btnUserManagement;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnExit;
     }
 }
