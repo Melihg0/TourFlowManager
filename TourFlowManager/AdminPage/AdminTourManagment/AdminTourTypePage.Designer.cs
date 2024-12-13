@@ -1,6 +1,6 @@
-﻿namespace TourAgent.AdminPage.AdminUserManagement
+﻿namespace TourAgent.AdminPage.AdminTourManagment
 {
-    partial class AdminEditUserPage
+    partial class AdminTourTypePage
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDeletedUserPage = new System.Windows.Forms.Button();
-            this.btnEditUserPage = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -45,26 +45,6 @@
             this.btnSystemManagement = new System.Windows.Forms.Button();
             this.btnTourManagement = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txtMail = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.maskedtxtTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbRoleID = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.btnDeleteUser = new System.Windows.Forms.Button();
-            this.btnEditUser = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,14 +61,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).BeginInit();
@@ -97,8 +69,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.btnDeletedUserPage);
-            this.panel1.Controls.Add(this.btnEditUserPage);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel4);
@@ -109,43 +81,41 @@
             this.panel1.Size = new System.Drawing.Size(241, 800);
             this.panel1.TabIndex = 2;
             // 
-            // btnDeletedUserPage
+            // button3
             // 
-            this.btnDeletedUserPage.BackColor = System.Drawing.Color.Lavender;
-            this.btnDeletedUserPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDeletedUserPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletedUserPage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnDeletedUserPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletedUserPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeletedUserPage.Image = global::TourAgent.Properties.Resources.block_user;
-            this.btnDeletedUserPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDeletedUserPage.Location = new System.Drawing.Point(12, 410);
-            this.btnDeletedUserPage.Name = "btnDeletedUserPage";
-            this.btnDeletedUserPage.Size = new System.Drawing.Size(213, 103);
-            this.btnDeletedUserPage.TabIndex = 30;
-            this.btnDeletedUserPage.Text = "Silinmis Kullanıcılar";
-            this.btnDeletedUserPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDeletedUserPage.UseVisualStyleBackColor = false;
-            this.btnDeletedUserPage.Click += new System.EventHandler(this.btnDeletedUserPage_Click);
+            this.button3.BackColor = System.Drawing.Color.Lavender;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Image = global::TourAgent.Properties.Resources.block_user;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(12, 410);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(213, 103);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Silinmis Kullanıcılar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // btnEditUserPage
+            // button1
             // 
-            this.btnEditUserPage.BackColor = System.Drawing.Color.LightCyan;
-            this.btnEditUserPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEditUserPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditUserPage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnEditUserPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditUserPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditUserPage.Image = global::TourAgent.Properties.Resources.edit_User;
-            this.btnEditUserPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditUserPage.Location = new System.Drawing.Point(12, 262);
-            this.btnEditUserPage.Name = "btnEditUserPage";
-            this.btnEditUserPage.Size = new System.Drawing.Size(213, 103);
-            this.btnEditUserPage.TabIndex = 29;
-            this.btnEditUserPage.Text = "Kullanıcıları Düzenle";
-            this.btnEditUserPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditUserPage.UseVisualStyleBackColor = false;
-            this.btnEditUserPage.Click += new System.EventHandler(this.btnEditUserPage_Click);
+            this.button1.BackColor = System.Drawing.Color.LightCyan;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Image = global::TourAgent.Properties.Resources.edit_User;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(12, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 103);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Kullanıcıları Düzenle";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -290,305 +260,6 @@
             this.btnUserManagement.UseVisualStyleBackColor = false;
             this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
-            // groupBox7
-            // 
-            this.groupBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox7.Controls.Add(this.dtBirthDate);
-            this.groupBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox7.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox7.Location = new System.Drawing.Point(683, 92);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(211, 49);
-            this.groupBox7.TabIndex = 19;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "DOGUM TARİHİ";
-            // 
-            // dtBirthDate
-            // 
-            this.dtBirthDate.CalendarForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtBirthDate.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaptionText;
-            this.dtBirthDate.CalendarTitleBackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtBirthDate.CalendarTitleForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dtBirthDate.CalendarTrailingForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dtBirthDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dtBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBirthDate.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dtBirthDate.Location = new System.Drawing.Point(0, 20);
-            this.dtBirthDate.MaxDate = new System.DateTime(2009, 12, 31, 0, 0, 0, 0);
-            this.dtBirthDate.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtBirthDate.Name = "dtBirthDate";
-            this.dtBirthDate.Size = new System.Drawing.Size(211, 27);
-            this.dtBirthDate.TabIndex = 11;
-            this.dtBirthDate.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox6.Controls.Add(this.txtMail);
-            this.groupBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox6.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox6.Location = new System.Drawing.Point(548, 17);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(346, 54);
-            this.groupBox6.TabIndex = 18;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "E-MAİL";
-            // 
-            // txtMail
-            // 
-            this.txtMail.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMail.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtMail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMail.Location = new System.Drawing.Point(3, 24);
-            this.txtMail.MaxLength = 50;
-            this.txtMail.Multiline = true;
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(340, 27);
-            this.txtMail.TabIndex = 0;
-            this.txtMail.TabStop = false;
-            this.txtMail.WordWrap = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox5.Controls.Add(this.txtSurname);
-            this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox5.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox5.Location = new System.Drawing.Point(308, 17);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(181, 49);
-            this.groupBox5.TabIndex = 17;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "SOYAD";
-            // 
-            // txtSurname
-            // 
-            this.txtSurname.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSurname.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtSurname.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSurname.Location = new System.Drawing.Point(3, 19);
-            this.txtSurname.MaxLength = 50;
-            this.txtSurname.Multiline = true;
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(175, 27);
-            this.txtSurname.TabIndex = 0;
-            this.txtSurname.TabStop = false;
-            this.txtSurname.WordWrap = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Controls.Add(this.txtPassword);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Location = new System.Drawing.Point(308, 92);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(204, 49);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "SIFRE";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPassword.Location = new System.Drawing.Point(3, 20);
-            this.txtPassword.MaxLength = 20;
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(198, 26);
-            this.txtPassword.TabIndex = 0;
-            this.txtPassword.TabStop = false;
-            this.txtPassword.WordWrap = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Controls.Add(this.maskedtxtTelefon);
-            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox4.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox4.Location = new System.Drawing.Point(86, 92);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(181, 49);
-            this.groupBox4.TabIndex = 13;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "TELEFON";
-            // 
-            // maskedtxtTelefon
-            // 
-            this.maskedtxtTelefon.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedtxtTelefon.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.maskedtxtTelefon.Location = new System.Drawing.Point(6, 20);
-            this.maskedtxtTelefon.Mask = "+90 (000) 000 0000";
-            this.maskedtxtTelefon.Name = "maskedtxtTelefon";
-            this.maskedtxtTelefon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.maskedtxtTelefon.Size = new System.Drawing.Size(172, 23);
-            this.maskedtxtTelefon.TabIndex = 17;
-            this.maskedtxtTelefon.Text = "905";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            this.panel2.Controls.Add(this.groupBox7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.groupBox3);
-            this.panel2.Controls.Add(this.groupBox6);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.groupBox4);
-            this.panel2.Controls.Add(this.groupBox5);
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(312, 530);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(965, 160);
-            this.panel2.TabIndex = 20;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.SteelBlue;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(175, 361);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(166, 68);
-            this.button6.TabIndex = 32;
-            this.button6.Text = "Kullanıcı Ekle";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Controls.Add(this.cbRoleID);
-            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox3.Location = new System.Drawing.Point(548, 90);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(95, 51);
-            this.groupBox3.TabIndex = 20;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "ROLEID";
-            // 
-            // cbRoleID
-            // 
-            this.cbRoleID.FormattingEnabled = true;
-            this.cbRoleID.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.cbRoleID.Location = new System.Drawing.Point(6, 21);
-            this.cbRoleID.Name = "cbRoleID";
-            this.cbRoleID.Size = new System.Drawing.Size(80, 28);
-            this.cbRoleID.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(3, 361);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 68);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Kullanıcı Ekle";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Controls.Add(this.txtName);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox2.Location = new System.Drawing.Point(86, 17);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(181, 49);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "AD";
-            // 
-            // txtName
-            // 
-            this.txtName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(3, 22);
-            this.txtName.MaxLength = 50;
-            this.txtName.Multiline = true;
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(175, 24);
-            this.txtName.TabIndex = 0;
-            this.txtName.TabStop = false;
-            this.txtName.WordWrap = false;
-            // 
-            // btnDeleteUser
-            // 
-            this.btnDeleteUser.BackColor = System.Drawing.Color.Red;
-            this.btnDeleteUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnDeleteUser.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteUser.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnDeleteUser.Location = new System.Drawing.Point(987, 711);
-            this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(236, 63);
-            this.btnDeleteUser.TabIndex = 33;
-            this.btnDeleteUser.Text = "Kullanıcıyı Sil";
-            this.btnDeleteUser.UseVisualStyleBackColor = false;
-            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
-            // 
-            // btnEditUser
-            // 
-            this.btnEditUser.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEditUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEditUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnEditUser.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditUser.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEditUser.Location = new System.Drawing.Point(677, 711);
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(236, 63);
-            this.btnEditUser.TabIndex = 34;
-            this.btnEditUser.Text = "Kullanıcıyı Düzenle";
-            this.btnEditUser.UseVisualStyleBackColor = false;
-            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BackColor = System.Drawing.Color.Green;
-            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddUser.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnAddUser.Location = new System.Drawing.Point(368, 711);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(236, 63);
-            this.btnAddUser.TabIndex = 35;
-            this.btnAddUser.Text = "Kullanıcı Ekle";
-            this.btnAddUser.UseVisualStyleBackColor = false;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // dataGridViewUsers
             // 
             this.dataGridViewUsers.AutoGenerateColumns = false;
@@ -634,7 +305,6 @@
             this.dataGridViewUsers.RowTemplate.Height = 24;
             this.dataGridViewUsers.Size = new System.Drawing.Size(1052, 376);
             this.dataGridViewUsers.TabIndex = 36;
-            this.dataGridViewUsers.SelectionChanged += new System.EventHandler(this.dataGridViewUsers_SelectionChanged);
             // 
             // userIDDataGridViewTextBoxColumn
             // 
@@ -723,44 +393,26 @@
             // 
             this.tbl_UsersTableAdapter.ClearBeforeFill = true;
             // 
-            // AdminEditUserPage
+            // DeletedUsersPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1350, 800);
             this.Controls.Add(this.dataGridViewUsers);
-            this.Controls.Add(this.btnAddUser);
-            this.Controls.Add(this.btnEditUser);
-            this.Controls.Add(this.btnDeleteUser);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AdminEditUserPage";
+            this.Name = "DeletedUsersPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
-            this.Load += new System.EventHandler(this.AdminEditUserPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).EndInit();
@@ -780,28 +432,8 @@
         private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
         private System.Windows.Forms.Button btnUserManagement;
-        private System.Windows.Forms.Button btnEditUserPage;
-        private System.Windows.Forms.Button btnDeletedUserPage;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.DateTimePicker dtBirthDate;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox txtMail;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtSurname;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.MaskedTextBox maskedtxtTelefon;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button btnDeleteUser;
-        private System.Windows.Forms.Button btnEditUser;
-        private System.Windows.Forms.Button btnAddUser;
-        private System.Windows.Forms.ComboBox cbRoleID;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridViewUsers;
         private TourFlowManagerDBDataSet tourFlowManagerDBDataSet;
         private System.Windows.Forms.BindingSource tblUsersBindingSource;

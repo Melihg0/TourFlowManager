@@ -30,7 +30,7 @@ namespace TourAgent
 
         private void btnKayıt_Click(object sender, EventArgs e)
         {
-            TelNo = Regex.Replace(maskedtxtTelefon.Text, @"[^\d\+]", "").Trim();
+            TelNo = Regex.Replace(maskedtxtTelefon.Text, @"[^\d\+]", "").Trim(); // \d digit yani rakamları temsil eder.
             if (isEmpty()||isPasswordmatch()||NumberControl()) { return; }  //boşsa sifreler eslesmiyorsa veya telefon Numarası duzgun gırılmemıs ıse hata doner. Kod sonlanır.
                                                                             
             try

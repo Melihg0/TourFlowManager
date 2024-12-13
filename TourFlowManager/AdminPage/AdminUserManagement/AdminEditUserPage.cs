@@ -42,20 +42,33 @@ namespace TourAgent.AdminPage.AdminUserManagement
         }
         private void btnTourManagement_Click(object sender, EventArgs e)
         {
-            AdminTourMainPage adminTourMain = new AdminTourMainPage();
-            adminTourMain.Show();
+            AdminTourTypePage adminTourType = new AdminTourTypePage();
+            adminTourType.Show();
             this.Hide();
         }
         private void btnSystemManagement_Click(object sender, EventArgs e)
         {
-            AdminSystemMainPage adminSystemMain = new AdminSystemMainPage();
-            adminSystemMain.Show();
+            AdminSystemPage adminSystemPage = new AdminSystemPage();
+            adminSystemPage.Show();
+            this.Hide();
+        }
+        private void btnEditUserPage_Click(object sender, EventArgs e)
+        {
+            AdminEditUserPage adminUserMain = new AdminEditUserPage();
+            adminUserMain.Show();
+            this.Hide();
+        }
+
+        private void btnDeletedUserPage_Click(object sender, EventArgs e)
+        {
+            DeletedUsersPage deletedUserPage = new DeletedUsersPage();
+            deletedUserPage.Show();
             this.Hide();
         }
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             int selectedRoleId = int.Parse(cbRoleID.Text.ToString());
-            TelNo = Regex.Replace(maskedtxtTelefon.Text, @"[^\d\+]", "").Trim();
+            TelNo = Regex.Replace(maskedtxtTelefon.Text, @"[^\d\+]", "").Trim(); // \d digit yani rakamları temsil eder.
             if (isEmpty() || NumberControl()) { return; }
 
             try
@@ -75,6 +88,7 @@ namespace TourAgent.AdminPage.AdminUserManagement
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Hesap Olusturuldu!", "Kayıt Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdataDataGridView();
                 }
             }
             catch (Exception err)
@@ -99,7 +113,7 @@ namespace TourAgent.AdminPage.AdminUserManagement
         }
         private void btnEditUser_Click(object sender, EventArgs e)
         {
-            TelNo = Regex.Replace(maskedtxtTelefon.Text, @"[^\d\+]", "").Trim();
+            TelNo = Regex.Replace(maskedtxtTelefon.Text, @"[^\d\+]", "").Trim(); // \d digit yani rakamları temsil eder.
             int selectedRoleId = int.Parse(cbRoleID.Text.ToString());
             if (isEmpty() || NumberControl()) { return; }
 
@@ -109,8 +123,8 @@ namespace TourAgent.AdminPage.AdminUserManagement
                 using (SqlCommand cmd = new SqlCommand("sp_UpdateUser", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ID", dataGridViewUsers.SelectedRows[0].Index);// DataGridView'deki seçili satırın indeksini al
-                    cmd.Parameters.AddWithValue("@Name", txtName.Text);
+                    cmd.Parameters.AddWithValue("@ID", dataGridViewUsers.SelectedRows[0].Cells[0].Value);// DataGridView'deki 0.indeksdeki sütunun satırının indeksini ID'ye ata
+                    cmd.Parameters.AddWithValue("@Name", txtName.Text);                                  //SelectedRows[0] birden fazla satır seçilmiş ise ilk seçilen satırı almak için işe yarar.
                     cmd.Parameters.AddWithValue("@Surname", txtSurname.Text);
                     cmd.Parameters.AddWithValue("@Email", txtMail.Text);
                     cmd.Parameters.AddWithValue("@PhoneNumber", TelNo);
@@ -119,9 +133,9 @@ namespace TourAgent.AdminPage.AdminUserManagement
                     cmd.Parameters.AddWithValue("@BirthDate", dtBirthDate.Value);
                     cmd.ExecuteNonQuery();
                 }
-                
-                MessageBox.Show("Kullanıcı güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                MessageBox.Show("Kullanıcı güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdataDataGridView();
             }
             catch (Exception err)
             {
@@ -129,6 +143,11 @@ namespace TourAgent.AdminPage.AdminUserManagement
                 {
                     // Hatalı E mail Girisi.
                     MessageBox.Show("Geçerli bir e-posta adresi giriniz!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (err.Message.Contains("UNIQUE KEY"))
+                {
+                    // Onceden Kaydedilmis E mail girisi
+                    MessageBox.Show("Bu e-posta adresi zaten kayıtlı. ", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -139,12 +158,36 @@ namespace TourAgent.AdminPage.AdminUserManagement
         }
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
+            if (dataGridViewUsers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Lütfen silmek istediğiniz kullanıcıyı seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int selectedUserId = Convert.ToInt32(dataGridViewUsers.SelectedRows[0].Cells[0].Value);
+            try
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("sp_DeleteUser", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID", selectedUserId);
+                    cmd.ExecuteNonQuery();
+                }
 
+                MessageBox.Show("Kullanıcı başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdataDataGridView();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Kullanıcı silinirken bir hata oluştu: " + err.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { conn.Close(); }  
         }
+
         private bool isEmpty()
         {
             if     //Kutular Bos ise hata doner.
-            ( string.IsNullOrWhiteSpace(txtName.Text) ||
+            (string.IsNullOrWhiteSpace(txtName.Text) ||
               string.IsNullOrWhiteSpace(txtSurname.Text) ||
               string.IsNullOrWhiteSpace(txtMail.Text) ||
               string.IsNullOrWhiteSpace(maskedtxtTelefon.Text) ||
@@ -190,5 +233,27 @@ namespace TourAgent.AdminPage.AdminUserManagement
                 txtPassword.Text = selectedRow.Cells[5].Value.ToString(); //password
             }
         }
+        private void UpdataDataGridView()
+        {
+            try
+            {
+                // Veri adaptörü ve veri tablosunu oluştur
+                using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM tbl_Users", conn))
+                {
+                    DataTable dataTable = new DataTable();
+
+                    // Veri tablosunu doldur
+                    adapter.Fill(dataTable);
+
+                    // DataGridView'e veri tablosunu bağla
+                    dataGridViewUsers.DataSource = dataTable;
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Veriler Güncellenemedi: " + err.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }  
     }
 }
