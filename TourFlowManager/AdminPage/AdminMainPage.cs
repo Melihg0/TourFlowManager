@@ -27,18 +27,22 @@ namespace TourAgent.AdminPage
             adminMainPage.Show();
             this.Close();
         }
-
-        private void btnUserManagement_Click(object sender, EventArgs e)
-        {
-            AdminEditUserPage adminUserMain = new AdminEditUserPage();
-            adminUserMain.Show();
-            this.Hide();
-        }
-
         private void btnTourManagement_Click(object sender, EventArgs e)
         {
             AdminTourTypePage adminTourType = new AdminTourTypePage();
             adminTourType.Show();
+            this.Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            AdminEditUserPage adminEditUserPage = new AdminEditUserPage();
+            adminEditUserPage.Show();
             this.Hide();
         }
 
@@ -47,11 +51,6 @@ namespace TourAgent.AdminPage
             AdminSystemPage adminSystemPage = new AdminSystemPage();
             adminSystemPage.Show();
             this.Hide();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

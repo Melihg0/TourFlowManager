@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TourAgent.AdminPage.AdminSystemManagement;
+//using TourAgent.AdminPage.AdminSystemManagement;
 using TourAgent.AdminPage.AdminTourManagment;
 using TourAgent.AdminPage;
 using System.Data.SqlClient;
@@ -15,6 +15,7 @@ using System.Data.Sql;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Microsoft.SqlServer.Server;
+using TourAgent.AdminPage.AdminSystemManagement;
 
 namespace TourAgent.AdminPage.AdminUserManagement
 {
@@ -46,12 +47,12 @@ namespace TourAgent.AdminPage.AdminUserManagement
             adminTourType.Show();
             this.Hide();
         }
-        private void btnSystemManagement_Click(object sender, EventArgs e)
+       /* private void btnSystemManagement_Click(object sender, EventArgs e)
         {
             AdminSystemPage adminSystemPage = new AdminSystemPage();
             adminSystemPage.Show();
             this.Hide();
-        }
+        }*/
 
         private void DeletedUsersPage_Load(object sender, EventArgs e)
         {
@@ -71,6 +72,13 @@ namespace TourAgent.AdminPage.AdminUserManagement
         {
             DeletedUsersPage deletedUserPage = new DeletedUsersPage();
             deletedUserPage.Show();
+            this.Hide();
+        }
+
+        private void btnSystemManagement_Click(object sender, EventArgs e)
+        {
+            AdminSystemPage adminSystemPage = new AdminSystemPage();
+            adminSystemPage.Show();
             this.Hide();
         }
     }

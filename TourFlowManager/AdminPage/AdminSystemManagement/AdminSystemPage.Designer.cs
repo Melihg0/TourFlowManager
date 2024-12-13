@@ -1,6 +1,6 @@
-﻿namespace TourAgent.AdminPage.AdminTourManagment
+﻿namespace TourAgent.AdminPage.AdminSystemManagement
 {
-    partial class AdminTourTypePage
+    partial class AdminSystemPage
     {
         /// <summary>
         /// Required designer variable.
@@ -393,7 +393,7 @@
             // 
             this.tbl_UsersTableAdapter.ClearBeforeFill = true;
             // 
-            // AdminTourTypePage
+            // AdminSystemPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -406,7 +406,7 @@
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AdminTourTypePage";
+            this.Name = "AdminSystemPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
             this.panel1.ResumeLayout(false);

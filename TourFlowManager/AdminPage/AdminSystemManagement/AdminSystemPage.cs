@@ -7,17 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TourAgent.AdminPage.AdminSystemManagement;
-using TourAgent.AdminPage.AdminUserManagement;
-using TourAgent.AdminPage;
 using TourAgent.AdminPage.AdminTourManagment;
-
+using TourAgent.AdminPage.AdminUserManagement;
+using System.Data.SqlClient;
+using System.Data.Sql;
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
+using Microsoft.SqlServer.Server;
 
 namespace TourAgent.AdminPage.AdminSystemManagement
 {
-    public partial class AdminSystemMainPage : Form
+    public partial class AdminSystemPage : Form
     {
-        public AdminSystemMainPage()
+        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
+       
+        public AdminSystemPage()
         {
             InitializeComponent();
         }
@@ -27,32 +31,26 @@ namespace TourAgent.AdminPage.AdminSystemManagement
             AdminMainPage adminMainPage = new AdminMainPage();
             adminMainPage.Show();
             this.Close();
-        }
 
+        }
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
             AdminEditUserPage adminUserMain = new AdminEditUserPage();
             adminUserMain.Show();
             this.Hide();
         }
-
         private void btnTourManagement_Click(object sender, EventArgs e)
         {
-            AdminTourMainPage adminTourMain = new AdminTourMainPage();
-            adminTourMain.Show();
+            AdminTourTypePage adminTourType = new AdminTourTypePage();
+            adminTourType.Show();
             this.Hide();
         }
 
         private void btnSystemManagement_Click(object sender, EventArgs e)
         {
-            AdminSystemMainPage adminSystemMain = new AdminSystemMainPage();
-            adminSystemMain.Show();
+            AdminSystemPage adminSystemPage = new AdminSystemPage();
+            adminSystemPage.Show();
             this.Hide();
-        }
-
-        private void AdminSystemMainPage_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

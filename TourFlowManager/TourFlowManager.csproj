@@ -242,5 +242,6 @@
   <ItemGroup>
     <None Include="Resources\block-user.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
