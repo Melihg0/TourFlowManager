@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnDeletedUserPage = new System.Windows.Forms.Button();
-            this.btnEditUserPage = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -97,8 +97,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.btnDeletedUserPage);
-            this.panel1.Controls.Add(this.btnEditUserPage);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel4);
@@ -109,43 +109,41 @@
             this.panel1.Size = new System.Drawing.Size(241, 800);
             this.panel1.TabIndex = 2;
             // 
-            // btnDeletedUserPage
+            // button3
             // 
-            this.btnDeletedUserPage.BackColor = System.Drawing.Color.Lavender;
-            this.btnDeletedUserPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDeletedUserPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletedUserPage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnDeletedUserPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletedUserPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeletedUserPage.Image = global::TourAgent.Properties.Resources.block_user;
-            this.btnDeletedUserPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDeletedUserPage.Location = new System.Drawing.Point(12, 410);
-            this.btnDeletedUserPage.Name = "btnDeletedUserPage";
-            this.btnDeletedUserPage.Size = new System.Drawing.Size(213, 103);
-            this.btnDeletedUserPage.TabIndex = 30;
-            this.btnDeletedUserPage.Text = "Silinmis Kullanıcılar";
-            this.btnDeletedUserPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDeletedUserPage.UseVisualStyleBackColor = false;
-            this.btnDeletedUserPage.Click += new System.EventHandler(this.btnDeletedUserPage_Click);
+            this.button3.BackColor = System.Drawing.Color.Lavender;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Image = global::TourAgent.Properties.Resources.block_user;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(12, 410);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(213, 103);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Silinmis Kullanıcılar";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // btnEditUserPage
+            // button1
             // 
-            this.btnEditUserPage.BackColor = System.Drawing.Color.LightCyan;
-            this.btnEditUserPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEditUserPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditUserPage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnEditUserPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditUserPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditUserPage.Image = global::TourAgent.Properties.Resources.edit_User;
-            this.btnEditUserPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditUserPage.Location = new System.Drawing.Point(12, 262);
-            this.btnEditUserPage.Name = "btnEditUserPage";
-            this.btnEditUserPage.Size = new System.Drawing.Size(213, 103);
-            this.btnEditUserPage.TabIndex = 29;
-            this.btnEditUserPage.Text = "Kullanıcıları Düzenle";
-            this.btnEditUserPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditUserPage.UseVisualStyleBackColor = false;
-            this.btnEditUserPage.Click += new System.EventHandler(this.btnEditUserPage_Click);
+            this.button1.BackColor = System.Drawing.Color.LightCyan;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Image = global::TourAgent.Properties.Resources.edit_User;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(12, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 103);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Kullanıcıları Düzenle";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -643,7 +641,7 @@
             this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
             this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userIDDataGridViewTextBoxColumn.Width = 80;
+            this.userIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -651,7 +649,7 @@
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.Width = 180;
+            this.emailDataGridViewTextBoxColumn.Width = 125;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -691,7 +689,7 @@
             this.roleIDDataGridViewTextBoxColumn.HeaderText = "RoleID";
             this.roleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.roleIDDataGridViewTextBoxColumn.Name = "roleIDDataGridViewTextBoxColumn";
-            this.roleIDDataGridViewTextBoxColumn.Width = 80;
+            this.roleIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // birthDateDataGridViewTextBoxColumn
             // 
@@ -780,8 +778,8 @@
         private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
         private System.Windows.Forms.Button btnUserManagement;
-        private System.Windows.Forms.Button btnEditUserPage;
-        private System.Windows.Forms.Button btnDeletedUserPage;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.DateTimePicker dtBirthDate;
         private System.Windows.Forms.GroupBox groupBox6;

@@ -37,15 +37,15 @@ namespace TourAgent.AdminPage
 
         private void btnTourManagement_Click(object sender, EventArgs e)
         {
-            AdminTourTypePage adminTourType = new AdminTourTypePage();
-            adminTourType.Show();
+            AdminTourMainPage adminTourMain = new AdminTourMainPage();
+            adminTourMain.Show();
             this.Hide();
         }
 
         private void btnSystemManagement_Click(object sender, EventArgs e)
         {
-            AdminSystemPage adminSystemPage = new AdminSystemPage();
-            adminSystemPage.Show();
+            AdminSystemMainPage adminSystemMain = new AdminSystemMainPage();
+            adminSystemMain.Show();
             this.Hide();
         }
 

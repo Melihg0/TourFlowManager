@@ -8,21 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TourAgent.AdminPage.AdminSystemManagement;
-using TourAgent.AdminPage.AdminTourManagment;
 using TourAgent.AdminPage.AdminUserManagement;
-using System.Data.SqlClient;
-using System.Data.Sql;
-using System.Text.RegularExpressions;
-using System.Xml.Linq;
-using Microsoft.SqlServer.Server;
+using TourAgent.AdminPage;
 
 namespace TourAgent.AdminPage.AdminTourManagment
 {
-    public partial class AdminTourTypePage : Form
+    public partial class AdminTourMainPage : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
-       
-        public AdminTourTypePage()
+        public AdminTourMainPage()
         {
             InitializeComponent();
         }
@@ -32,24 +25,26 @@ namespace TourAgent.AdminPage.AdminTourManagment
             AdminMainPage adminMainPage = new AdminMainPage();
             adminMainPage.Show();
             this.Close();
-
         }
+
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
-            AdminEditUserPage adminUserMain = new AdminEditUserPage();
-            adminUserMain.Show();
+            AdminTourMainPage adminTourMain = new AdminTourMainPage();
+            adminTourMain.Show();
             this.Hide();
         }
+
         private void btnTourManagement_Click(object sender, EventArgs e)
         {
-            AdminTourTypePage adminTourType = new AdminTourTypePage();
-            adminTourType.Show();
+            AdminTourMainPage adminTourMain = new AdminTourMainPage();
+            adminTourMain.Show();
             this.Hide();
         }
+
         private void btnSystemManagement_Click(object sender, EventArgs e)
         {
-            AdminSystemPage adminSystemPage = new AdminSystemPage();
-            adminSystemPage.Show();
+            AdminSystemMainPage adminSystemMain = new AdminSystemMainPage();
+            adminSystemMain.Show();
             this.Hide();
         }
     }
