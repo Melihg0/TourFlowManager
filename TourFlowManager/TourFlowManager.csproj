@@ -97,6 +97,18 @@
     <Compile Include="AdminPage\AdminSystemManagement\AdminSystemPage.Designer.cs">
       <DependentUpon>AdminSystemPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPage\AdminTourManagment\AdminDeletedTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\AdminTourManagment\AdminDeletedTour.Designer.cs">
+      <DependentUpon>AdminDeletedTour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\AdminTourManagment\AdminTourPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPage\AdminTourManagment\AdminTourPage.Designer.cs">
+      <DependentUpon>AdminTourPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage\AdminTourManagment\AdminTourTypePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage\AdminSystemManagement\AdminSystemPage.resx">
       <DependentUpon>AdminSystemPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\AdminTourManagment\AdminDeletedTour.resx">
+      <DependentUpon>AdminDeletedTour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPage\AdminTourManagment\AdminTourPage.resx">
+      <DependentUpon>AdminTourPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage\AdminTourManagment\AdminTourTypePage.resx">
       <DependentUpon>AdminTourTypePage.cs</DependentUpon>
@@ -242,6 +260,14 @@
   <ItemGroup>
     <None Include="Resources\block-user.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\editing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editing1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleted.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

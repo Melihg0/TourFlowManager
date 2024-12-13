@@ -1,6 +1,6 @@
 ﻿namespace TourAgent.AdminPage.AdminSystemManagement
 {
-    partial class AdminSystemPage
+    partial class AdminDeletedTour
     {
         /// <summary>
         /// Required designer variable.
@@ -29,25 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tourFlowManagerDBDataSet = new TourAgent.TourFlowManagerDBDataSet();
-            this.tbl_UsersTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_UsersTableAdapter();
             this.btnMainPage = new System.Windows.Forms.Button();
             this.btnSystemManagement = new System.Windows.Forms.Button();
             this.btnTourManagement = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tourFlowManagerDBDataSet = new TourAgent.TourFlowManagerDBDataSet();
+            this.tbl_UsersTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_UsersTableAdapter();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,19 +56,23 @@
             this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.birthDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditTourPage = new System.Windows.Forms.Button();
+            this.btnDeletedTourType = new System.Windows.Forms.Button();
+            this.btnEditTourTypePage = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnEditTourPage);
+            this.panel1.Controls.Add(this.btnDeletedTourType);
+            this.panel1.Controls.Add(this.btnEditTourTypePage);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel4);
@@ -91,6 +93,17 @@
             this.label1.Size = new System.Drawing.Size(190, 31);
             this.label1.TabIndex = 17;
             this.label1.Text = "Yönetim Sayfası";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -132,20 +145,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1109, 122);
             this.panel6.TabIndex = 3;
-            // 
-            // tblUsersBindingSource
-            // 
-            this.tblUsersBindingSource.DataMember = "tbl_Users";
-            this.tblUsersBindingSource.DataSource = this.tourFlowManagerDBDataSet;
-            // 
-            // tourFlowManagerDBDataSet
-            // 
-            this.tourFlowManagerDBDataSet.DataSetName = "TourFlowManagerDBDataSet";
-            this.tourFlowManagerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbl_UsersTableAdapter
-            // 
-            this.tbl_UsersTableAdapter.ClearBeforeFill = true;
             // 
             // btnMainPage
             // 
@@ -227,65 +226,32 @@
             this.btnUserManagement.UseVisualStyleBackColor = false;
             this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
-            // button3
+            // tblUsersBindingSource
             // 
-            this.button3.BackColor = System.Drawing.Color.Lavender;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Image = global::TourAgent.Properties.Resources.block_user;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(12, 410);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(213, 103);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Silinmis Kullanıcılar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.tblUsersBindingSource.DataMember = "tbl_Users";
+            this.tblUsersBindingSource.DataSource = this.tourFlowManagerDBDataSet;
             // 
-            // button1
+            // tourFlowManagerDBDataSet
             // 
-            this.button1.BackColor = System.Drawing.Color.LightCyan;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Image = global::TourAgent.Properties.Resources.edit_User;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(12, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 103);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Kullanıcıları Düzenle";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.tourFlowManagerDBDataSet.DataSetName = "TourFlowManagerDBDataSet";
+            this.tourFlowManagerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pictureBox1
+            // tbl_UsersTableAdapter
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.tbl_UsersTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewUsers
             // 
             this.dataGridViewUsers.AutoGenerateColumns = false;
             this.dataGridViewUsers.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.userIDDataGridViewTextBoxColumn,
@@ -298,26 +264,26 @@
             this.birthDateDataGridViewTextBoxColumn,
             this.createdAtDataGridViewTextBoxColumn});
             this.dataGridViewUsers.DataSource = this.tblUsersBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUsers.GridColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(264, 160);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(261, 160);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewUsers.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewUsers.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewUsers.RowTemplate.Height = 24;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(1052, 376);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(1052, 517);
             this.dataGridViewUsers.TabIndex = 37;
             // 
             // userIDDataGridViewTextBoxColumn
@@ -393,7 +359,61 @@
             this.createdAtDataGridViewTextBoxColumn.Name = "createdAtDataGridViewTextBoxColumn";
             this.createdAtDataGridViewTextBoxColumn.Width = 125;
             // 
-            // AdminSystemPage
+            // btnEditTourPage
+            // 
+            this.btnEditTourPage.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btnEditTourPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEditTourPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditTourPage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEditTourPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTourPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEditTourPage.Image = global::TourAgent.Properties.Resources.editing;
+            this.btnEditTourPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditTourPage.Location = new System.Drawing.Point(11, 414);
+            this.btnEditTourPage.Name = "btnEditTourPage";
+            this.btnEditTourPage.Size = new System.Drawing.Size(213, 103);
+            this.btnEditTourPage.TabIndex = 34;
+            this.btnEditTourPage.Text = "Turları Düzenle";
+            this.btnEditTourPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditTourPage.UseVisualStyleBackColor = false;
+            // 
+            // btnDeletedTourType
+            // 
+            this.btnDeletedTourType.BackColor = System.Drawing.Color.Lavender;
+            this.btnDeletedTourType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeletedTourType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletedTourType.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnDeletedTourType.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletedTourType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDeletedTourType.Image = global::TourAgent.Properties.Resources.deleted;
+            this.btnDeletedTourType.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDeletedTourType.Location = new System.Drawing.Point(12, 574);
+            this.btnDeletedTourType.Name = "btnDeletedTourType";
+            this.btnDeletedTourType.Size = new System.Drawing.Size(213, 103);
+            this.btnDeletedTourType.TabIndex = 33;
+            this.btnDeletedTourType.Text = "Silinmis Turlar";
+            this.btnDeletedTourType.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDeletedTourType.UseVisualStyleBackColor = false;
+            // 
+            // btnEditTourTypePage
+            // 
+            this.btnEditTourTypePage.BackColor = System.Drawing.Color.LightCyan;
+            this.btnEditTourTypePage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEditTourTypePage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditTourTypePage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEditTourTypePage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTourTypePage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEditTourTypePage.Image = global::TourAgent.Properties.Resources.editing;
+            this.btnEditTourTypePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditTourTypePage.Location = new System.Drawing.Point(12, 254);
+            this.btnEditTourTypePage.Name = "btnEditTourTypePage";
+            this.btnEditTourTypePage.Size = new System.Drawing.Size(213, 103);
+            this.btnEditTourTypePage.TabIndex = 32;
+            this.btnEditTourTypePage.Text = "Tur Türlerini Düzenle";
+            this.btnEditTourTypePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditTourTypePage.UseVisualStyleBackColor = false;
+            // 
+            // AdminDeletedTour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -406,15 +426,15 @@
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AdminSystemPage";
+            this.Name = "AdminDeletedTour";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
             this.ResumeLayout(false);
 
@@ -432,8 +452,6 @@
         private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
         private System.Windows.Forms.Button btnUserManagement;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
         private TourFlowManagerDBDataSet tourFlowManagerDBDataSet;
         private System.Windows.Forms.BindingSource tblUsersBindingSource;
         private TourFlowManagerDBDataSetTableAdapters.tbl_UsersTableAdapter tbl_UsersTableAdapter;
@@ -447,5 +465,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn roleIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdAtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnEditTourPage;
+        private System.Windows.Forms.Button btnDeletedTourType;
+        private System.Windows.Forms.Button btnEditTourTypePage;
     }
 }

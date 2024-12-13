@@ -343,7 +343,7 @@
             this.txtMail.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtMail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMail.Location = new System.Drawing.Point(3, 24);
-            this.txtMail.MaxLength = 50;
+            this.txtMail.MaxLength = 100;
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(340, 27);
