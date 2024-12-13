@@ -143,9 +143,6 @@
     <EmbeddedResource Include="TourGuidePage\TourGuideMainPage.resx">
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TourGuidePage\TourGuideTourPage.resx">
-      <DependentUpon>TourGuideTourPage.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
