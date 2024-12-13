@@ -215,7 +215,6 @@
             this.Name = "AdminSystemMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
-            this.Load += new System.EventHandler(this.AdminSystemMainPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

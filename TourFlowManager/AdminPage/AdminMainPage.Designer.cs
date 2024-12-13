@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -40,9 +38,11 @@
             this.btnSystemManagement = new System.Windows.Forms.Button();
             this.btnTourManagement = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,28 +58,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 700);
             this.panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(28, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 31);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Yönetim Sayfası";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
             // 
             // btnExit
             // 
@@ -109,7 +87,6 @@
             this.panel4.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(5, 700);
             this.panel4.TabIndex = 14;
@@ -136,15 +113,15 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Window;
             this.panel6.Controls.Add(this.btnMainPage);
+            this.panel6.Controls.Add(this.btnSystemManagement);
             this.panel6.Controls.Add(this.btnTourManagement);
+            this.panel6.Controls.Add(this.btnUserManagement);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(241, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(909, 122);
-            this.panel6.TabIndex = 5;
-
+            this.panel6.TabIndex = 3;
             // 
             // btnMainPage
             // 
@@ -226,6 +203,28 @@
             this.btnUserManagement.UseVisualStyleBackColor = false;
             this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(28, 160);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 31);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Yönetim Sayfası";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
@@ -243,8 +242,8 @@
             this.Text = "AdminMainPage";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

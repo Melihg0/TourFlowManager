@@ -12,7 +12,6 @@ using TourAgent.AdminPage.AdminUserManagement;
 using TourAgent.AdminPage;
 using TourAgent.AdminPage.AdminTourManagment;
 
-
 namespace TourAgent.AdminPage.AdminSystemManagement
 {
     public partial class AdminSystemMainPage : Form
@@ -48,11 +47,6 @@ namespace TourAgent.AdminPage.AdminSystemManagement
             AdminSystemMainPage adminSystemMain = new AdminSystemMainPage();
             adminSystemMain.Show();
             this.Hide();
-        }
-
-        private void AdminSystemMainPage_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

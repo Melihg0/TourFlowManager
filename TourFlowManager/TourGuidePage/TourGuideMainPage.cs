@@ -7,23 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TourAgent.TourGuidePage.TourGuideTourPage;
-using TourAgent.TourGuidePage.TourGuideMainPage;
-using TourAgent.TourGuidePage;
 
-
-namespace TourAgent.TourGuidePage.TourGuideMainPage
+namespace TourAgent.TourGuidePage
 {
     public partial class TourGuideMainPage : Form
     {
         public TourGuideMainPage()
         {
             InitializeComponent();
-        }
-
-        private void TourGuideMainPage_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
