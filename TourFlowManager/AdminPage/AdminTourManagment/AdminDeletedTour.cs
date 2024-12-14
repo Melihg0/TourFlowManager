@@ -52,5 +52,32 @@ namespace TourAgent.AdminPage.AdminSystemManagement
             adminSystemPage.Show();
             this.Hide();
         }
+
+        private void btnDeletedTourType_Click(object sender, EventArgs e)
+        {
+            AdminDeletedTour adminDeletedTour = new AdminDeletedTour();
+            adminDeletedTour.Show();
+            this.Hide();
+        }
+
+        private void btnEditTourPage_Click(object sender, EventArgs e)
+        {
+            AdminTourPage adminTourPage = new AdminTourPage();
+            adminTourPage.Show();
+            this.Hide();
+        }
+
+        private void btnEditTourTypePage_Click(object sender, EventArgs e)
+        {
+            AdminTourTypePage adminTourTypePage = new AdminTourTypePage();
+            adminTourTypePage.Show();
+            this.Hide();
+        }
+        private void AdminDeletedTour_Load_1(object sender, EventArgs e)
+        {
+            // TODO: Bu kod satırı 'tourFlowManagerDBDataSet.tbl_DeletedTours' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.tbl_DeletedToursTableAdapter.Fill(this.tourFlowManagerDBDataSet.tbl_DeletedTours);
+
+        }
     }
 }

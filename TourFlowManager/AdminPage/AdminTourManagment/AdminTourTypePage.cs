@@ -68,9 +68,9 @@ namespace TourAgent.AdminPage.AdminTourManagment
 
         private void btnDeletedTourType_Click(object sender, EventArgs e)
         {
-            AdminSystemPage adminSystemPage =new AdminSystemPage();
-            adminSystemPage.Show();
-            this.Hide();    
+            AdminDeletedTour adminDeletedTour = new AdminDeletedTour();
+            adminDeletedTour.Show();
+            this.Hide();
         }
 
         private void AdminTourTypePage_Load(object sender, EventArgs e)

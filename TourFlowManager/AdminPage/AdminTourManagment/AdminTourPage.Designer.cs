@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditTourPage = new System.Windows.Forms.Button();
             this.btnDeletedTourType = new System.Windows.Forms.Button();
@@ -50,16 +50,6 @@
             this.tourFlowManagerDBDataSet = new TourAgent.TourFlowManagerDBDataSet();
             this.tbl_UsersTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_UsersTableAdapter();
             this.dataGridViewTours = new System.Windows.Forms.DataGridView();
-            this.tourIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startPointCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destinationCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourTypeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guideIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxParticipantsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblToursBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAddTour = new System.Windows.Forms.Button();
             this.btnEditTour = new System.Windows.Forms.Button();
@@ -88,6 +78,18 @@
             this.tbl_ToursTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_ToursTableAdapter();
             this.fkGuideIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fkGuideIDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblDeletedUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_DeletedUsersTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_DeletedUsersTableAdapter();
+            this.maxParticipantsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guideIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tourTypeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destinationCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startPointCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tourNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tourIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -107,6 +109,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fkGuideIDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fkGuideIDBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDeletedUsersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -142,6 +145,7 @@
             this.btnEditTourPage.Text = "Turları Düzenle";
             this.btnEditTourPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditTourPage.UseVisualStyleBackColor = false;
+            this.btnEditTourPage.Click += new System.EventHandler(this.btnEditTourPage_Click);
             // 
             // btnDeletedTourType
             // 
@@ -160,6 +164,7 @@
             this.btnDeletedTourType.Text = "Silinmis Turlar";
             this.btnDeletedTourType.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDeletedTourType.UseVisualStyleBackColor = false;
+            this.btnDeletedTourType.Click += new System.EventHandler(this.btnDeletedTourType_Click);
             // 
             // btnEditTourTypePage
             // 
@@ -178,6 +183,7 @@
             this.btnEditTourTypePage.Text = "Tur Türlerini Düzenle";
             this.btnEditTourTypePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEditTourTypePage.UseVisualStyleBackColor = false;
+            this.btnEditTourTypePage.Click += new System.EventHandler(this.btnEditTourTypePage_Click);
             // 
             // label1
             // 
@@ -340,14 +346,14 @@
             // 
             this.dataGridViewTours.AutoGenerateColumns = false;
             this.dataGridViewTours.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTours.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTours.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTours.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTours.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tourIDDataGridViewTextBoxColumn,
@@ -361,109 +367,28 @@
             this.priceDataGridViewTextBoxColumn,
             this.maxParticipantsDataGridViewTextBoxColumn});
             this.dataGridViewTours.DataSource = this.tblToursBindingSource;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTours.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTours.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTours.GridColor = System.Drawing.SystemColors.WindowText;
             this.dataGridViewTours.Location = new System.Drawing.Point(265, 154);
             this.dataGridViewTours.Name = "dataGridViewTours";
             this.dataGridViewTours.RowHeadersWidth = 51;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTours.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTours.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTours.RowTemplate.Height = 24;
             this.dataGridViewTours.Size = new System.Drawing.Size(1053, 376);
             this.dataGridViewTours.TabIndex = 37;
             this.dataGridViewTours.SelectionChanged += new System.EventHandler(this.dataGridViewTours_SelectionChanged);
-            // 
-            // tourIDDataGridViewTextBoxColumn
-            // 
-            this.tourIDDataGridViewTextBoxColumn.DataPropertyName = "TourID";
-            this.tourIDDataGridViewTextBoxColumn.HeaderText = "TourID";
-            this.tourIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tourIDDataGridViewTextBoxColumn.Name = "tourIDDataGridViewTextBoxColumn";
-            this.tourIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tourIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tourNameDataGridViewTextBoxColumn
-            // 
-            this.tourNameDataGridViewTextBoxColumn.DataPropertyName = "TourName";
-            this.tourNameDataGridViewTextBoxColumn.HeaderText = "TourName";
-            this.tourNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tourNameDataGridViewTextBoxColumn.Name = "tourNameDataGridViewTextBoxColumn";
-            this.tourNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startPointCityIDDataGridViewTextBoxColumn
-            // 
-            this.startPointCityIDDataGridViewTextBoxColumn.DataPropertyName = "StartPointCityID";
-            this.startPointCityIDDataGridViewTextBoxColumn.HeaderText = "StartPointCityID";
-            this.startPointCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startPointCityIDDataGridViewTextBoxColumn.Name = "startPointCityIDDataGridViewTextBoxColumn";
-            this.startPointCityIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // destinationCityIDDataGridViewTextBoxColumn
-            // 
-            this.destinationCityIDDataGridViewTextBoxColumn.DataPropertyName = "DestinationCityID";
-            this.destinationCityIDDataGridViewTextBoxColumn.HeaderText = "DestinationCityID";
-            this.destinationCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.destinationCityIDDataGridViewTextBoxColumn.Name = "destinationCityIDDataGridViewTextBoxColumn";
-            this.destinationCityIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tourTypeIDDataGridViewTextBoxColumn
-            // 
-            this.tourTypeIDDataGridViewTextBoxColumn.DataPropertyName = "TourTypeID";
-            this.tourTypeIDDataGridViewTextBoxColumn.HeaderText = "TourTypeID";
-            this.tourTypeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tourTypeIDDataGridViewTextBoxColumn.Name = "tourTypeIDDataGridViewTextBoxColumn";
-            this.tourTypeIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // guideIDDataGridViewTextBoxColumn
-            // 
-            this.guideIDDataGridViewTextBoxColumn.DataPropertyName = "GuideID";
-            this.guideIDDataGridViewTextBoxColumn.HeaderText = "GuideID";
-            this.guideIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.guideIDDataGridViewTextBoxColumn.Name = "guideIDDataGridViewTextBoxColumn";
-            this.guideIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maxParticipantsDataGridViewTextBoxColumn
-            // 
-            this.maxParticipantsDataGridViewTextBoxColumn.DataPropertyName = "MaxParticipants";
-            this.maxParticipantsDataGridViewTextBoxColumn.HeaderText = "MaxParticipants";
-            this.maxParticipantsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maxParticipantsDataGridViewTextBoxColumn.Name = "maxParticipantsDataGridViewTextBoxColumn";
-            this.maxParticipantsDataGridViewTextBoxColumn.Width = 125;
             // 
             // tblToursBindingSource
             // 
@@ -847,6 +772,96 @@
             this.fkGuideIDBindingSource1.DataMember = "fk_GuideID";
             this.fkGuideIDBindingSource1.DataSource = this.tblUsersBindingSource;
             // 
+            // tblDeletedUsersBindingSource
+            // 
+            this.tblDeletedUsersBindingSource.DataMember = "tbl_DeletedUsers";
+            this.tblDeletedUsersBindingSource.DataSource = this.tourFlowManagerDBDataSet;
+            // 
+            // tbl_DeletedUsersTableAdapter
+            // 
+            this.tbl_DeletedUsersTableAdapter.ClearBeforeFill = true;
+            // 
+            // maxParticipantsDataGridViewTextBoxColumn
+            // 
+            this.maxParticipantsDataGridViewTextBoxColumn.DataPropertyName = "MaxParticipants";
+            this.maxParticipantsDataGridViewTextBoxColumn.HeaderText = "MaxParticipants";
+            this.maxParticipantsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maxParticipantsDataGridViewTextBoxColumn.Name = "maxParticipantsDataGridViewTextBoxColumn";
+            this.maxParticipantsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // endDateDataGridViewTextBoxColumn
+            // 
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // startDateDataGridViewTextBoxColumn
+            // 
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // guideIDDataGridViewTextBoxColumn
+            // 
+            this.guideIDDataGridViewTextBoxColumn.DataPropertyName = "GuideID";
+            this.guideIDDataGridViewTextBoxColumn.HeaderText = "GuideID";
+            this.guideIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.guideIDDataGridViewTextBoxColumn.Name = "guideIDDataGridViewTextBoxColumn";
+            this.guideIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tourTypeIDDataGridViewTextBoxColumn
+            // 
+            this.tourTypeIDDataGridViewTextBoxColumn.DataPropertyName = "TourTypeID";
+            this.tourTypeIDDataGridViewTextBoxColumn.HeaderText = "TourTypeID";
+            this.tourTypeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tourTypeIDDataGridViewTextBoxColumn.Name = "tourTypeIDDataGridViewTextBoxColumn";
+            this.tourTypeIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // destinationCityIDDataGridViewTextBoxColumn
+            // 
+            this.destinationCityIDDataGridViewTextBoxColumn.DataPropertyName = "DestinationCityID";
+            this.destinationCityIDDataGridViewTextBoxColumn.HeaderText = "DestinationCityID";
+            this.destinationCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.destinationCityIDDataGridViewTextBoxColumn.Name = "destinationCityIDDataGridViewTextBoxColumn";
+            this.destinationCityIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // startPointCityIDDataGridViewTextBoxColumn
+            // 
+            this.startPointCityIDDataGridViewTextBoxColumn.DataPropertyName = "StartPointCityID";
+            this.startPointCityIDDataGridViewTextBoxColumn.HeaderText = "StartPointCityID";
+            this.startPointCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startPointCityIDDataGridViewTextBoxColumn.Name = "startPointCityIDDataGridViewTextBoxColumn";
+            this.startPointCityIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tourNameDataGridViewTextBoxColumn
+            // 
+            this.tourNameDataGridViewTextBoxColumn.DataPropertyName = "TourName";
+            this.tourNameDataGridViewTextBoxColumn.HeaderText = "TourName";
+            this.tourNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tourNameDataGridViewTextBoxColumn.Name = "tourNameDataGridViewTextBoxColumn";
+            this.tourNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tourIDDataGridViewTextBoxColumn
+            // 
+            this.tourIDDataGridViewTextBoxColumn.DataPropertyName = "TourID";
+            this.tourIDDataGridViewTextBoxColumn.HeaderText = "TourID";
+            this.tourIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tourIDDataGridViewTextBoxColumn.Name = "tourIDDataGridViewTextBoxColumn";
+            this.tourIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tourIDDataGridViewTextBoxColumn.Width = 125;
+            // 
             // AdminTourPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
@@ -894,6 +909,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fkGuideIDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fkGuideIDBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDeletedUsersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -935,16 +951,6 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.BindingSource tblToursBindingSource;
         private TourFlowManagerDBDataSetTableAdapters.tbl_ToursTableAdapter tbl_ToursTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startPointCityIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destinationCityIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourTypeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn guideIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maxParticipantsDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox txtDestinationID;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -955,5 +961,17 @@
         private System.Windows.Forms.TextBox txtMaxParticipants;
         private System.Windows.Forms.BindingSource fkGuideIDBindingSource;
         private System.Windows.Forms.BindingSource fkGuideIDBindingSource1;
+        private System.Windows.Forms.BindingSource tblDeletedUsersBindingSource;
+        private TourFlowManagerDBDataSetTableAdapters.tbl_DeletedUsersTableAdapter tbl_DeletedUsersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tourIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tourNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startPointCityIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinationCityIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tourTypeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn guideIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxParticipantsDataGridViewTextBoxColumn;
     }
 }

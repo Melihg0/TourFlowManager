@@ -33,6 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEditTourPage = new System.Windows.Forms.Button();
+            this.btnDeletedTourType = new System.Windows.Forms.Button();
+            this.btnEditTourTypePage = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -43,28 +46,30 @@
             this.btnSystemManagement = new System.Windows.Forms.Button();
             this.btnTourManagement = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
-            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tourFlowManagerDBDataSet = new TourAgent.TourFlowManagerDBDataSet();
             this.tbl_UsersTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_UsersTableAdapter();
-            this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roleIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditTourPage = new System.Windows.Forms.Button();
-            this.btnDeletedTourType = new System.Windows.Forms.Button();
-            this.btnEditTourTypePage = new System.Windows.Forms.Button();
+            this.tblUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViedfdwDeletedUsers = new System.Windows.Forms.DataGridView();
+            this.deletedTourIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deletedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tourNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startPointCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.destinationCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tourTypeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guideIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxParticipantsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblDeletedToursBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_DeletedToursTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_DeletedToursTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViedfdwDeletedUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDeletedToursBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,6 +87,63 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 800);
             this.panel1.TabIndex = 2;
+            // 
+            // btnEditTourPage
+            // 
+            this.btnEditTourPage.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btnEditTourPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEditTourPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditTourPage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEditTourPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTourPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEditTourPage.Image = global::TourAgent.Properties.Resources.editing;
+            this.btnEditTourPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditTourPage.Location = new System.Drawing.Point(11, 414);
+            this.btnEditTourPage.Name = "btnEditTourPage";
+            this.btnEditTourPage.Size = new System.Drawing.Size(213, 103);
+            this.btnEditTourPage.TabIndex = 34;
+            this.btnEditTourPage.Text = "Turları Düzenle";
+            this.btnEditTourPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditTourPage.UseVisualStyleBackColor = false;
+            this.btnEditTourPage.Click += new System.EventHandler(this.btnEditTourPage_Click);
+            // 
+            // btnDeletedTourType
+            // 
+            this.btnDeletedTourType.BackColor = System.Drawing.Color.Lavender;
+            this.btnDeletedTourType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDeletedTourType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletedTourType.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnDeletedTourType.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletedTourType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDeletedTourType.Image = global::TourAgent.Properties.Resources.deleted;
+            this.btnDeletedTourType.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDeletedTourType.Location = new System.Drawing.Point(12, 574);
+            this.btnDeletedTourType.Name = "btnDeletedTourType";
+            this.btnDeletedTourType.Size = new System.Drawing.Size(213, 103);
+            this.btnDeletedTourType.TabIndex = 33;
+            this.btnDeletedTourType.Text = "Silinmis Turlar";
+            this.btnDeletedTourType.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDeletedTourType.UseVisualStyleBackColor = false;
+            this.btnDeletedTourType.Click += new System.EventHandler(this.btnDeletedTourType_Click);
+            // 
+            // btnEditTourTypePage
+            // 
+            this.btnEditTourTypePage.BackColor = System.Drawing.Color.LightCyan;
+            this.btnEditTourTypePage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEditTourTypePage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditTourTypePage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEditTourTypePage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTourTypePage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEditTourTypePage.Image = global::TourAgent.Properties.Resources.editing;
+            this.btnEditTourTypePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditTourTypePage.Location = new System.Drawing.Point(12, 254);
+            this.btnEditTourTypePage.Name = "btnEditTourTypePage";
+            this.btnEditTourTypePage.Size = new System.Drawing.Size(213, 103);
+            this.btnEditTourTypePage.TabIndex = 32;
+            this.btnEditTourTypePage.Text = "Tur Türlerini Düzenle";
+            this.btnEditTourTypePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditTourTypePage.UseVisualStyleBackColor = false;
+            this.btnEditTourTypePage.Click += new System.EventHandler(this.btnEditTourTypePage_Click);
             // 
             // label1
             // 
@@ -226,11 +288,6 @@
             this.btnUserManagement.UseVisualStyleBackColor = false;
             this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
-            // tblUsersBindingSource
-            // 
-            this.tblUsersBindingSource.DataMember = "tbl_Users";
-            this.tblUsersBindingSource.DataSource = this.tourFlowManagerDBDataSet;
-            // 
             // tourFlowManagerDBDataSet
             // 
             this.tourFlowManagerDBDataSet.DataSetName = "TourFlowManagerDBDataSet";
@@ -240,10 +297,14 @@
             // 
             this.tbl_UsersTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewUsers
+            // tblUsersBindingSource
             // 
-            this.dataGridViewUsers.AutoGenerateColumns = false;
-            this.dataGridViewUsers.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tblUsersBindingSource.DataMember = "tbl_Users";
+            // 
+            // dataGridViedfdwDeletedUsers
+            // 
+            this.dataGridViedfdwDeletedUsers.AutoGenerateColumns = false;
+            this.dataGridViedfdwDeletedUsers.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
@@ -251,19 +312,21 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userIDDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn,
-            this.userPasswordDataGridViewTextBoxColumn,
-            this.roleIDDataGridViewTextBoxColumn,
-            this.birthDateDataGridViewTextBoxColumn,
-            this.createdAtDataGridViewTextBoxColumn});
-            this.dataGridViewUsers.DataSource = this.tblUsersBindingSource;
+            this.dataGridViedfdwDeletedUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViedfdwDeletedUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViedfdwDeletedUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.deletedTourIDDataGridViewTextBoxColumn,
+            this.deletedAtDataGridViewTextBoxColumn,
+            this.tourNameDataGridViewTextBoxColumn,
+            this.startPointCityIDDataGridViewTextBoxColumn,
+            this.destinationCityIDDataGridViewTextBoxColumn,
+            this.tourTypeIDDataGridViewTextBoxColumn,
+            this.guideIDDataGridViewTextBoxColumn,
+            this.startDateDataGridViewTextBoxColumn,
+            this.endDateDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.maxParticipantsDataGridViewTextBoxColumn});
+            this.dataGridViedfdwDeletedUsers.DataSource = this.tblDeletedToursBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
@@ -271,147 +334,117 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewUsers.GridColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(261, 160);
-            this.dataGridViewUsers.Name = "dataGridViewUsers";
-            this.dataGridViewUsers.RowHeadersWidth = 51;
+            this.dataGridViedfdwDeletedUsers.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViedfdwDeletedUsers.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViedfdwDeletedUsers.Location = new System.Drawing.Point(272, 160);
+            this.dataGridViedfdwDeletedUsers.Name = "dataGridViedfdwDeletedUsers";
+            this.dataGridViedfdwDeletedUsers.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewUsers.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewUsers.RowTemplate.Height = 24;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(1052, 517);
-            this.dataGridViewUsers.TabIndex = 37;
+            this.dataGridViedfdwDeletedUsers.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViedfdwDeletedUsers.RowTemplate.Height = 24;
+            this.dataGridViedfdwDeletedUsers.Size = new System.Drawing.Size(1044, 524);
+            this.dataGridViedfdwDeletedUsers.TabIndex = 37;
             // 
-            // userIDDataGridViewTextBoxColumn
+            // deletedTourIDDataGridViewTextBoxColumn
             // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userIDDataGridViewTextBoxColumn.Width = 80;
+            this.deletedTourIDDataGridViewTextBoxColumn.DataPropertyName = "DeletedTourID";
+            this.deletedTourIDDataGridViewTextBoxColumn.HeaderText = "DeletedTourID";
+            this.deletedTourIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.deletedTourIDDataGridViewTextBoxColumn.Name = "deletedTourIDDataGridViewTextBoxColumn";
+            this.deletedTourIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // emailDataGridViewTextBoxColumn
+            // deletedAtDataGridViewTextBoxColumn
             // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.Width = 180;
+            this.deletedAtDataGridViewTextBoxColumn.DataPropertyName = "DeletedAt";
+            this.deletedAtDataGridViewTextBoxColumn.HeaderText = "DeletedAt";
+            this.deletedAtDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.deletedAtDataGridViewTextBoxColumn.Name = "deletedAtDataGridViewTextBoxColumn";
+            this.deletedAtDataGridViewTextBoxColumn.Width = 125;
             // 
-            // firstNameDataGridViewTextBoxColumn
+            // tourNameDataGridViewTextBoxColumn
             // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 125;
+            this.tourNameDataGridViewTextBoxColumn.DataPropertyName = "TourName";
+            this.tourNameDataGridViewTextBoxColumn.HeaderText = "TourName";
+            this.tourNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tourNameDataGridViewTextBoxColumn.Name = "tourNameDataGridViewTextBoxColumn";
+            this.tourNameDataGridViewTextBoxColumn.Width = 125;
             // 
-            // lastNameDataGridViewTextBoxColumn
+            // startPointCityIDDataGridViewTextBoxColumn
             // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.Width = 125;
+            this.startPointCityIDDataGridViewTextBoxColumn.DataPropertyName = "StartPointCityID";
+            this.startPointCityIDDataGridViewTextBoxColumn.HeaderText = "StartPointCityID";
+            this.startPointCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startPointCityIDDataGridViewTextBoxColumn.Name = "startPointCityIDDataGridViewTextBoxColumn";
+            this.startPointCityIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // phoneNumberDataGridViewTextBoxColumn
+            // destinationCityIDDataGridViewTextBoxColumn
             // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
+            this.destinationCityIDDataGridViewTextBoxColumn.DataPropertyName = "DestinationCityID";
+            this.destinationCityIDDataGridViewTextBoxColumn.HeaderText = "DestinationCityID";
+            this.destinationCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.destinationCityIDDataGridViewTextBoxColumn.Name = "destinationCityIDDataGridViewTextBoxColumn";
+            this.destinationCityIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // userPasswordDataGridViewTextBoxColumn
+            // tourTypeIDDataGridViewTextBoxColumn
             // 
-            this.userPasswordDataGridViewTextBoxColumn.DataPropertyName = "UserPassword";
-            this.userPasswordDataGridViewTextBoxColumn.HeaderText = "UserPassword";
-            this.userPasswordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userPasswordDataGridViewTextBoxColumn.Name = "userPasswordDataGridViewTextBoxColumn";
-            this.userPasswordDataGridViewTextBoxColumn.Width = 125;
+            this.tourTypeIDDataGridViewTextBoxColumn.DataPropertyName = "TourTypeID";
+            this.tourTypeIDDataGridViewTextBoxColumn.HeaderText = "TourTypeID";
+            this.tourTypeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tourTypeIDDataGridViewTextBoxColumn.Name = "tourTypeIDDataGridViewTextBoxColumn";
+            this.tourTypeIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // roleIDDataGridViewTextBoxColumn
+            // guideIDDataGridViewTextBoxColumn
             // 
-            this.roleIDDataGridViewTextBoxColumn.DataPropertyName = "RoleID";
-            this.roleIDDataGridViewTextBoxColumn.HeaderText = "RoleID";
-            this.roleIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.roleIDDataGridViewTextBoxColumn.Name = "roleIDDataGridViewTextBoxColumn";
-            this.roleIDDataGridViewTextBoxColumn.Width = 80;
+            this.guideIDDataGridViewTextBoxColumn.DataPropertyName = "GuideID";
+            this.guideIDDataGridViewTextBoxColumn.HeaderText = "GuideID";
+            this.guideIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.guideIDDataGridViewTextBoxColumn.Name = "guideIDDataGridViewTextBoxColumn";
+            this.guideIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // birthDateDataGridViewTextBoxColumn
+            // startDateDataGridViewTextBoxColumn
             // 
-            this.birthDateDataGridViewTextBoxColumn.DataPropertyName = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.HeaderText = "BirthDate";
-            this.birthDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.birthDateDataGridViewTextBoxColumn.Name = "birthDateDataGridViewTextBoxColumn";
-            this.birthDateDataGridViewTextBoxColumn.Width = 125;
+            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
+            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
+            this.startDateDataGridViewTextBoxColumn.Width = 125;
             // 
-            // createdAtDataGridViewTextBoxColumn
+            // endDateDataGridViewTextBoxColumn
             // 
-            this.createdAtDataGridViewTextBoxColumn.DataPropertyName = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn.HeaderText = "CreatedAt";
-            this.createdAtDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.createdAtDataGridViewTextBoxColumn.Name = "createdAtDataGridViewTextBoxColumn";
-            this.createdAtDataGridViewTextBoxColumn.Width = 125;
+            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
+            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
+            this.endDateDataGridViewTextBoxColumn.Width = 125;
             // 
-            // btnEditTourPage
+            // priceDataGridViewTextBoxColumn
             // 
-            this.btnEditTourPage.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.btnEditTourPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEditTourPage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditTourPage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnEditTourPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTourPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditTourPage.Image = global::TourAgent.Properties.Resources.editing;
-            this.btnEditTourPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditTourPage.Location = new System.Drawing.Point(11, 414);
-            this.btnEditTourPage.Name = "btnEditTourPage";
-            this.btnEditTourPage.Size = new System.Drawing.Size(213, 103);
-            this.btnEditTourPage.TabIndex = 34;
-            this.btnEditTourPage.Text = "Turları Düzenle";
-            this.btnEditTourPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditTourPage.UseVisualStyleBackColor = false;
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.Width = 125;
             // 
-            // btnDeletedTourType
+            // maxParticipantsDataGridViewTextBoxColumn
             // 
-            this.btnDeletedTourType.BackColor = System.Drawing.Color.Lavender;
-            this.btnDeletedTourType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDeletedTourType.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletedTourType.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnDeletedTourType.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletedTourType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeletedTourType.Image = global::TourAgent.Properties.Resources.deleted;
-            this.btnDeletedTourType.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDeletedTourType.Location = new System.Drawing.Point(12, 574);
-            this.btnDeletedTourType.Name = "btnDeletedTourType";
-            this.btnDeletedTourType.Size = new System.Drawing.Size(213, 103);
-            this.btnDeletedTourType.TabIndex = 33;
-            this.btnDeletedTourType.Text = "Silinmis Turlar";
-            this.btnDeletedTourType.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDeletedTourType.UseVisualStyleBackColor = false;
+            this.maxParticipantsDataGridViewTextBoxColumn.DataPropertyName = "MaxParticipants";
+            this.maxParticipantsDataGridViewTextBoxColumn.HeaderText = "MaxParticipants";
+            this.maxParticipantsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maxParticipantsDataGridViewTextBoxColumn.Name = "maxParticipantsDataGridViewTextBoxColumn";
+            this.maxParticipantsDataGridViewTextBoxColumn.Width = 125;
             // 
-            // btnEditTourTypePage
+            // tblDeletedToursBindingSource
             // 
-            this.btnEditTourTypePage.BackColor = System.Drawing.Color.LightCyan;
-            this.btnEditTourTypePage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEditTourTypePage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditTourTypePage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnEditTourTypePage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTourTypePage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditTourTypePage.Image = global::TourAgent.Properties.Resources.editing;
-            this.btnEditTourTypePage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditTourTypePage.Location = new System.Drawing.Point(12, 254);
-            this.btnEditTourTypePage.Name = "btnEditTourTypePage";
-            this.btnEditTourTypePage.Size = new System.Drawing.Size(213, 103);
-            this.btnEditTourTypePage.TabIndex = 32;
-            this.btnEditTourTypePage.Text = "Tur Türlerini Düzenle";
-            this.btnEditTourTypePage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEditTourTypePage.UseVisualStyleBackColor = false;
+            this.tblDeletedToursBindingSource.DataMember = "tbl_DeletedTours";
+            this.tblDeletedToursBindingSource.DataSource = this.tourFlowManagerDBDataSet;
+            // 
+            // tbl_DeletedToursTableAdapter
+            // 
+            this.tbl_DeletedToursTableAdapter.ClearBeforeFill = true;
             // 
             // AdminDeletedTour
             // 
@@ -419,7 +452,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1350, 800);
-            this.Controls.Add(this.dataGridViewUsers);
+            this.Controls.Add(this.dataGridViedfdwDeletedUsers);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
@@ -429,13 +462,15 @@
             this.Name = "AdminDeletedTour";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
+            this.Load += new System.EventHandler(this.AdminDeletedTour_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViedfdwDeletedUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblDeletedToursBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -452,21 +487,25 @@
         private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
         private System.Windows.Forms.Button btnUserManagement;
-        private TourFlowManagerDBDataSet tourFlowManagerDBDataSet;
-        private System.Windows.Forms.BindingSource tblUsersBindingSource;
-        private TourFlowManagerDBDataSetTableAdapters.tbl_UsersTableAdapter tbl_UsersTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridViewUsers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userPasswordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roleIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createdAtDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnEditTourPage;
         private System.Windows.Forms.Button btnDeletedTourType;
         private System.Windows.Forms.Button btnEditTourTypePage;
+        private TourFlowManagerDBDataSet tourFlowManagerDBDataSet;
+        private TourFlowManagerDBDataSetTableAdapters.tbl_UsersTableAdapter tbl_UsersTableAdapter;
+        private System.Windows.Forms.BindingSource tblUsersBindingSource;
+        private System.Windows.Forms.DataGridView dataGridViedfdwDeletedUsers;
+        private System.Windows.Forms.BindingSource tblDeletedToursBindingSource;
+        private TourFlowManagerDBDataSetTableAdapters.tbl_DeletedToursTableAdapter tbl_DeletedToursTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deletedTourIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deletedAtDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tourNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startPointCityIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinationCityIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tourTypeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn guideIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxParticipantsDataGridViewTextBoxColumn;
     }
 }

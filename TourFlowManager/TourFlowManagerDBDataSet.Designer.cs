@@ -1078,7 +1078,7 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_DeletedToursRow Addtbl_DeletedToursRow(int DeletedTourID, System.DateTime DeletedAt, string TourName, int StartPointCityID, int DestinationCityID, int TourTypeID, int GuideID, System.DateTime StartDate, System.DateTime EndDate, decimal Price, int MaxParticipants) {
+            public tbl_DeletedToursRow Addtbl_DeletedToursRow(int DeletedTourID, System.DateTime DeletedAt, string TourName, string StartPointCityID, string DestinationCityID, int TourTypeID, int GuideID, System.DateTime StartDate, System.DateTime EndDate, decimal Price, int MaxParticipants) {
                 tbl_DeletedToursRow rowtbl_DeletedToursRow = ((tbl_DeletedToursRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DeletedTourID,
@@ -1143,9 +1143,9 @@ namespace TourAgent {
                 base.Columns.Add(this.columnDeletedAt);
                 this.columnTourName = new global::System.Data.DataColumn("TourName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTourName);
-                this.columnStartPointCityID = new global::System.Data.DataColumn("StartPointCityID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnStartPointCityID = new global::System.Data.DataColumn("StartPointCityID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStartPointCityID);
-                this.columnDestinationCityID = new global::System.Data.DataColumn("DestinationCityID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnDestinationCityID = new global::System.Data.DataColumn("DestinationCityID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDestinationCityID);
                 this.columnTourTypeID = new global::System.Data.DataColumn("TourTypeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTourTypeID);
@@ -3893,9 +3893,9 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int StartPointCityID {
+            public string StartPointCityID {
                 get {
-                    return ((int)(this[this.tabletbl_DeletedTours.StartPointCityIDColumn]));
+                    return ((string)(this[this.tabletbl_DeletedTours.StartPointCityIDColumn]));
                 }
                 set {
                     this[this.tabletbl_DeletedTours.StartPointCityIDColumn] = value;
@@ -3904,9 +3904,9 @@ namespace TourAgent {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int DestinationCityID {
+            public string DestinationCityID {
                 get {
-                    return ((int)(this[this.tabletbl_DeletedTours.DestinationCityIDColumn]));
+                    return ((string)(this[this.tabletbl_DeletedTours.DestinationCityIDColumn]));
                 }
                 set {
                     this[this.tabletbl_DeletedTours.DestinationCityIDColumn] = value;
