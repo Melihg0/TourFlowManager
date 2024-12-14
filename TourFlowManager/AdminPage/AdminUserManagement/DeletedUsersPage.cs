@@ -47,13 +47,6 @@ namespace TourAgent.AdminPage.AdminUserManagement
             adminTourType.Show();
             this.Hide();
         }
-       /* private void btnSystemManagement_Click(object sender, EventArgs e)
-        {
-            AdminSystemPage adminSystemPage = new AdminSystemPage();
-            adminSystemPage.Show();
-            this.Hide();
-        }*/
-
         private void DeletedUsersPage_Load(object sender, EventArgs e)
         {
             // TODO: Bu kod satırı 'tourFlowManagerDBDataSet.tbl_DeletedUsers' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
@@ -74,7 +67,6 @@ namespace TourAgent.AdminPage.AdminUserManagement
             deletedUserPage.Show();
             this.Hide();
         }
-
         private void btnSystemManagement_Click(object sender, EventArgs e)
         {
             AdminSystemPage adminSystemPage = new AdminSystemPage();
