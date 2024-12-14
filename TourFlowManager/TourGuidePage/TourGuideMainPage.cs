@@ -10,18 +10,61 @@ using System.Windows.Forms;
 using TourAgent.TourGuidePage.TourGuideTourPage;
 using TourAgent.TourGuidePage.TourGuideMainPage;
 using TourAgent.TourGuidePage;
+using TourAgent.AdminPage.AdminTourManagment;
+using TourAgent.AdminPage.AdminUserManagement;
+using System.Data.SqlClient;
+using System.Data.Sql;
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
+using Microsoft.SqlServer.Server;
+using TourAgent.AdminPage.AdminSystemManagement;
+using TourAgent.AdminPage;
 
 
 namespace TourAgent.TourGuidePage.TourGuideMainPage
 {
     public partial class TourGuideMainPage : Form
     {
+        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
+
         public TourGuideMainPage()
         {
             InitializeComponent();
         }
+        private void btnMainPage_Click(object sender, EventArgs e)
+        {
+            AdminMainPage adminMainPage = new AdminMainPage();
+            adminMainPage.Show();
+            this.Close();
+
+        }
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            AdminEditUserPage adminUserMain = new AdminEditUserPage();
+            adminUserMain.Show();
+            this.Hide();
+        }
+        private void btnTourManagement_Click(object sender, EventArgs e)
+        {
+            AdminTourTypePage adminTourType = new AdminTourTypePage();
+            adminTourType.Show();
+            this.Hide();
+        }
+
+        private void btnSystemManagement_Click(object sender, EventArgs e)
+        {
+            AdminSystemPage adminSystemPage = new AdminSystemPage();
+            adminSystemPage.Show();
+            this.Hide();
+        }
 
         private void TourGuideMainPage_Load(object sender, EventArgs e)
+        {
+            this.tbl_ToursTableAdapter.Fill(this.tourFlowManagerDBDataSet.tbl_Tours);
+
+        }
+
+        private void TourGuideMainPage_Load_1(object sender, EventArgs e)
         {
 
         }

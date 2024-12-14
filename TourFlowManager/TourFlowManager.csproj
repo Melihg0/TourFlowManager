@@ -127,11 +127,23 @@
     <Compile Include="AdminPage\AdminUserManagement\DeletedUsersPage.Designer.cs">
       <DependentUpon>DeletedUsersPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerPage\CustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPage\CustomerInfo.Designer.cs">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPage\CustomerMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerPage\CustomerMainPage.Designer.cs">
       <DependentUpon>CustomerMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPage\CustomerSelectTour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPage\CustomerSelectTour.Designer.cs">
+      <DependentUpon>CustomerSelectTour.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginAndRegisterPage\RegisterPage.cs">
       <SubType>Form</SubType>
@@ -189,6 +201,15 @@
     <EmbeddedResource Include="AdminPage\AdminUserManagement\DeletedUsersPage.resx">
       <DependentUpon>DeletedUsersPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPage\CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPage\CustomerMainPage.resx">
+      <DependentUpon>CustomerMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPage\CustomerSelectTour.resx">
+      <DependentUpon>CustomerSelectTour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginAndRegisterPage\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +228,9 @@
     </Compile>
     <EmbeddedResource Include="TourGuidePage\TourGuideMainPage.resx">
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourGuidePage\TourGuideTourPage.resx">
+      <DependentUpon>TourGuideTourPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

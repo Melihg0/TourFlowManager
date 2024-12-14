@@ -1,6 +1,6 @@
 ﻿namespace TourAgent.CustomerPage
 {
-    partial class CustomerMainPage
+    partial class CustomerSelectTour
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TurDuzenle = new System.Windows.Forms.Button();
             this.TurSec = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.TurDuzenle = new System.Windows.Forms.Button();
             this.btnMainPage = new System.Windows.Forms.Button();
             this.btnUserManagement = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,7 +57,19 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 753);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 4;
+            // 
+            // TurDuzenle
+            // 
+            this.TurDuzenle.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TurDuzenle.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold);
+            this.TurDuzenle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TurDuzenle.Location = new System.Drawing.Point(43, 413);
+            this.TurDuzenle.Name = "TurDuzenle";
+            this.TurDuzenle.Size = new System.Drawing.Size(147, 79);
+            this.TurDuzenle.TabIndex = 19;
+            this.TurDuzenle.Text = "Turlarımı Düzenle";
+            this.TurDuzenle.UseVisualStyleBackColor = false;
             // 
             // TurSec
             // 
@@ -70,7 +82,6 @@
             this.TurSec.TabIndex = 18;
             this.TurSec.Text = "Tur Seç";
             this.TurSec.UseVisualStyleBackColor = false;
-            this.TurSec.Click += new System.EventHandler(this.ViewTours_Click);
             // 
             // label1
             // 
@@ -101,6 +112,17 @@
             this.panel3.Size = new System.Drawing.Size(10, 753);
             this.panel3.TabIndex = 12;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
+            this.pictureBox1.Location = new System.Drawing.Point(43, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Window;
@@ -111,29 +133,7 @@
             this.panel6.Location = new System.Drawing.Point(241, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1091, 122);
-            this.panel6.TabIndex = 4;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 112);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1091, 10);
-            this.panel7.TabIndex = 15;
-            // 
-            // TurDuzenle
-            // 
-            this.TurDuzenle.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.TurDuzenle.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold);
-            this.TurDuzenle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TurDuzenle.Location = new System.Drawing.Point(43, 413);
-            this.TurDuzenle.Name = "TurDuzenle";
-            this.TurDuzenle.Size = new System.Drawing.Size(147, 79);
-            this.TurDuzenle.TabIndex = 19;
-            this.TurDuzenle.Text = "Turlarımı Düzenle";
-            this.TurDuzenle.UseVisualStyleBackColor = false;
-            this.TurDuzenle.Click += new System.EventHandler(this.button1_Click);
+            this.panel6.TabIndex = 5;
             // 
             // btnMainPage
             // 
@@ -153,7 +153,6 @@
             this.btnMainPage.Text = "Ana Sayfa";
             this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMainPage.UseVisualStyleBackColor = false;
-            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
             // 
             // btnUserManagement
             // 
@@ -173,38 +172,30 @@
             this.btnUserManagement.Text = "Kullanıcı Islemleri";
             this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUserManagement.UseVisualStyleBackColor = false;
-            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
-            // pictureBox1
+            // panel7
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.panel7.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(0, 112);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1091, 10);
+            this.panel7.TabIndex = 15;
             // 
-            // CustomerMainPage
+            // CustomerSelectTour
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1332, 753);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            this.ForeColor = System.Drawing.SystemColors.Control;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "CustomerMainPage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CustomerMainPage";
-            this.Load += new System.EventHandler(this.CustomerMainPage_Load);
+            this.Name = "CustomerSelectTour";
+            this.Text = "CustomerSelectTour";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -212,6 +203,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button TurDuzenle;
+        private System.Windows.Forms.Button TurSec;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
@@ -220,7 +213,5 @@
         private System.Windows.Forms.Button btnMainPage;
         private System.Windows.Forms.Button btnUserManagement;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button TurSec;
-        private System.Windows.Forms.Button TurDuzenle;
     }
 }

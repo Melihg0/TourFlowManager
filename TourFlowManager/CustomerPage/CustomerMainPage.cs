@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace TourAgent.CustomerPage
 {
     public partial class CustomerMainPage : Form
@@ -15,6 +14,32 @@ namespace TourAgent.CustomerPage
         public CustomerMainPage()
         {
             InitializeComponent();
+        }
+
+        private void CustomerMainPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewTours_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMainPage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //turdüzenle burası
         }
     }
 }
