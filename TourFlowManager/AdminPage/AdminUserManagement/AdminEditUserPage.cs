@@ -46,20 +46,22 @@ namespace TourAgent.AdminPage.AdminUserManagement
             adminTourType.Show();
             this.Hide();
         }
-        /*private void btnSystemManagement_Click(object sender, EventArgs e)
-        {
-            AdminSystemPage adminSystemPage = new AdminSystemPage();
-            adminSystemPage.Show();
-            this.Hide();
-        }*/
         private void btnEditUserPage_Click(object sender, EventArgs e)
         {
             AdminEditUserPage adminUserMain = new AdminEditUserPage();
             adminUserMain.Show();
             this.Hide();
         }
+        private void btnSystemManagement_Click(object sender, EventArgs e)
+        {
+            {
+                AdminSystemPage adminSystemPage = new AdminSystemPage();
+                adminSystemPage.Show();
+                this.Close();
 
-        private void btnDeletedUserPage_Click(object sender, EventArgs e)
+            }
+        }
+            private void btnDeletedUserPage_Click(object sender, EventArgs e)
         {
             DeletedUsersPage deletedUserPage = new DeletedUsersPage();
             deletedUserPage.Show();
@@ -252,15 +254,9 @@ namespace TourAgent.AdminPage.AdminUserManagement
             }
             catch (Exception err)
             {
-                MessageBox.Show("Veriler Güncellenemedi: " + err.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Veriler Güncellenirken bir hata olustu.: " + err.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btnSystemManagement_Click(object sender, EventArgs e)
-        {
-            AdminSystemPage adminSystemPage = new AdminSystemPage();
-            adminSystemPage.Show();
-            this.Hide();
-        }
+        
     }
 }

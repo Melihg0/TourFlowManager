@@ -61,12 +61,16 @@ namespace TourAgent.AdminPage.AdminTourManagment
         }
         private void btnEditTourPage_Click(object sender, EventArgs e)
         {
-
+            AdminTourPage adminTourPage = new AdminTourPage();
+            adminTourPage.Show();
+            this.Hide();
         }
 
         private void btnDeletedTourType_Click(object sender, EventArgs e)
         {
-
+            AdminSystemPage adminSystemPage =new AdminSystemPage();
+            adminSystemPage.Show();
+            this.Hide();    
         }
 
         private void AdminTourTypePage_Load(object sender, EventArgs e)
@@ -180,13 +184,6 @@ namespace TourAgent.AdminPage.AdminTourManagment
                 var selectedRow = dataGridViewTourTypes.SelectedRows[0];
                 txtTypeName.Text = selectedRow.Cells[1].Value.ToString(); // TypeName
                 txtDescription.Text = selectedRow.Cells[2].Value.ToString(); // Description
-            }
-        }
-
-        private void txtDescription_TextChanged(object sender, EventArgs e)
-        {
-            {
-                txtDescription.ReadOnly = false; // Kullanıcı düzenleme yapmaya çalışırken alanı aç
             }
         }
     }
