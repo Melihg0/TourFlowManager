@@ -31,7 +31,7 @@ namespace TourAgent.CustomerPage
         private void CustomerEditTours_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tourFlowManagerDBDataSet.tbl_Tours' table. You can move, or remove it, as needed.
-            this.tbl_ToursTableAdapter.Fill(this.tourFlowManagerDBDataSet.tbl_Tours);
+            this.tbl_ReservationsTableAdapter.Fill(this.tourFlowManagerDBDataSet.tbl_Reservations);
 
         }
 

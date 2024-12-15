@@ -41,8 +41,8 @@
             this.btnUserManagement = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tourFlowManagerDBDataSet = new TourAgent.TourFlowManagerDBDataSet();
-            this.tblToursBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_ToursTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_ToursTableAdapter();
+            this.tblReservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_ReservationsTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_ReservationsTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -63,9 +63,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            //buradan itibaren datagriview düzenleme ekranı geliyor
             this.tourIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startPointCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReservationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReservationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destinationCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tourTypeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guideIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,7 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblToursBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblReservationsBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -251,14 +252,14 @@
             this.tourFlowManagerDBDataSet.DataSetName = "TourFlowManagerDBDataSet";
             this.tourFlowManagerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tblToursBindingSource
+            // tbReservationsBindingSource
             // 
-            this.tblToursBindingSource.DataMember = "tbl_Tours";
-            this.tblToursBindingSource.DataSource = this.tourFlowManagerDBDataSet;
+            this.tblReservationsBindingSource.DataMember = "tbl_Reservations";
+            this.tblReservationsBindingSource.DataSource = this.tourFlowManagerDBDataSet;
             // 
-            // tbl_ToursTableAdapter
+            // tbl_ReservationsTableAdapter
             // 
-            this.tbl_ToursTableAdapter.ClearBeforeFill = true;
+            this.tbl_ReservationsTableAdapter.ClearBeforeFill = true;
             // 
             // panel1
             // 
@@ -561,8 +562,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tourIDDataGridViewTextBoxColumn,
-            this.tourNameDataGridViewTextBoxColumn,
-            this.startPointCityIDDataGridViewTextBoxColumn,
+            //
+            this.ReservationIDDataGridViewTextBoxColumn,
+            this.ReservationDateDataGridViewTextBoxColumn,
             this.destinationCityIDDataGridViewTextBoxColumn,
             this.tourTypeIDDataGridViewTextBoxColumn,
             this.guideIDDataGridViewTextBoxColumn,
@@ -570,7 +572,7 @@
             this.endDateDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
             this.maxParticipantsDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblToursBindingSource;
+            this.dataGridView1.DataSource = this.tblReservationsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(312, 191);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -581,6 +583,8 @@
             // 
             // tourIDDataGridViewTextBoxColumn
             // 
+
+            //
             this.tourIDDataGridViewTextBoxColumn.DataPropertyName = "TourID";
             this.tourIDDataGridViewTextBoxColumn.HeaderText = "TourID";
             this.tourIDDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -590,19 +594,19 @@
             // 
             // tourNameDataGridViewTextBoxColumn
             // 
-            this.tourNameDataGridViewTextBoxColumn.DataPropertyName = "TourName";
-            this.tourNameDataGridViewTextBoxColumn.HeaderText = "TourName";
-            this.tourNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tourNameDataGridViewTextBoxColumn.Name = "tourNameDataGridViewTextBoxColumn";
-            this.tourNameDataGridViewTextBoxColumn.Width = 125;
+            this.ReservationIDDataGridViewTextBoxColumn.DataPropertyName = "ReservationID";
+            this.ReservationIDDataGridViewTextBoxColumn.HeaderText = "ReservationID";
+            this.ReservationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ReservationIDDataGridViewTextBoxColumn.Name = "ReservationIDDataGridViewTextBoxColumn";
+            this.ReservationIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // startPointCityIDDataGridViewTextBoxColumn
+            // ReservationDateDataGridViewTextBoxColumn
             // 
-            this.startPointCityIDDataGridViewTextBoxColumn.DataPropertyName = "StartPointCityID";
-            this.startPointCityIDDataGridViewTextBoxColumn.HeaderText = "StartPointCityID";
-            this.startPointCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startPointCityIDDataGridViewTextBoxColumn.Name = "startPointCityIDDataGridViewTextBoxColumn";
-            this.startPointCityIDDataGridViewTextBoxColumn.Width = 125;
+            this.ReservationDateDataGridViewTextBoxColumn.DataPropertyName = "ReservationDate";
+            this.ReservationDateDataGridViewTextBoxColumn.HeaderText = "ReservationDate";
+            this.ReservationDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ReservationDateDataGridViewTextBoxColumn.Name = "ReservationDateDataGridViewTextBoxColumn";
+            this.ReservationDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // destinationCityIDDataGridViewTextBoxColumn
             // 
@@ -708,7 +712,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblToursBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblReservationsBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
@@ -743,8 +747,8 @@
         private System.Windows.Forms.Button btnUserManagement;
         private System.Windows.Forms.Panel panel7;
         private TourFlowManagerDBDataSet tourFlowManagerDBDataSet;
-        private System.Windows.Forms.BindingSource tblToursBindingSource;
-        private TourFlowManagerDBDataSetTableAdapters.tbl_ToursTableAdapter tbl_ToursTableAdapter;
+        private System.Windows.Forms.BindingSource tblReservationsBindingSource;
+        private TourFlowManagerDBDataSetTableAdapters.tbl_ReservationsTableAdapter tbl_ReservationsTableAdapter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -765,9 +769,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.DataGridView dataGridView1;
+        //
         private System.Windows.Forms.DataGridViewTextBoxColumn tourIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startPointCityIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReservationIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReservationDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn destinationCityIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tourTypeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn guideIDDataGridViewTextBoxColumn;

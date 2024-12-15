@@ -75,7 +75,7 @@ namespace TourAgent.CustomerPage
         }
 
         private void btnKayitOl_Click(object sender, EventArgs e)
-        {
+        {//kayıt ol tuşu = datagridden tıklanan tura kullanıcının kayıt olması lazım
 
         }
     }
