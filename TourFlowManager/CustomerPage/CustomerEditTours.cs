@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TourAgent.CustomerPage;
-using TourAgent.TourGuidePage.TourGuideTourPage;
+using TourAgent.TourGuidePage.TourGuideTour;
 using System.Data.Sql;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
