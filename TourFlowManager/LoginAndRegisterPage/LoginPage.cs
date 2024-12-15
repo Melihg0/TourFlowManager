@@ -16,7 +16,7 @@ using System.Linq.Expressions;
 using TourAgent.AdminPage;
 using TourAgent.CustomerPage;
 using TourAgent.TourGuidePage;
-using TourAgent.TourGuidePage.TourGuideMainPage;
+using TourAgent.TourGuidePage.TourGuideMain;
 
 
 namespace TourAgent
@@ -63,7 +63,18 @@ namespace TourAgent
         {
             user = VerifyUser(txtMail.Text, txtPassword.Text);
             if (user != null)
+
             {
+                UserSession.UserID = user.UserID;
+                UserSession.FirstName = user.FirstName;
+                UserSession.LastName = user.LastName;
+                UserSession.Email = user.Email;
+                UserSession.PhoneNumber = user.PhoneNumber;  // PhoneNumber'ı ekledik
+                UserSession.UserPassword = user.UserPassword;  // UserPassword'ı ekledik
+                UserSession.RoleID = user.RoleID;
+                UserSession.BirthDate = user.BirthDate;  // BirthDate'yi ekledik
+                UserSession.CreatedAt = user.CreatedDate;
+
                 switch (user.RoleID)
                 {
                     case 1:
@@ -139,6 +150,11 @@ namespace TourAgent
             registerPage.Show();
             this.Hide();
            
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     } 
 }        

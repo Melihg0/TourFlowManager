@@ -138,6 +138,12 @@
     <Compile Include="AdminPage\AdminUserManagement\DeletedUsersPage.Designer.cs">
       <DependentUpon>DeletedUsersPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerPage\CustomerEditTours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerPage\CustomerEditTours.Designer.cs">
+      <DependentUpon>CustomerEditTours.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerPage\CustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,19 +184,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TourFlowManagerDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TourGuidePage\TourGuideMainPage.cs">
+    <Compile Include="TourGuidePage\TourGuideMain\TourGuideMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TourGuidePage\TourGuideMainPage.Designer.cs">
+    <Compile Include="TourGuidePage\TourGuideMain\TourGuideMainPage.Designer.cs">
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="TourGuidePage\TourGuideTourPage.cs">
+    <Compile Include="TourGuidePage\TourGuideTour\TourGuideTourPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TourGuidePage\TourGuideTourPage.Designer.cs">
+    <Compile Include="TourGuidePage\TourGuideTour\TourGuideTourPage.Designer.cs">
       <DependentUpon>TourGuideTourPage.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserSession.cs" />
     <EmbeddedResource Include="AdminPage\AdminMainPage.resx">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage\AdminUserManagement\DeletedUsersPage.resx">
       <DependentUpon>DeletedUsersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerPage\CustomerEditTours.resx">
+      <DependentUpon>CustomerEditTours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerPage\CustomerInfo.resx">
       <DependentUpon>CustomerInfo.cs</DependentUpon>
@@ -237,10 +247,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TourGuidePage\TourGuideMainPage.resx">
+    <EmbeddedResource Include="TourGuidePage\TourGuideMain\TourGuideMainPage.resx">
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TourGuidePage\TourGuideTourPage.resx">
+    <EmbeddedResource Include="TourGuidePage\TourGuideTour\TourGuideTourPage.resx">
       <DependentUpon>TourGuideTourPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

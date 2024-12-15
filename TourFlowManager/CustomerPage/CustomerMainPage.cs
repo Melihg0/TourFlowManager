@@ -21,25 +21,34 @@ namespace TourAgent.CustomerPage
 
         }
 
-        private void ViewTours_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnMainPage_Click(object sender, EventArgs e)
         {
-
+            CustomerMainPage customerMainPage = new CustomerMainPage();
+            customerMainPage.Show();
+            this.Hide();
         }
 
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
-
+            CustomerInfo customerInfo = new CustomerInfo();
+            customerInfo.Show();
+            this.Hide();
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSelectTour_Click(object sender, EventArgs e)
         {
-            //turdüzenle burası
+            CustomerSelectTour customerSelectTour = new CustomerSelectTour();
+            customerSelectTour.Show();
+            this.Hide();
+        }
+
+        private void btnEditTourPage_Click(object sender, EventArgs e)
+        {
+            CustomerEditTours customerEditTours = new CustomerEditTours();
+            customerEditTours.Show();
+            this.Hide();
         }
     }
 }

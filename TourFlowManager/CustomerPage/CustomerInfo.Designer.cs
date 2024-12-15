@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSelectTour = new System.Windows.Forms.Button();
+            this.btnEditTourPage = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.TurDuzenle = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,7 +51,17 @@
             this.Email = new System.Windows.Forms.Label();
             this.DogumTarihi = new System.Windows.Forms.Label();
             this.Sifre = new System.Windows.Forms.Label();
+            this.txtboxAd = new System.Windows.Forms.TextBox();
+            this.txtBoxSoyad = new System.Windows.Forms.TextBox();
+            this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtBoxEmail = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtBoxPassword = new System.Windows.Forms.TextBox();
+            this.btnBilgilerimiGuncelle = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +69,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.TurDuzenle);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -62,6 +80,100 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 753);
             this.panel1.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.Controls.Add(this.btnSelectTour);
+            this.panel2.Controls.Add(this.btnEditTourPage);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(5, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(241, 753);
+            this.panel2.TabIndex = 20;
+            // 
+            // btnSelectTour
+            // 
+            this.btnSelectTour.BackColor = System.Drawing.Color.LightCyan;
+            this.btnSelectTour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSelectTour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectTour.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnSelectTour.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectTour.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSelectTour.Image = global::TourAgent.Properties.Resources.editing;
+            this.btnSelectTour.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSelectTour.Location = new System.Drawing.Point(12, 294);
+            this.btnSelectTour.Name = "btnSelectTour";
+            this.btnSelectTour.Size = new System.Drawing.Size(213, 103);
+            this.btnSelectTour.TabIndex = 36;
+            this.btnSelectTour.Text = "Tur Seç";
+            this.btnSelectTour.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSelectTour.UseVisualStyleBackColor = false;
+            this.btnSelectTour.Click += new System.EventHandler(this.btnSelectTour_Click);
+            // 
+            // btnEditTourPage
+            // 
+            this.btnEditTourPage.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btnEditTourPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEditTourPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditTourPage.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnEditTourPage.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTourPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEditTourPage.Image = global::TourAgent.Properties.Resources.editing;
+            this.btnEditTourPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditTourPage.Location = new System.Drawing.Point(11, 455);
+            this.btnEditTourPage.Name = "btnEditTourPage";
+            this.btnEditTourPage.Size = new System.Drawing.Size(213, 103);
+            this.btnEditTourPage.TabIndex = 35;
+            this.btnEditTourPage.Text = "Turlarımı Düzenle";
+            this.btnEditTourPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditTourPage.UseVisualStyleBackColor = false;
+            this.btnEditTourPage.Click += new System.EventHandler(this.btnEditTourPage_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(26, 160);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 31);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Yönetim Sayfası";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::TourAgent.Properties.Resources.software_engineer;
+            this.pictureBox2.Location = new System.Drawing.Point(43, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(147, 145);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 753);
+            this.panel5.TabIndex = 14;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(231, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 753);
+            this.panel8.TabIndex = 12;
             // 
             // TurDuzenle
             // 
@@ -145,6 +257,7 @@
             this.btnMainPage.Text = "Ana Sayfa";
             this.btnMainPage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMainPage.UseVisualStyleBackColor = false;
+            this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
             // 
             // btnUserManagement
             // 
@@ -164,6 +277,7 @@
             this.btnUserManagement.Text = "Kullanıcı Islemleri";
             this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUserManagement.UseVisualStyleBackColor = false;
+            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
             // panel7
             // 
@@ -178,7 +292,7 @@
             // 
             this.Ad.AutoSize = true;
             this.Ad.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold);
-            this.Ad.Location = new System.Drawing.Point(344, 249);
+            this.Ad.Location = new System.Drawing.Point(555, 216);
             this.Ad.Name = "Ad";
             this.Ad.Size = new System.Drawing.Size(39, 28);
             this.Ad.TabIndex = 6;
@@ -189,7 +303,7 @@
             // 
             this.Soyad.AutoSize = true;
             this.Soyad.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold);
-            this.Soyad.Location = new System.Drawing.Point(344, 298);
+            this.Soyad.Location = new System.Drawing.Point(555, 265);
             this.Soyad.Name = "Soyad";
             this.Soyad.Size = new System.Drawing.Size(72, 28);
             this.Soyad.TabIndex = 7;
@@ -200,7 +314,7 @@
             // 
             this.Telefon.AutoSize = true;
             this.Telefon.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold);
-            this.Telefon.Location = new System.Drawing.Point(343, 350);
+            this.Telefon.Location = new System.Drawing.Point(554, 317);
             this.Telefon.Name = "Telefon";
             this.Telefon.Size = new System.Drawing.Size(83, 28);
             this.Telefon.TabIndex = 8;
@@ -211,7 +325,7 @@
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold);
-            this.Email.Location = new System.Drawing.Point(349, 398);
+            this.Email.Location = new System.Drawing.Point(557, 365);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(64, 28);
             this.Email.TabIndex = 9;
@@ -222,7 +336,7 @@
             // 
             this.DogumTarihi.AutoSize = true;
             this.DogumTarihi.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold);
-            this.DogumTarihi.Location = new System.Drawing.Point(344, 450);
+            this.DogumTarihi.Location = new System.Drawing.Point(555, 417);
             this.DogumTarihi.Name = "DogumTarihi";
             this.DogumTarihi.Size = new System.Drawing.Size(143, 28);
             this.DogumTarihi.TabIndex = 10;
@@ -233,12 +347,89 @@
             // 
             this.Sifre.AutoSize = true;
             this.Sifre.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold);
-            this.Sifre.Location = new System.Drawing.Point(349, 504);
+            this.Sifre.Location = new System.Drawing.Point(558, 470);
             this.Sifre.Name = "Sifre";
             this.Sifre.Size = new System.Drawing.Size(59, 28);
             this.Sifre.TabIndex = 11;
             this.Sifre.Text = "Şifre";
             this.Sifre.Click += new System.EventHandler(this.Sifre_Click);
+            // 
+            // txtboxAd
+            // 
+            this.txtboxAd.Location = new System.Drawing.Point(713, 216);
+            this.txtboxAd.Name = "txtboxAd";
+            this.txtboxAd.Size = new System.Drawing.Size(235, 22);
+            this.txtboxAd.TabIndex = 14;
+            this.txtboxAd.TextChanged += new System.EventHandler(this.txtboxAd_TextChanged);
+            // 
+            // txtBoxSoyad
+            // 
+            this.txtBoxSoyad.Location = new System.Drawing.Point(713, 272);
+            this.txtBoxSoyad.Name = "txtBoxSoyad";
+            this.txtBoxSoyad.Size = new System.Drawing.Size(235, 22);
+            this.txtBoxSoyad.TabIndex = 15;
+            this.txtBoxSoyad.TextChanged += new System.EventHandler(this.txtBoxSoyad_TextChanged);
+            // 
+            // txtBoxPhoneNumber
+            // 
+            this.txtBoxPhoneNumber.Location = new System.Drawing.Point(713, 322);
+            this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
+            this.txtBoxPhoneNumber.Size = new System.Drawing.Size(235, 22);
+            this.txtBoxPhoneNumber.TabIndex = 16;
+            this.txtBoxPhoneNumber.TextChanged += new System.EventHandler(this.txtBoxPhoneNumber_TextChanged);
+            // 
+            // txtBoxEmail
+            // 
+            this.txtBoxEmail.Location = new System.Drawing.Point(713, 372);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Size = new System.Drawing.Size(235, 22);
+            this.txtBoxEmail.TabIndex = 17;
+            this.txtBoxEmail.TextChanged += new System.EventHandler(this.txtBoxEmail_TextChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(713, 422);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(235, 22);
+            this.dateTimePicker1.TabIndex = 18;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // txtBoxPassword
+            // 
+            this.txtBoxPassword.Location = new System.Drawing.Point(713, 470);
+            this.txtBoxPassword.Name = "txtBoxPassword";
+            this.txtBoxPassword.Size = new System.Drawing.Size(235, 22);
+            this.txtBoxPassword.TabIndex = 19;
+            this.txtBoxPassword.TextChanged += new System.EventHandler(this.txtBoxPassword_TextChanged);
+            // 
+            // btnBilgilerimiGuncelle
+            // 
+            this.btnBilgilerimiGuncelle.BackColor = System.Drawing.Color.LightCyan;
+            this.btnBilgilerimiGuncelle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBilgilerimiGuncelle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBilgilerimiGuncelle.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnBilgilerimiGuncelle.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBilgilerimiGuncelle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBilgilerimiGuncelle.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBilgilerimiGuncelle.Location = new System.Drawing.Point(607, 543);
+            this.btnBilgilerimiGuncelle.Name = "btnBilgilerimiGuncelle";
+            this.btnBilgilerimiGuncelle.Size = new System.Drawing.Size(305, 43);
+            this.btnBilgilerimiGuncelle.TabIndex = 37;
+            this.btnBilgilerimiGuncelle.Text = "Kullanıcı Bilgilerimi Güncelle";
+            this.btnBilgilerimiGuncelle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBilgilerimiGuncelle.UseVisualStyleBackColor = false;
+            this.btnBilgilerimiGuncelle.Click += new System.EventHandler(this.btnBilgilerimiGuncelle_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.Location = new System.Drawing.Point(674, 151);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 24);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Kullanıcı İşlemleri";
             // 
             // CustomerInfo
             // 
@@ -246,6 +437,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1332, 753);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnBilgilerimiGuncelle);
+            this.Controls.Add(this.txtBoxPassword);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtBoxEmail);
+            this.Controls.Add(this.txtBoxPhoneNumber);
+            this.Controls.Add(this.txtBoxSoyad);
+            this.Controls.Add(this.txtboxAd);
             this.Controls.Add(this.Sifre);
             this.Controls.Add(this.DogumTarihi);
             this.Controls.Add(this.Email);
@@ -259,6 +458,9 @@
             this.Load += new System.EventHandler(this.CustomerInfo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -284,5 +486,20 @@
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Label DogumTarihi;
         private System.Windows.Forms.Label Sifre;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnSelectTour;
+        private System.Windows.Forms.Button btnEditTourPage;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox txtboxAd;
+        private System.Windows.Forms.TextBox txtBoxSoyad;
+        private System.Windows.Forms.TextBox txtBoxPhoneNumber;
+        private System.Windows.Forms.TextBox txtBoxEmail;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtBoxPassword;
+        private System.Windows.Forms.Button btnBilgilerimiGuncelle;
+        private System.Windows.Forms.Label label3;
     }
 }

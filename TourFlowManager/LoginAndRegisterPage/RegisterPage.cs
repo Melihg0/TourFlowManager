@@ -156,6 +156,11 @@ namespace TourAgent
             loginPage.Show();
             this.Close();
         }
+
+        private void RegisterPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
      

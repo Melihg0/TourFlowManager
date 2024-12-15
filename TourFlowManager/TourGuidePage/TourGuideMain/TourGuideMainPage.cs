@@ -7,21 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TourAgent.TourGuidePage.TourGuideTourPage;
-using TourAgent.TourGuidePage.TourGuideMainPage;
+using TourAgent.TourGuidePage.TourGuideTour;
+using TourAgent.TourGuidePage.TourGuideMain;
 using TourAgent.TourGuidePage;
-using TourAgent.AdminPage.AdminTourManagment;
-using TourAgent.AdminPage.AdminUserManagement;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Microsoft.SqlServer.Server;
-using TourAgent.AdminPage.AdminSystemManagement;
-using TourAgent.AdminPage;
 
 
-namespace TourAgent.TourGuidePage.TourGuideMainPage
+
+namespace TourAgent.TourGuidePage.TourGuideMain
 {
     public partial class TourGuideMainPage : Form
     {
@@ -33,30 +30,19 @@ namespace TourAgent.TourGuidePage.TourGuideMainPage
         }
         private void btnMainPage_Click(object sender, EventArgs e)
         {
-            AdminMainPage adminMainPage = new AdminMainPage();
-            adminMainPage.Show();
+            TourGuideMainPage tourGuideMainPage = new TourGuideMainPage();
+            tourGuideMainPage.Show();
             this.Close();
 
         }
-        private void btnUserManagement_Click(object sender, EventArgs e)
-        {
-            AdminEditUserPage adminUserMain = new AdminEditUserPage();
-            adminUserMain.Show();
-            this.Hide();
-        }
+        
         private void btnTourManagement_Click(object sender, EventArgs e)
         {
-            AdminTourTypePage adminTourType = new AdminTourTypePage();
-            adminTourType.Show();
+            TourGuideTourPage tourGuideTourPage = new TourGuideTourPage(); 
+            tourGuideTourPage.Show(); 
             this.Hide();
         }
 
-        private void btnSystemManagement_Click(object sender, EventArgs e)
-        {
-            AdminSystemPage adminSystemPage = new AdminSystemPage();
-            adminSystemPage.Show();
-            this.Hide();
-        }
 
         private void TourGuideMainPage_Load(object sender, EventArgs e)
         {

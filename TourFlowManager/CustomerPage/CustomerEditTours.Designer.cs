@@ -1,6 +1,6 @@
 ﻿namespace TourAgent.CustomerPage
 {
-    partial class CustomerSelectTour
+    partial class CustomerEditTours
     {
         /// <summary>
         /// Required designer variable.
@@ -29,31 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnSelectTour = new System.Windows.Forms.Button();
             this.btnEditTourPage = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.UserManagement = new System.Windows.Forms.Button();
             this.btnMainPage = new System.Windows.Forms.Button();
+            this.btnUserManagement = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tourIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startPointCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destinationCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourTypeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guideIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxParticipantsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblToursBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tourFlowManagerDBDataSet = new TourAgent.TourFlowManagerDBDataSet();
-            this.tbl_ToursTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_ToursTableAdapter();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.tblReservationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_ReservationsTableAdapter = new TourAgent.TourFlowManagerDBDataSetTableAdapters.tbl_ReservationsTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -72,26 +62,18 @@
             this.txtTourName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnKayitOl = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tourIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startPointCityIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destinationCityIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourTypeIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guideIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxParticipantsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblToursBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblToursBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).BeginInit();
+            this.tourIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReservationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReservationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTurdanÇik = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblReservationsBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -101,23 +83,22 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblToursBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.btnSelectTour);
-            this.panel1.Controls.Add(this.btnEditTourPage);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(241, 753);
-            this.panel1.TabIndex = 4;
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.Controls.Add(this.btnSelectTour);
+            this.panel2.Controls.Add(this.btnEditTourPage);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(241, 753);
+            this.panel2.TabIndex = 21;
             // 
             // btnSelectTour
             // 
@@ -157,77 +138,57 @@
             this.btnEditTourPage.UseVisualStyleBackColor = false;
             this.btnEditTourPage.Click += new System.EventHandler(this.btnEditTourPage_Click);
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(26, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 31);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Yönetim Sayfası";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(26, 160);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 31);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Yönetim Sayfası";
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::TourAgent.Properties.Resources.software_engineer;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 145);
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::TourAgent.Properties.Resources.software_engineer;
+            this.pictureBox2.Location = new System.Drawing.Point(43, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(147, 145);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
-            // panel4
+            // panel5
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 753);
-            this.panel4.TabIndex = 14;
+            this.panel5.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 753);
+            this.panel5.TabIndex = 14;
             // 
-            // panel3
+            // panel8
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(231, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 753);
-            this.panel3.TabIndex = 12;
+            this.panel8.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(231, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 753);
+            this.panel8.TabIndex = 12;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Window;
-            this.panel6.Controls.Add(this.UserManagement);
             this.panel6.Controls.Add(this.btnMainPage);
+            this.panel6.Controls.Add(this.btnUserManagement);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(241, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1091, 122);
-            this.panel6.TabIndex = 5;
-            // 
-            // UserManagement
-            // 
-            this.UserManagement.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.UserManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.UserManagement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UserManagement.FlatAppearance.BorderSize = 0;
-            this.UserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UserManagement.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UserManagement.Image = global::TourAgent.Properties.Resources.group;
-            this.UserManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.UserManagement.Location = new System.Drawing.Point(247, 6);
-            this.UserManagement.Name = "UserManagement";
-            this.UserManagement.Size = new System.Drawing.Size(200, 104);
-            this.UserManagement.TabIndex = 33;
-            this.UserManagement.Text = "Kullanıcı Islemleri";
-            this.UserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.UserManagement.UseVisualStyleBackColor = false;
-            this.UserManagement.Click += new System.EventHandler(this.button1_Click);
+            this.panel6.TabIndex = 22;
             // 
             // btnMainPage
             // 
@@ -249,6 +210,26 @@
             this.btnMainPage.UseVisualStyleBackColor = false;
             this.btnMainPage.Click += new System.EventHandler(this.btnMainPage_Click);
             // 
+            // btnUserManagement
+            // 
+            this.btnUserManagement.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnUserManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnUserManagement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUserManagement.FlatAppearance.BorderSize = 0;
+            this.btnUserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUserManagement.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUserManagement.Image = global::TourAgent.Properties.Resources.group;
+            this.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUserManagement.Location = new System.Drawing.Point(251, 6);
+            this.btnUserManagement.Name = "btnUserManagement";
+            this.btnUserManagement.Size = new System.Drawing.Size(200, 104);
+            this.btnUserManagement.TabIndex = 28;
+            this.btnUserManagement.Text = "Kullanıcı Islemleri";
+            this.btnUserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUserManagement.UseVisualStyleBackColor = false;
+            this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -258,118 +239,37 @@
             this.panel7.Size = new System.Drawing.Size(1091, 10);
             this.panel7.TabIndex = 15;
             // 
-            // tourIDDataGridViewTextBoxColumn
-            // 
-            this.tourIDDataGridViewTextBoxColumn.DataPropertyName = "TourID";
-            this.tourIDDataGridViewTextBoxColumn.HeaderText = "TourID";
-            this.tourIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tourIDDataGridViewTextBoxColumn.Name = "tourIDDataGridViewTextBoxColumn";
-            this.tourIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tourIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tourNameDataGridViewTextBoxColumn
-            // 
-            this.tourNameDataGridViewTextBoxColumn.DataPropertyName = "TourName";
-            this.tourNameDataGridViewTextBoxColumn.HeaderText = "TourName";
-            this.tourNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tourNameDataGridViewTextBoxColumn.Name = "tourNameDataGridViewTextBoxColumn";
-            this.tourNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startPointCityIDDataGridViewTextBoxColumn
-            // 
-            this.startPointCityIDDataGridViewTextBoxColumn.DataPropertyName = "StartPointCityID";
-            this.startPointCityIDDataGridViewTextBoxColumn.HeaderText = "StartPointCityID";
-            this.startPointCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startPointCityIDDataGridViewTextBoxColumn.Name = "startPointCityIDDataGridViewTextBoxColumn";
-            this.startPointCityIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // destinationCityIDDataGridViewTextBoxColumn
-            // 
-            this.destinationCityIDDataGridViewTextBoxColumn.DataPropertyName = "DestinationCityID";
-            this.destinationCityIDDataGridViewTextBoxColumn.HeaderText = "DestinationCityID";
-            this.destinationCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.destinationCityIDDataGridViewTextBoxColumn.Name = "destinationCityIDDataGridViewTextBoxColumn";
-            this.destinationCityIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tourTypeIDDataGridViewTextBoxColumn
-            // 
-            this.tourTypeIDDataGridViewTextBoxColumn.DataPropertyName = "TourTypeID";
-            this.tourTypeIDDataGridViewTextBoxColumn.HeaderText = "TourTypeID";
-            this.tourTypeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tourTypeIDDataGridViewTextBoxColumn.Name = "tourTypeIDDataGridViewTextBoxColumn";
-            this.tourTypeIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // guideIDDataGridViewTextBoxColumn
-            // 
-            this.guideIDDataGridViewTextBoxColumn.DataPropertyName = "GuideID";
-            this.guideIDDataGridViewTextBoxColumn.HeaderText = "GuideID";
-            this.guideIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.guideIDDataGridViewTextBoxColumn.Name = "guideIDDataGridViewTextBoxColumn";
-            this.guideIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maxParticipantsDataGridViewTextBoxColumn
-            // 
-            this.maxParticipantsDataGridViewTextBoxColumn.DataPropertyName = "MaxParticipants";
-            this.maxParticipantsDataGridViewTextBoxColumn.HeaderText = "MaxParticipants";
-            this.maxParticipantsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maxParticipantsDataGridViewTextBoxColumn.Name = "maxParticipantsDataGridViewTextBoxColumn";
-            this.maxParticipantsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tblToursBindingSource
-            // 
-            this.tblToursBindingSource.DataMember = "tbl_Tours";
-            this.tblToursBindingSource.DataSource = this.tourFlowManagerDBDataSet;
-            // 
             // tourFlowManagerDBDataSet
             // 
             this.tourFlowManagerDBDataSet.DataSetName = "TourFlowManagerDBDataSet";
             this.tourFlowManagerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tbl_ToursTableAdapter
+            // tblReservationsBindingSource
             // 
-            this.tbl_ToursTableAdapter.ClearBeforeFill = true;
+            this.tblReservationsBindingSource.DataMember = "tbl_Reservations";
+            this.tblReservationsBindingSource.DataSource = this.tourFlowManagerDBDataSet;
             // 
-            // panel2
+            // tbl_ReservationsTableAdapter
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
-            this.panel2.Controls.Add(this.groupBox4);
-            this.panel2.Controls.Add(this.groupBox8);
-            this.panel2.Controls.Add(this.groupBox7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.groupBox3);
-            this.panel2.Controls.Add(this.groupBox6);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.groupBox5);
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(313, 477);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(965, 160);
-            this.panel2.TabIndex = 39;
+            this.tbl_ReservationsTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(242)))), ((int)(((byte)(235)))));
+            this.panel1.Controls.Add(this.groupBox4);
+            this.panel1.Controls.Add(this.groupBox8);
+            this.panel1.Controls.Add(this.groupBox7);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox6);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.groupBox5);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Location = new System.Drawing.Point(312, 471);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(965, 160);
+            this.panel1.TabIndex = 41;
             // 
             // groupBox4
             // 
@@ -648,167 +548,100 @@
             this.txtPassword.TabStop = false;
             this.txtPassword.WordWrap = false;
             // 
-            // btnKayitOl
-            // 
-            this.btnKayitOl.BackColor = System.Drawing.Color.LightCyan;
-            this.btnKayitOl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnKayitOl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKayitOl.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnKayitOl.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKayitOl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnKayitOl.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnKayitOl.Location = new System.Drawing.Point(612, 666);
-            this.btnKayitOl.Name = "btnKayitOl";
-            this.btnKayitOl.Size = new System.Drawing.Size(305, 43);
-            this.btnKayitOl.TabIndex = 40;
-            this.btnKayitOl.Text = "Seçili Tura Kayıt Ol";
-            this.btnKayitOl.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnKayitOl.UseVisualStyleBackColor = false;
-            this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(697, 144);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 24);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Tur Kayıt Ekranı";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tourIDDataGridViewTextBoxColumn1,
-            this.tourNameDataGridViewTextBoxColumn1,
-            this.startPointCityIDDataGridViewTextBoxColumn1,
-            this.destinationCityIDDataGridViewTextBoxColumn1,
-            this.tourTypeIDDataGridViewTextBoxColumn1,
-            this.guideIDDataGridViewTextBoxColumn1,
-            this.startDateDataGridViewTextBoxColumn1,
-            this.endDateDataGridViewTextBoxColumn1,
-            this.priceDataGridViewTextBoxColumn1,
-            this.maxParticipantsDataGridViewTextBoxColumn1});
-            this.dataGridView1.DataSource = this.tblToursBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(316, 186);
+            this.tourIDDataGridViewTextBoxColumn,
+            this.ReservationIDDataGridViewTextBoxColumn,
+            this.ReservationDateDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tblReservationsBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(312, 191);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(962, 263);
-            this.dataGridView1.TabIndex = 46;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.Size = new System.Drawing.Size(965, 260);
+            this.dataGridView1.TabIndex = 40;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // tourIDDataGridViewTextBoxColumn1
+            // tourIDDataGridViewTextBoxColumn
             // 
-            this.tourIDDataGridViewTextBoxColumn1.DataPropertyName = "TourID";
-            this.tourIDDataGridViewTextBoxColumn1.HeaderText = "TourID";
-            this.tourIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.tourIDDataGridViewTextBoxColumn1.Name = "tourIDDataGridViewTextBoxColumn1";
-            this.tourIDDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.tourIDDataGridViewTextBoxColumn1.Width = 125;
+            this.tourIDDataGridViewTextBoxColumn.DataPropertyName = "TourID";
+            this.tourIDDataGridViewTextBoxColumn.HeaderText = "TourID";
+            this.tourIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tourIDDataGridViewTextBoxColumn.Name = "tourIDDataGridViewTextBoxColumn";
+            this.tourIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tourIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // tourNameDataGridViewTextBoxColumn1
+            // ReservationIDDataGridViewTextBoxColumn
             // 
-            this.tourNameDataGridViewTextBoxColumn1.DataPropertyName = "TourName";
-            this.tourNameDataGridViewTextBoxColumn1.HeaderText = "TourName";
-            this.tourNameDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.tourNameDataGridViewTextBoxColumn1.Name = "tourNameDataGridViewTextBoxColumn1";
-            this.tourNameDataGridViewTextBoxColumn1.Width = 125;
+            this.ReservationIDDataGridViewTextBoxColumn.DataPropertyName = "ReservationID";
+            this.ReservationIDDataGridViewTextBoxColumn.HeaderText = "ReservationID";
+            this.ReservationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ReservationIDDataGridViewTextBoxColumn.Name = "ReservationIDDataGridViewTextBoxColumn";
+            this.ReservationIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ReservationIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // startPointCityIDDataGridViewTextBoxColumn1
+            // ReservationDateDataGridViewTextBoxColumn
             // 
-            this.startPointCityIDDataGridViewTextBoxColumn1.DataPropertyName = "StartPointCityID";
-            this.startPointCityIDDataGridViewTextBoxColumn1.HeaderText = "StartPointCityID";
-            this.startPointCityIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.startPointCityIDDataGridViewTextBoxColumn1.Name = "startPointCityIDDataGridViewTextBoxColumn1";
-            this.startPointCityIDDataGridViewTextBoxColumn1.Width = 125;
+            this.ReservationDateDataGridViewTextBoxColumn.DataPropertyName = "ReservationDate";
+            this.ReservationDateDataGridViewTextBoxColumn.HeaderText = "ReservationDate";
+            this.ReservationDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ReservationDateDataGridViewTextBoxColumn.Name = "ReservationDateDataGridViewTextBoxColumn";
+            this.ReservationDateDataGridViewTextBoxColumn.Width = 125;
             // 
-            // destinationCityIDDataGridViewTextBoxColumn1
+            // btnTurdanÇik
             // 
-            this.destinationCityIDDataGridViewTextBoxColumn1.DataPropertyName = "DestinationCityID";
-            this.destinationCityIDDataGridViewTextBoxColumn1.HeaderText = "DestinationCityID";
-            this.destinationCityIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.destinationCityIDDataGridViewTextBoxColumn1.Name = "destinationCityIDDataGridViewTextBoxColumn1";
-            this.destinationCityIDDataGridViewTextBoxColumn1.Width = 125;
+            this.btnTurdanÇik.BackColor = System.Drawing.Color.LightCyan;
+            this.btnTurdanÇik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnTurdanÇik.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTurdanÇik.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnTurdanÇik.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTurdanÇik.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnTurdanÇik.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTurdanÇik.Location = new System.Drawing.Point(608, 660);
+            this.btnTurdanÇik.Name = "btnTurdanÇik";
+            this.btnTurdanÇik.Size = new System.Drawing.Size(305, 43);
+            this.btnTurdanÇik.TabIndex = 42;
+            this.btnTurdanÇik.Text = "Seçili Turdan Çık";
+            this.btnTurdanÇik.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTurdanÇik.UseVisualStyleBackColor = false;
+            this.btnTurdanÇik.Click += new System.EventHandler(this.btnTurdanÇik_Click);
             // 
-            // tourTypeIDDataGridViewTextBoxColumn1
+            // label1
             // 
-            this.tourTypeIDDataGridViewTextBoxColumn1.DataPropertyName = "TourTypeID";
-            this.tourTypeIDDataGridViewTextBoxColumn1.HeaderText = "TourTypeID";
-            this.tourTypeIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.tourTypeIDDataGridViewTextBoxColumn1.Name = "tourTypeIDDataGridViewTextBoxColumn1";
-            this.tourTypeIDDataGridViewTextBoxColumn1.Width = 125;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(691, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 24);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Turlarımı Düzenle";
             // 
-            // guideIDDataGridViewTextBoxColumn1
-            // 
-            this.guideIDDataGridViewTextBoxColumn1.DataPropertyName = "GuideID";
-            this.guideIDDataGridViewTextBoxColumn1.HeaderText = "GuideID";
-            this.guideIDDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.guideIDDataGridViewTextBoxColumn1.Name = "guideIDDataGridViewTextBoxColumn1";
-            this.guideIDDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn1
-            // 
-            this.startDateDataGridViewTextBoxColumn1.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn1.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn1.Name = "startDateDataGridViewTextBoxColumn1";
-            this.startDateDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // endDateDataGridViewTextBoxColumn1
-            // 
-            this.endDateDataGridViewTextBoxColumn1.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn1.HeaderText = "EndDate";
-            this.endDateDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn1.Name = "endDateDataGridViewTextBoxColumn1";
-            this.endDateDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // priceDataGridViewTextBoxColumn1
-            // 
-            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
-            this.priceDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // maxParticipantsDataGridViewTextBoxColumn1
-            // 
-            this.maxParticipantsDataGridViewTextBoxColumn1.DataPropertyName = "MaxParticipants";
-            this.maxParticipantsDataGridViewTextBoxColumn1.HeaderText = "MaxParticipants";
-            this.maxParticipantsDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.maxParticipantsDataGridViewTextBoxColumn1.Name = "maxParticipantsDataGridViewTextBoxColumn1";
-            this.maxParticipantsDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // tblToursBindingSource1
-            // 
-            this.tblToursBindingSource1.DataMember = "tbl_Tours";
-            this.tblToursBindingSource1.DataSource = this.tourFlowManagerDBDataSet;
-            // 
-            // CustomerSelectTour
+            // CustomerEditTours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1332, 753);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnKayitOl);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnTurdanÇik);
             this.Controls.Add(this.panel1);
-            this.Name = "CustomerSelectTour";
-            this.Text = "CustomerSelectTour";
-            this.Load += new System.EventHandler(this.CustomerSelectTour_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tblToursBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).EndInit();
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel2);
+            this.Name = "CustomerEditTours";
+            this.Text = "CustomerEditTours";
+            this.Load += new System.EventHandler(this.CustomerEditTours_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblReservationsBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
@@ -823,7 +656,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblToursBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,30 +663,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnSelectTour;
+        private System.Windows.Forms.Button btnEditTourPage;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnMainPage;
+        private System.Windows.Forms.Button btnUserManagement;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnEditTourPage;
-        private System.Windows.Forms.Button btnSelectTour;
         private TourFlowManagerDBDataSet tourFlowManagerDBDataSet;
-        private System.Windows.Forms.BindingSource tblToursBindingSource;
-        private TourFlowManagerDBDataSetTableAdapters.tbl_ToursTableAdapter tbl_ToursTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startPointCityIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destinationCityIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourTypeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn guideIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maxParticipantsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.BindingSource tblReservationsBindingSource;
+        private TourFlowManagerDBDataSetTableAdapters.tbl_ReservationsTableAdapter tbl_ReservationsTableAdapter;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox8;
@@ -873,20 +696,19 @@
         private System.Windows.Forms.TextBox txtTourName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnKayitOl;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startPointCityIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destinationCityIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tourTypeIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn guideIDDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maxParticipantsDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource tblToursBindingSource1;
-        private System.Windows.Forms.Button UserManagement;
+        //
+        private System.Windows.Forms.DataGridViewTextBoxColumn tourIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReservationIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReservationDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinationCityIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tourTypeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn guideIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxParticipantsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnTurdanÇik;
+        private System.Windows.Forms.Label label1;
     }
 }

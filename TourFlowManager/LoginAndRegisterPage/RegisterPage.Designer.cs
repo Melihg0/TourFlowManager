@@ -374,6 +374,7 @@
             this.Name = "RegisterPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKayıt";
+            this.Load += new System.EventHandler(this.RegisterPage_Load);
             this.pnlKayıt.ResumeLayout(false);
             this.pnlKayıt.PerformLayout();
             this.groupBox8.ResumeLayout(false);

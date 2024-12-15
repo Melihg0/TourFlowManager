@@ -1,4 +1,4 @@
-﻿namespace TourAgent.TourGuidePage.TourGuideTourPage
+﻿namespace TourAgent.TourGuidePage.TourGuideTour
 {
     partial class TourGuideTourPage
     {
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -246,14 +246,14 @@
             // 
             this.dataGridViewUsers.AutoGenerateColumns = false;
             this.dataGridViewUsers.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tourIDDataGridViewTextBoxColumn,
@@ -267,24 +267,24 @@
             this.priceDataGridViewTextBoxColumn,
             this.maxParticipantsDataGridViewTextBoxColumn});
             this.dataGridViewUsers.DataSource = this.tblToursBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewUsers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUsers.GridColor = System.Drawing.SystemColors.WindowText;
             this.dataGridViewUsers.Location = new System.Drawing.Point(265, 154);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewUsers.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewUsers.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewUsers.RowTemplate.Height = 24;
             this.dataGridViewUsers.Size = new System.Drawing.Size(1053, 376);
             this.dataGridViewUsers.TabIndex = 37;
@@ -701,6 +701,7 @@
             this.Name = "TourGuideTourPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMainPage";
+            this.Load += new System.EventHandler(this.TourGuideTourPage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
