@@ -76,7 +76,46 @@ namespace TourAgent.CustomerPage
 
         private void btnKayitOl_Click(object sender, EventArgs e)
         {//kayıt ol tuşu = datagridden tıklanan tura kullanıcının kayıt olması lazım
+         // DataGridView'den seçilen satırın index'ini al
+            int selectedRowIndex = dataGridView1.SelectedCells[0].RowIndex;
 
+            // Seçilen satırdaki tur ID'sini al (burada, 0. kolonun tur ID'si olduğu varsayılıyor)
+            int selectedTourId = Convert.ToInt32(dataGridView1.Rows[selectedRowIndex].Cells[0].Value);
+
+            // Kullanıcıyı almak
+            int userId = user.UserID;
+
+            try
+            {
+                // Veritabanına bağlantıyı aç
+                conn.Open();
+
+                // Kullanıcıyı seçilen tura kaydedecek SQL sorgusunu hazırlayın
+                string query = "INSERT INTO tbl_Reservations (UserID, TourID) VALUES (@UserID, @TourID)";            
+
+                // SQL komutunu oluştur
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                // Parametreleri ekle
+                cmd.Parameters.AddWithValue("@UserID", userId);
+                cmd.Parameters.AddWithValue("@TourID", selectedTourId);
+
+                // Komutu çalıştır
+                cmd.ExecuteNonQuery();
+
+                // Başarılı bir şekilde kaydedildi mesajı
+                MessageBox.Show("Tur kaydınız başarıyla gerçekleşti.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Hata durumunda kullanıcıya mesaj göster
+                MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Bağlantıyı kapat
+                conn.Close();
+            }
         }
     }
 

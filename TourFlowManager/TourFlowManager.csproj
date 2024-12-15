@@ -186,6 +186,7 @@
       <DependentUpon>TourGuideTourPage.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserSession.cs" />
     <EmbeddedResource Include="AdminPage\AdminMainPage.resx">
       <DependentUpon>AdminMainPage.cs</DependentUpon>
     </EmbeddedResource>

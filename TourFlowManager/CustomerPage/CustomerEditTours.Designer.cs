@@ -63,17 +63,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            //buradan itibaren datagriview düzenleme ekranı geliyor
             this.tourIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReservationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReservationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destinationCityIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tourTypeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guideIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxParticipantsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTurdanÇik = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -252,7 +244,7 @@
             this.tourFlowManagerDBDataSet.DataSetName = "TourFlowManagerDBDataSet";
             this.tourFlowManagerDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tbReservationsBindingSource
+            // tblReservationsBindingSource
             // 
             this.tblReservationsBindingSource.DataMember = "tbl_Reservations";
             this.tblReservationsBindingSource.DataSource = this.tourFlowManagerDBDataSet;
@@ -562,16 +554,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tourIDDataGridViewTextBoxColumn,
-            //
             this.ReservationIDDataGridViewTextBoxColumn,
-            this.ReservationDateDataGridViewTextBoxColumn,
-            this.destinationCityIDDataGridViewTextBoxColumn,
-            this.tourTypeIDDataGridViewTextBoxColumn,
-            this.guideIDDataGridViewTextBoxColumn,
-            this.startDateDataGridViewTextBoxColumn,
-            this.endDateDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.maxParticipantsDataGridViewTextBoxColumn});
+            this.ReservationDateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblReservationsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(312, 191);
             this.dataGridView1.Name = "dataGridView1";
@@ -583,8 +567,6 @@
             // 
             // tourIDDataGridViewTextBoxColumn
             // 
-
-            //
             this.tourIDDataGridViewTextBoxColumn.DataPropertyName = "TourID";
             this.tourIDDataGridViewTextBoxColumn.HeaderText = "TourID";
             this.tourIDDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -592,12 +574,13 @@
             this.tourIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.tourIDDataGridViewTextBoxColumn.Width = 125;
             // 
-            // tourNameDataGridViewTextBoxColumn
+            // ReservationIDDataGridViewTextBoxColumn
             // 
             this.ReservationIDDataGridViewTextBoxColumn.DataPropertyName = "ReservationID";
             this.ReservationIDDataGridViewTextBoxColumn.HeaderText = "ReservationID";
             this.ReservationIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ReservationIDDataGridViewTextBoxColumn.Name = "ReservationIDDataGridViewTextBoxColumn";
+            this.ReservationIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.ReservationIDDataGridViewTextBoxColumn.Width = 125;
             // 
             // ReservationDateDataGridViewTextBoxColumn
@@ -607,62 +590,6 @@
             this.ReservationDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ReservationDateDataGridViewTextBoxColumn.Name = "ReservationDateDataGridViewTextBoxColumn";
             this.ReservationDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // destinationCityIDDataGridViewTextBoxColumn
-            // 
-            this.destinationCityIDDataGridViewTextBoxColumn.DataPropertyName = "DestinationCityID";
-            this.destinationCityIDDataGridViewTextBoxColumn.HeaderText = "DestinationCityID";
-            this.destinationCityIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.destinationCityIDDataGridViewTextBoxColumn.Name = "destinationCityIDDataGridViewTextBoxColumn";
-            this.destinationCityIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tourTypeIDDataGridViewTextBoxColumn
-            // 
-            this.tourTypeIDDataGridViewTextBoxColumn.DataPropertyName = "TourTypeID";
-            this.tourTypeIDDataGridViewTextBoxColumn.HeaderText = "TourTypeID";
-            this.tourTypeIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tourTypeIDDataGridViewTextBoxColumn.Name = "tourTypeIDDataGridViewTextBoxColumn";
-            this.tourTypeIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // guideIDDataGridViewTextBoxColumn
-            // 
-            this.guideIDDataGridViewTextBoxColumn.DataPropertyName = "GuideID";
-            this.guideIDDataGridViewTextBoxColumn.HeaderText = "GuideID";
-            this.guideIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.guideIDDataGridViewTextBoxColumn.Name = "guideIDDataGridViewTextBoxColumn";
-            this.guideIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // startDateDataGridViewTextBoxColumn
-            // 
-            this.startDateDataGridViewTextBoxColumn.DataPropertyName = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.HeaderText = "StartDate";
-            this.startDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startDateDataGridViewTextBoxColumn.Name = "startDateDataGridViewTextBoxColumn";
-            this.startDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // endDateDataGridViewTextBoxColumn
-            // 
-            this.endDateDataGridViewTextBoxColumn.DataPropertyName = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.HeaderText = "EndDate";
-            this.endDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.endDateDataGridViewTextBoxColumn.Name = "endDateDataGridViewTextBoxColumn";
-            this.endDateDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maxParticipantsDataGridViewTextBoxColumn
-            // 
-            this.maxParticipantsDataGridViewTextBoxColumn.DataPropertyName = "MaxParticipants";
-            this.maxParticipantsDataGridViewTextBoxColumn.HeaderText = "MaxParticipants";
-            this.maxParticipantsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maxParticipantsDataGridViewTextBoxColumn.Name = "maxParticipantsDataGridViewTextBoxColumn";
-            this.maxParticipantsDataGridViewTextBoxColumn.Width = 125;
             // 
             // btnTurdanÇik
             // 
@@ -680,6 +607,7 @@
             this.btnTurdanÇik.Text = "Seçili Turdan Çık";
             this.btnTurdanÇik.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTurdanÇik.UseVisualStyleBackColor = false;
+            this.btnTurdanÇik.Click += new System.EventHandler(this.btnTurdanÇik_Click);
             // 
             // label1
             // 
