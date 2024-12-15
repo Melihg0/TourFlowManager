@@ -142,11 +142,6 @@ namespace TourAgent
             this.Hide();
            
         }
-
-        private void LoginPage_Load(object sender, EventArgs e)
-        {
-
-        }
     } 
 }        
     
