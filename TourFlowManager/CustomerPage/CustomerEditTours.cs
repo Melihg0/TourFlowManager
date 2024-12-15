@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TourAgent.CustomerPage;
-using TourAgent.TourGuidePage.TourGuideTour;
 using System.Data.Sql;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
@@ -36,7 +35,7 @@ namespace TourAgent.CustomerPage
         {
             // TODO: This line of code loads data into the 'tourFlowManagerDBDataSet.tbl_Tours' table. You can move, or remove it, as needed.
             this.tbl_ReservationsTableAdapter.Fill(this.tourFlowManagerDBDataSet.tbl_Reservations);
-            int userId = User.userID;  // User'dan alınır
+            int userId = User.UserID;  // User'dan alınır
 
             // Kullanıcının kayıt olduğu turları yüklemek için veri çekme
             LoadUserTours(userId);
