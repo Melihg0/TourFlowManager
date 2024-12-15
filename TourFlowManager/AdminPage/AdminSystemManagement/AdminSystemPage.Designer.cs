@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -52,28 +57,29 @@
             this.cmbox_import = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_FileName = new System.Windows.Forms.TextBox();
-            this.btn_Import = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView_Import = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExport = new System.Windows.Forms.Button();
-            this.cmbox_Export = new System.Windows.Forms.ComboBox();
-            this.dataGridView_Export = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbTable = new System.Windows.Forms.ComboBox();
+            this.dataGridViewExport = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImport = new System.Windows.Forms.DataGridView();
+            this.btnLoadTable = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Import)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Export)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewImport)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel4);
@@ -83,24 +89,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 800);
             this.panel1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightCyan;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Image = global::TourAgent.Properties.Resources.edit_User;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(12, 262);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 103);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Kullanıcıları Düzenle";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -176,7 +164,7 @@
             this.btnMainPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnMainPage.Image = global::TourAgent.Properties.Resources.home;
             this.btnMainPage.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMainPage.Location = new System.Drawing.Point(41, 8);
+            this.btnMainPage.Location = new System.Drawing.Point(66, 5);
             this.btnMainPage.Name = "btnMainPage";
             this.btnMainPage.Size = new System.Drawing.Size(126, 101);
             this.btnMainPage.TabIndex = 31;
@@ -196,7 +184,7 @@
             this.btnSystemManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSystemManagement.Image = global::TourAgent.Properties.Resources.data_storage;
             this.btnSystemManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSystemManagement.Location = new System.Drawing.Point(836, 6);
+            this.btnSystemManagement.Location = new System.Drawing.Point(893, 2);
             this.btnSystemManagement.Name = "btnSystemManagement";
             this.btnSystemManagement.Size = new System.Drawing.Size(200, 104);
             this.btnSystemManagement.TabIndex = 30;
@@ -216,7 +204,7 @@
             this.btnTourManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTourManagement.Image = global::TourAgent.Properties.Resources.tour;
             this.btnTourManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTourManagement.Location = new System.Drawing.Point(550, 5);
+            this.btnTourManagement.Location = new System.Drawing.Point(598, 2);
             this.btnTourManagement.Name = "btnTourManagement";
             this.btnTourManagement.Size = new System.Drawing.Size(200, 104);
             this.btnTourManagement.TabIndex = 29;
@@ -236,7 +224,7 @@
             this.btnUserManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUserManagement.Image = global::TourAgent.Properties.Resources.group;
             this.btnUserManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUserManagement.Location = new System.Drawing.Point(253, 6);
+            this.btnUserManagement.Location = new System.Drawing.Point(290, 2);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(200, 104);
             this.btnUserManagement.TabIndex = 28;
@@ -264,7 +252,7 @@
             this.btnRestore.BackColor = System.Drawing.Color.Linen;
             this.btnRestore.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRestore.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnRestore.Location = new System.Drawing.Point(606, 747);
+            this.btnRestore.Location = new System.Drawing.Point(732, 757);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(167, 38);
             this.btnRestore.TabIndex = 37;
@@ -277,7 +265,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(270, 754);
+            this.label7.Location = new System.Drawing.Point(396, 764);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(294, 24);
             this.label7.TabIndex = 36;
@@ -288,7 +276,7 @@
             this.btnBackup.BackColor = System.Drawing.Color.Linen;
             this.btnBackup.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBackup.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnBackup.Location = new System.Drawing.Point(606, 689);
+            this.btnBackup.Location = new System.Drawing.Point(732, 699);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(167, 38);
             this.btnBackup.TabIndex = 35;
@@ -301,7 +289,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(270, 696);
+            this.label6.Location = new System.Drawing.Point(396, 706);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(319, 24);
             this.label6.TabIndex = 34;
@@ -350,17 +338,17 @@
             this.txt_FileName.Size = new System.Drawing.Size(245, 34);
             this.txt_FileName.TabIndex = 30;
             // 
-            // btn_Import
+            // btnImport
             // 
-            this.btn_Import.BackColor = System.Drawing.Color.Linen;
-            this.btn_Import.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_Import.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_Import.Location = new System.Drawing.Point(1201, 712);
-            this.btn_Import.Name = "btn_Import";
-            this.btn_Import.Size = new System.Drawing.Size(170, 40);
-            this.btn_Import.TabIndex = 29;
-            this.btn_Import.Text = "İMPORT";
-            this.btn_Import.UseVisualStyleBackColor = false;
+            this.btnImport.BackColor = System.Drawing.Color.Linen;
+            this.btnImport.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnImport.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnImport.Location = new System.Drawing.Point(1201, 712);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(170, 40);
+            this.btnImport.TabIndex = 29;
+            this.btnImport.Text = "İceri Aktar";
+            this.btnImport.UseVisualStyleBackColor = false;
             // 
             // btnBrowse
             // 
@@ -385,20 +373,6 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "İçeri Aktarmak İstediğiniz \r\nDosyayı Seçin\r\n";
             // 
-            // dataGridView_Import
-            // 
-            this.dataGridView_Import.AllowUserToAddRows = false;
-            this.dataGridView_Import.AllowUserToDeleteRows = false;
-            this.dataGridView_Import.BackgroundColor = System.Drawing.Color.Linen;
-            this.dataGridView_Import.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Import.Location = new System.Drawing.Point(898, 202);
-            this.dataGridView_Import.Name = "dataGridView_Import";
-            this.dataGridView_Import.ReadOnly = true;
-            this.dataGridView_Import.RowHeadersWidth = 51;
-            this.dataGridView_Import.RowTemplate.Height = 24;
-            this.dataGridView_Import.Size = new System.Drawing.Size(518, 334);
-            this.dataGridView_Import.TabIndex = 26;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -416,50 +390,117 @@
             this.btnExport.BackColor = System.Drawing.Color.Linen;
             this.btnExport.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExport.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnExport.Location = new System.Drawing.Point(593, 615);
+            this.btnExport.Location = new System.Drawing.Point(671, 627);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(119, 38);
             this.btnExport.TabIndex = 23;
             this.btnExport.Text = "Dışarı Aktar";
             this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
-            // cmbox_Export
+            // groupBox3
             // 
-            this.cmbox_Export.FormattingEnabled = true;
-            this.cmbox_Export.Items.AddRange(new object[] {
-            "tbl_Bookings",
-            "tbl_Cities",
-            "tbl_DeletedUsers",
-            "tbl_DeletedTours",
-            "tbl_Tours",
-            "tbl_Users",
-            ""});
-            this.cmbox_Export.Location = new System.Drawing.Point(568, 559);
-            this.cmbox_Export.Name = "cmbox_Export";
-            this.cmbox_Export.Size = new System.Drawing.Size(182, 36);
-            this.cmbox_Export.TabIndex = 22;
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox3.Controls.Add(this.cbTable);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.groupBox3.Location = new System.Drawing.Point(271, 545);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(371, 67);
+            this.groupBox3.TabIndex = 38;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Dısarı Aktarmak İstediginiz Tabloyu Seciniz";
             // 
-            // dataGridView_Export
+            // cbTable
             // 
-            this.dataGridView_Export.BackgroundColor = System.Drawing.Color.Linen;
-            this.dataGridView_Export.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Export.Location = new System.Drawing.Point(272, 202);
-            this.dataGridView_Export.Name = "dataGridView_Export";
-            this.dataGridView_Export.RowHeadersWidth = 51;
-            this.dataGridView_Export.RowTemplate.Height = 24;
-            this.dataGridView_Export.Size = new System.Drawing.Size(518, 334);
-            this.dataGridView_Export.TabIndex = 21;
+            this.cbTable.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbTable.FormattingEnabled = true;
+            this.cbTable.Location = new System.Drawing.Point(0, 35);
+            this.cbTable.Name = "cbTable";
+            this.cbTable.Size = new System.Drawing.Size(371, 31);
+            this.cbTable.TabIndex = 0;
             // 
-            // label8
+            // dataGridViewExport
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(270, 559);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(245, 48);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Dışarı Aktarmak İstediğiniz \r\nTabloyu Seçiniz";
+            this.dataGridViewExport.BackgroundColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewExport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewExport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewExport.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewExport.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewExport.Location = new System.Drawing.Point(272, 189);
+            this.dataGridViewExport.Name = "dataGridViewExport";
+            this.dataGridViewExport.RowHeadersWidth = 51;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewExport.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewExport.RowTemplate.Height = 24;
+            this.dataGridViewExport.Size = new System.Drawing.Size(518, 334);
+            this.dataGridViewExport.TabIndex = 39;
+            // 
+            // dataGridViewImport
+            // 
+            this.dataGridViewImport.BackgroundColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImport.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewImport.GridColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewImport.Location = new System.Drawing.Point(898, 189);
+            this.dataGridViewImport.Name = "dataGridViewImport";
+            this.dataGridViewImport.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(193)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewImport.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewImport.RowTemplate.Height = 24;
+            this.dataGridViewImport.Size = new System.Drawing.Size(518, 334);
+            this.dataGridViewImport.TabIndex = 40;
+            // 
+            // btnLoadTable
+            // 
+            this.btnLoadTable.BackColor = System.Drawing.Color.Linen;
+            this.btnLoadTable.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLoadTable.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnLoadTable.Location = new System.Drawing.Point(679, 545);
+            this.btnLoadTable.Name = "btnLoadTable";
+            this.btnLoadTable.Size = new System.Drawing.Size(99, 66);
+            this.btnLoadTable.TabIndex = 41;
+            this.btnLoadTable.Text = "Tabloda Goster";
+            this.btnLoadTable.UseVisualStyleBackColor = false;
+            this.btnLoadTable.Click += new System.EventHandler(this.btnLoadTable_Click);
             // 
             // AdminSystemPage
             // 
@@ -467,6 +508,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(245)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1450, 800);
+            this.Controls.Add(this.btnLoadTable);
+            this.Controls.Add(this.dataGridViewImport);
+            this.Controls.Add(this.dataGridViewExport);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnBackup);
@@ -475,15 +520,11 @@
             this.Controls.Add(this.cmbox_import);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_FileName);
-            this.Controls.Add(this.btn_Import);
+            this.Controls.Add(this.btnImport);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView_Import);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.cmbox_Export);
-            this.Controls.Add(this.dataGridView_Export);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
@@ -499,8 +540,9 @@
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourFlowManagerDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Import)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Export)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewImport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,7 +560,6 @@
         private System.Windows.Forms.Button btnSystemManagement;
         private System.Windows.Forms.Button btnTourManagement;
         private System.Windows.Forms.Button btnUserManagement;
-        private System.Windows.Forms.Button button1;
         private TourFlowManagerDBDataSet tourFlowManagerDBDataSet;
         private System.Windows.Forms.BindingSource tblUsersBindingSource;
         private TourFlowManagerDBDataSetTableAdapters.tbl_UsersTableAdapter tbl_UsersTableAdapter;
@@ -530,14 +571,15 @@
         private System.Windows.Forms.ComboBox cmbox_import;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_FileName;
-        private System.Windows.Forms.Button btn_Import;
+        private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView_Import;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.ComboBox cmbox_Export;
-        private System.Windows.Forms.DataGridView dataGridView_Export;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox cbTable;
+        private System.Windows.Forms.DataGridView dataGridViewExport;
+        private System.Windows.Forms.DataGridView dataGridViewImport;
+        private System.Windows.Forms.Button btnLoadTable;
     }
 }

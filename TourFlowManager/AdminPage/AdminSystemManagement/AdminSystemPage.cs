@@ -14,16 +14,19 @@ using System.Data.Sql;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Microsoft.SqlServer.Server;
+using DocumentFormat.OpenXml.Office2013.Excel;
+using ClosedXML.Excel;
 
 namespace TourAgent.AdminPage.AdminSystemManagement
 {
     public partial class AdminSystemPage : Form
     {
         SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
-
+        private string connectionString = "Data Source=.;Initial Catalog=TourFlowManagerDB;Integrated Security=True;";
         public AdminSystemPage()
         {
             InitializeComponent();
+            LoadTableNames();
         }
 
         private void btnMainPage_Click(object sender, EventArgs e)
@@ -88,7 +91,7 @@ namespace TourAgent.AdminPage.AdminSystemManagement
             try
             {
                 conn.ConnectionString = new SqlConnectionStringBuilder(conn.ConnectionString)
-                {InitialCatalog = "master"}.ConnectionString;
+                { InitialCatalog = "master" }.ConnectionString;
                 conn.Open();
 
                 // Kullanıcıdan geri yükleme dosyasını seçmesini iste
@@ -128,6 +131,96 @@ namespace TourAgent.AdminPage.AdminSystemManagement
                 MessageBox.Show(err.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally { conn.Close(); }
+        }
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            if (cbTable.SelectedIndex < 0)
+            {
+                MessageBox.Show("Lütfen bir tablo seçin!");
+                return;
+            }
+            string selectedTable = cbTable.SelectedItem.ToString();
+            LoadTableData(selectedTable); //DatagridViewe Gonderdik seçilen tabloyu
+            DataTable dt = (DataTable)dataGridViewExport.DataSource;
+            ExportToExcel(dt);
+
+        }
+        //DataGridViewde gosterme butonu
+        private void btnLoadTable_Click(object sender, EventArgs e)
+        {
+            if (cbTable.SelectedIndex < 0)
+            {
+                MessageBox.Show("Lütfen bir tablo seçin!");
+                return;
+            }
+            string selectedTable = cbTable.SelectedItem.ToString();
+            LoadTableData(selectedTable);
+        }
+       
+        //Comboboxa Tabloları Ekleme
+        private void LoadTableNames()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'", conn);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        cbTable.Items.Add(reader["TABLE_NAME"].ToString());
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Tablo isimleri yüklenirken bir hata oluştu:" + err.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        //DatagridViewe Secılen Tablonun verilerini Ekleme 
+        private void LoadTableData(string tableName)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter($"SELECT * FROM {tableName}", connection);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    dataGridViewExport.DataSource = table; // DataGridView'i doldur
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Tablo isimleri yüklenirken bir hata oluştu:" + err.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ExportToExcel(DataTable table)
+        {
+            try
+            {
+                using (XLWorkbook workbook = new XLWorkbook())
+                {
+                    workbook.Worksheets.Add(table, "ExportedData");
+                    SaveFileDialog saveFileDialog = new SaveFileDialog
+                    {
+                        Filter = "Excel Dosyası (*.xlsx)|*.xlsx",
+                        FileName = "ExportedData.xlsx"
+                    };
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        workbook.SaveAs(saveFileDialog.FileName);
+                        MessageBox.Show("Veriler başarıyla dışa aktarıldı!", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Excel dosyasına yazılırken bir hata oluştu:" + err.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
