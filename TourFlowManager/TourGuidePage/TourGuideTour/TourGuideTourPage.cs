@@ -56,7 +56,7 @@ namespace TourAgent.TourGuidePage.TourGuideTour
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT DISTINCT GuideID FROM tbl_Users", conn);
+                SqlCommand cmd = new SqlCommand("SELECT DISTINCT GuideID FROM tbl_Tours", conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 // ComboBox'ı doldur
@@ -76,11 +76,7 @@ namespace TourAgent.TourGuidePage.TourGuideTour
             }
         }
 
-        private void cbmGuide_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selectedGuideID = ((dynamic)cbmGuide.SelectedItem).Value;
-            FilterDataByPersonnel(selectedGuideID);
-        }
+      
 
         private void FilterDataByPersonnel(string guideID)
         {
@@ -117,6 +113,12 @@ namespace TourAgent.TourGuidePage.TourGuideTour
         private void TourGuideTourPage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbmGuide_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            var selectedGuideID = ((dynamic)cbmGuide.SelectedItem).Value;
+            FilterDataByPersonnel(selectedGuideID);
         }
     }
 }

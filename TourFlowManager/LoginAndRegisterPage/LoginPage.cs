@@ -65,15 +65,6 @@ namespace TourAgent
             if (user != null)
 
             {
-                UserSession.UserID = user.UserID;
-                UserSession.FirstName = user.FirstName;
-                UserSession.LastName = user.LastName;
-                UserSession.Email = user.Email;
-                UserSession.PhoneNumber = user.PhoneNumber;  // PhoneNumber'ı ekledik
-                UserSession.UserPassword = user.UserPassword;  // UserPassword'ı ekledik
-                UserSession.RoleID = user.RoleID;
-                UserSession.BirthDate = user.BirthDate;  // BirthDate'yi ekledik
-                UserSession.CreatedAt = user.CreatedDate;
 
                 switch (user.RoleID)
                 {

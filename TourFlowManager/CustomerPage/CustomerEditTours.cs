@@ -16,6 +16,8 @@ using System.Xml.Linq;
 using Microsoft.SqlServer.Server;
 using DocumentFormat.OpenXml.Spreadsheet;
 using System.Data.Common;
+using TourAgent;
+
 
 
 namespace TourAgent.CustomerPage
@@ -33,8 +35,8 @@ namespace TourAgent.CustomerPage
         private void CustomerEditTours_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tourFlowManagerDBDataSet.tbl_Tours' table. You can move, or remove it, as needed.
-            //this.tbl_ReservationsTableAdapter.Fill(this.tourFlowManagerDBDataSet.tbl_Reservations);
-            int userId = UserSession.UserID;  // UserSession'dan alınır
+            this.tbl_ReservationsTableAdapter.Fill(this.tourFlowManagerDBDataSet.tbl_Reservations);
+            int userId = User.userID;  // User'dan alınır
 
             // Kullanıcının kayıt olduğu turları yüklemek için veri çekme
             LoadUserTours(userId);
@@ -102,7 +104,7 @@ namespace TourAgent.CustomerPage
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 int selectedTourId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["TourID"].Value);  // Seçilen turun ID'si
-                int userId = UserSession.UserID;  // Giriş yapan kullanıcının ID'si
+                int userId = User.UserID;  // Giriş yapan kullanıcının ID'si
 
                 // Kullanıcıyı bu turdan çıkarmak için SQL sorgusu
                 string query = "DELETE FROM tbl_Reservations WHERE UserID = @UserID AND TourID = @TourID";

@@ -682,6 +682,7 @@
             this.cbmGuide.Name = "cbmGuide";
             this.cbmGuide.Size = new System.Drawing.Size(191, 36);
             this.cbmGuide.TabIndex = 39;
+            this.cbmGuide.SelectedIndexChanged += new System.EventHandler(this.cbmGuide_SelectedIndexChanged_1);
             // 
             // TourGuideTourPage
             // 
