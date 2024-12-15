@@ -1,4 +1,4 @@
-﻿namespace TourAgent.TourGuidePage.TourGuideMainPage
+﻿namespace TourAgent.TourGuidePage.TourGuideMain
 {
     partial class TourGuideMainPage
     {

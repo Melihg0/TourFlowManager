@@ -368,6 +368,7 @@
             this.txtBoxSoyad.Name = "txtBoxSoyad";
             this.txtBoxSoyad.Size = new System.Drawing.Size(235, 22);
             this.txtBoxSoyad.TabIndex = 15;
+            this.txtBoxSoyad.TextChanged += new System.EventHandler(this.txtBoxSoyad_TextChanged);
             // 
             // txtBoxPhoneNumber
             // 
@@ -375,6 +376,7 @@
             this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
             this.txtBoxPhoneNumber.Size = new System.Drawing.Size(235, 22);
             this.txtBoxPhoneNumber.TabIndex = 16;
+            this.txtBoxPhoneNumber.TextChanged += new System.EventHandler(this.txtBoxPhoneNumber_TextChanged);
             // 
             // txtBoxEmail
             // 
@@ -382,6 +384,7 @@
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(235, 22);
             this.txtBoxEmail.TabIndex = 17;
+            this.txtBoxEmail.TextChanged += new System.EventHandler(this.txtBoxEmail_TextChanged);
             // 
             // dateTimePicker1
             // 
@@ -389,6 +392,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(235, 22);
             this.dateTimePicker1.TabIndex = 18;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txtBoxPassword
             // 
@@ -396,6 +400,7 @@
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.Size = new System.Drawing.Size(235, 22);
             this.txtBoxPassword.TabIndex = 19;
+            this.txtBoxPassword.TextChanged += new System.EventHandler(this.txtBoxPassword_TextChanged);
             // 
             // btnBilgilerimiGuncelle
             // 

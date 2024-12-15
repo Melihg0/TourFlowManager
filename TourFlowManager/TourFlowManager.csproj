@@ -173,16 +173,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TourFlowManagerDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TourGuidePage\TourGuideMainPage.cs">
+    <Compile Include="TourGuidePage\TourGuideMain\TourGuideMainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TourGuidePage\TourGuideMainPage.Designer.cs">
+    <Compile Include="TourGuidePage\TourGuideMain\TourGuideMainPage.Designer.cs">
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="TourGuidePage\TourGuideTourPage.cs">
+    <Compile Include="TourGuidePage\TourGuideTour\TourGuideTourPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TourGuidePage\TourGuideTourPage.Designer.cs">
+    <Compile Include="TourGuidePage\TourGuideTour\TourGuideTourPage.Designer.cs">
       <DependentUpon>TourGuideTourPage.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
@@ -235,10 +235,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TourGuidePage\TourGuideMainPage.resx">
+    <EmbeddedResource Include="TourGuidePage\TourGuideMain\TourGuideMainPage.resx">
       <DependentUpon>TourGuideMainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TourGuidePage\TourGuideTourPage.resx">
+    <EmbeddedResource Include="TourGuidePage\TourGuideTour\TourGuideTourPage.resx">
       <DependentUpon>TourGuideTourPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TourAgent.TourGuidePage.TourGuideTourPage;
-using TourAgent.TourGuidePage.TourGuideMainPage;
+using TourAgent.TourGuidePage.TourGuideTour;
+using TourAgent.TourGuidePage.TourGuideMain;
 using TourAgent.TourGuidePage;
 using System.Data.SqlClient;
 using System.Data.Sql;
@@ -16,14 +16,13 @@ using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Microsoft.SqlServer.Server;
 
-namespace TourAgent.TourGuidePage.TourGuideTourPage
+namespace TourAgent.TourGuidePage.TourGuideTour
 {
 
 
     public partial class TourGuideTourPage : Form
     {
         SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
-
 
 
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TourAgent.CustomerPage;
 using TourAgent.TourGuidePage.TourGuideTourPage;
+using System.Data.Sql;
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
+using Microsoft.SqlServer.Server;
+
 
 namespace TourAgent.CustomerPage
 {
     public partial class CustomerEditTours : Form
+
     {
+        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
+
         public CustomerEditTours()
         {
             InitializeComponent();
@@ -52,6 +61,11 @@ namespace TourAgent.CustomerPage
             CustomerInfo customerInfo = new CustomerInfo();
             customerInfo.Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

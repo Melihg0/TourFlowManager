@@ -37,6 +37,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.UserManagement = new System.Windows.Forms.Button();
             this.btnMainPage = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tourIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +86,6 @@
             this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maxParticipantsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblToursBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.UserManagement = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
@@ -208,6 +208,26 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1091, 122);
             this.panel6.TabIndex = 5;
+            // 
+            // UserManagement
+            // 
+            this.UserManagement.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.UserManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.UserManagement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UserManagement.FlatAppearance.BorderSize = 0;
+            this.UserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.UserManagement.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.UserManagement.Image = global::TourAgent.Properties.Resources.group;
+            this.UserManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.UserManagement.Location = new System.Drawing.Point(247, 6);
+            this.UserManagement.Name = "UserManagement";
+            this.UserManagement.Size = new System.Drawing.Size(200, 104);
+            this.UserManagement.TabIndex = 33;
+            this.UserManagement.Text = "Kullanıcı Islemleri";
+            this.UserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.UserManagement.UseVisualStyleBackColor = false;
+            this.UserManagement.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnMainPage
             // 
@@ -644,6 +664,7 @@
             this.btnKayitOl.Text = "Seçili Tura Kayıt Ol";
             this.btnKayitOl.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnKayitOl.UseVisualStyleBackColor = false;
+            this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
             // 
             // label3
             // 
@@ -765,26 +786,6 @@
             // 
             this.tblToursBindingSource1.DataMember = "tbl_Tours";
             this.tblToursBindingSource1.DataSource = this.tourFlowManagerDBDataSet;
-            // 
-            // UserManagement
-            // 
-            this.UserManagement.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.UserManagement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.UserManagement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UserManagement.FlatAppearance.BorderSize = 0;
-            this.UserManagement.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UserManagement.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.UserManagement.Image = global::TourAgent.Properties.Resources.group;
-            this.UserManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.UserManagement.Location = new System.Drawing.Point(247, 6);
-            this.UserManagement.Name = "UserManagement";
-            this.UserManagement.Size = new System.Drawing.Size(200, 104);
-            this.UserManagement.TabIndex = 33;
-            this.UserManagement.Text = "Kullanıcı Islemleri";
-            this.UserManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.UserManagement.UseVisualStyleBackColor = false;
-            this.UserManagement.Click += new System.EventHandler(this.button1_Click);
             // 
             // CustomerSelectTour
             // 

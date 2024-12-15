@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,11 @@ namespace TourAgent.CustomerPage
 {
     public partial class CustomerSelectTour : Form
     {
+        SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = TourFlowManagerDB; Integrated Security = True;");
+        User user;
         public CustomerSelectTour()
         {
+            this.user = user;
             InitializeComponent();
         }
 
@@ -27,8 +31,18 @@ namespace TourAgent.CustomerPage
 
         private void CustomerSelectTour_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tourFlowManagerDBDataSet.tbl_Tours' table. You can move, or remove it, as needed.
-            this.tbl_ToursTableAdapter.Fill(this.tourFlowManagerDBDataSet.tbl_Tours);
+            try
+            {
+                // tbl_Tours tablosundan verileri DataGridView'e yükleme
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM tbl_Tours", conn);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                dataGridView1.DataSource = table;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -58,6 +72,11 @@ namespace TourAgent.CustomerPage
             CustomerInfo customerInfo = new CustomerInfo();
             customerInfo.Show();
             this.Hide();
+        }
+
+        private void btnKayitOl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
