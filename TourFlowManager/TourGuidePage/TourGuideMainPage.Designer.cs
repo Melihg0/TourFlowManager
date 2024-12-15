@@ -159,7 +159,7 @@
             this.btnTourManagement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTourManagement.Image = global::TourAgent.Properties.Resources.tour;
             this.btnTourManagement.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTourManagement.Location = new System.Drawing.Point(550, 5);
+            this.btnTourManagement.Location = new System.Drawing.Point(247, 5);
             this.btnTourManagement.Name = "btnTourManagement";
             this.btnTourManagement.Size = new System.Drawing.Size(200, 104);
             this.btnTourManagement.TabIndex = 29;

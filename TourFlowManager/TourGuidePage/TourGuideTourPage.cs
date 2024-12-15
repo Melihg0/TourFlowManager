@@ -10,15 +10,11 @@ using System.Windows.Forms;
 using TourAgent.TourGuidePage.TourGuideTourPage;
 using TourAgent.TourGuidePage.TourGuideMainPage;
 using TourAgent.TourGuidePage;
-using TourAgent.AdminPage.AdminTourManagment;
-using TourAgent.AdminPage.AdminUserManagement;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using Microsoft.SqlServer.Server;
-using TourAgent.AdminPage.AdminSystemManagement;
-using TourAgent.AdminPage;
 
 namespace TourAgent.TourGuidePage.TourGuideTourPage
 {
@@ -38,15 +34,15 @@ namespace TourAgent.TourGuidePage.TourGuideTourPage
 
         private void btnMainPage_Click(object sender, EventArgs e)
         {
-            AdminMainPage adminMainPage = new AdminMainPage();
-            adminMainPage.Show();
+            TourGuideMainPage tourGuideMainPage = new TourGuideMainPage();
+            tourGuideMainPage.Show();
             this.Close();
 
         }
         private void btnTourManagement_Click(object sender, EventArgs e)
         {
-            AdminTourTypePage adminTourType = new AdminTourTypePage();
-            adminTourType.Show();
+            TourGuideTourPage tourGuideTourType = new TourGuideTourPage();
+            tourGuideTourType.Show();
             this.Hide();
         }
 
@@ -115,6 +111,11 @@ namespace TourAgent.TourGuidePage.TourGuideTourPage
         }
 
         private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TourGuideTourPage_Load(object sender, EventArgs e)
         {
 
         }

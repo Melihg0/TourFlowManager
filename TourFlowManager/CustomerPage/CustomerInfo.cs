@@ -26,11 +26,7 @@ namespace TourAgent.CustomerPage
         {
 
         }
-
-        private void TurSec_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Sifre_Click(object sender, EventArgs e)
         {
@@ -53,6 +49,50 @@ namespace TourAgent.CustomerPage
         }
 
         private void Soyad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSelectTour_Click(object sender, EventArgs e)
+        {
+            CustomerSelectTour customerSelectTour = new CustomerSelectTour();
+            customerSelectTour.Show();
+            this.Hide();
+        }
+
+        private void btnEditTourPage_Click(object sender, EventArgs e)
+        {
+
+            CustomerEditTours customerEditTours = new CustomerEditTours();
+            customerEditTours.Show();
+            this.Hide();
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            CustomerInfo customerInfo = new CustomerInfo();
+            customerInfo.Show();
+            this.Hide();
+        }
+
+        private void txtboxAd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBilgilerimiGuncelle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMainPage_Click(object sender, EventArgs e)
+        {
+            CustomerMainPage customerMainPage = new CustomerMainPage();
+            customerMainPage.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
