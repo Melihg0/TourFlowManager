@@ -1,0 +1,5 @@
+CREATE TABLE tbl_TourTypes (
+    TourTypeID INT IDENTITY(1,1) PRIMARY KEY,
+    TypeName NVARCHAR(100) NOT NULL UNIQUE,
+    Description NVARCHAR(255) NULL
+);

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourFlowManager", "..\TourFlowManager.csproj", "{6F91EA6E-CCAD-46A7-9EE9-96EA2BDF3B8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F91EA6E-CCAD-46A7-9EE9-96EA2BDF3B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F91EA6E-CCAD-46A7-9EE9-96EA2BDF3B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F91EA6E-CCAD-46A7-9EE9-96EA2BDF3B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F91EA6E-CCAD-46A7-9EE9-96EA2BDF3B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EED8E4C-60F4-4919-9BE2-53440E13D146}
+	EndGlobalSection
+EndGlobal
